@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <meta name="description" content="InvoiceLens UI mockup — a static walkthrough of the upload, extraction, review queue, citations chat, run log and health screens, with synthetic sample data.">
+  <meta name="description" content="InvoiceLens UI mockup — a static walkthrough of the upload, extraction and review queue screens, with synthetic sample data.">
   <title>InvoiceLens — UI demo mockup</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -48,16 +48,10 @@
 
       <input class="tab-radio" type="radio" name="demo-tabs" id="tab-extract" checked>
       <input class="tab-radio" type="radio" name="demo-tabs" id="tab-review">
-      <input class="tab-radio" type="radio" name="demo-tabs" id="tab-chat">
-      <input class="tab-radio" type="radio" name="demo-tabs" id="tab-run">
-      <input class="tab-radio" type="radio" name="demo-tabs" id="tab-health">
 
       <div class="tab-labels" aria-label="Demo screens">
         <label for="tab-extract">1 · Upload &amp; extract</label>
         <label for="tab-review">2 · Review queue</label>
-        <label for="tab-chat">3 · Chat with citations</label>
-        <label for="tab-run">4 · Approvals &amp; run log</label>
-        <label for="tab-health">5 · Alerts &amp; health</label>
       </div>
 
       <div class="tab-panels">
@@ -328,230 +322,7 @@
           </div>
         </section>
 
-        <!-- ================= PANEL 3: CHAT ================= -->
-        <section class="tab-panel" id="panel-chat" aria-label="Chat with citations">
-          <div class="panel-title">
-            <h2>Chat with citations</h2>
-            <div>
-              <span class="badge badge-demo">Mock conversation</span>
-              <span class="badge">answers grounded in extracted docs only</span>
-            </div>
-          </div>
-          <p class="muted small" style="margin-bottom: 16px;">
-            Ask questions across the documents this workspace has processed. Every claim carries a citation chip
-            pointing at the page it came from — the chat cannot answer from outside the processed set.
-          </p>
-
-          <div class="chat">
-            <div class="msg msg-user">
-              <span class="who">You</span>
-              Which documents have totals that don't add up?
-            </div>
-            <div class="msg msg-bot">
-              <span class="who">InvoiceLens</span>
-              One document: <strong>INV-20492</strong> (Copperfield Tools GmbH). The line items sum to 1,180.00,
-              but the printed grand total is 1,250.00 — a 70.00 discrepancy. The pipeline kept the printed value,
-              scored it 0.42, and sent it to the review queue rather than "fixing" the source.
-              <div class="cites">
-                <a class="cite" href="#panel-extract" title="Mock citation">INV-20492 · p1 · total</a>
-                <a class="cite" href="#panel-review" title="Mock citation">INV-20492 · p1 · line items</a>
-              </div>
-            </div>
-            <div class="msg msg-user">
-              <span class="who">You</span>
-              What is the total due on the Halcyon invoice, and by when?
-            </div>
-            <div class="msg msg-bot">
-              <span class="who">InvoiceLens</span>
-              <strong>USD 583.03</strong> on invoice INV-20481, payable by <strong>2026-04-03</strong>.
-              The arithmetic was verified: subtotal 538.60 + tax 44.43 = 583.03, and every line item
-              multiplies out. The due date came from the payment-terms line on page 2 and is currently
-              in the review queue at confidence 0.68.
-              <div class="cites">
-                <a class="cite" href="#panel-extract" title="Mock citation">INV-20481 · p1 · total</a>
-                <a class="cite" href="#panel-extract" title="Mock citation">INV-20481 · p1 · line items</a>
-                <a class="cite" href="#panel-review" title="Mock citation">INV-20481 · p2 · due_date</a>
-              </div>
-            </div>
-            <div class="msg msg-user">
-              <span class="who">You</span>
-              How many purchase orders are in this workspace?
-            </div>
-            <div class="msg msg-bot">
-              <span class="who">InvoiceLens</span>
-              One: <strong>PO-7781</strong> (Bright Meridian Logistics), read from a spreadsheet.
-              Its currency field (€ symbol, no ISO code) is awaiting review, so the document is not yet final.
-              <div class="cites">
-                <a class="cite" href="#panel-review" title="Mock citation">PO-7781 · Sheet1!D9 · currency</a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ================= PANEL 4: APPROVALS & RUN LOG ================= -->
-        <section class="tab-panel" id="panel-run" aria-label="Approvals and run log">
-          <div class="panel-title">
-            <h2>Approval flow &amp; run log</h2>
-            <div>
-              <span class="badge badge-demo">Mock run</span>
-              <span class="badge">doc: inv-20481</span>
-            </div>
-          </div>
-          <p class="muted small" style="margin-bottom: 18px;">
-            Sample run of a text-PDF invoice through the full pipeline. Timings below are illustrative mock values,
-            not measurements — real runs write <span class="field-name">out/metrics.jsonl</span> with
-            token counts, dollar cost and stage timings.
-          </p>
-
-          <div class="grid grid-2">
-            <div class="card">
-              <h3 style="font-size: 1rem;">Approval flow</h3>
-              <div class="stepper">
-                <div class="step">
-                  <span class="step-dot">1</span>
-                  <div class="step-body">
-                    <strong>Extracted</strong>
-                    <span>LLM returned a schema-complete draft; 9 fields + 3 line items, each with a page citation.</span>
-                  </div>
-                </div>
-                <div class="step">
-                  <span class="step-dot">2</span>
-                  <div class="step-body">
-                    <strong>Validated</strong>
-                    <span>All arithmetic, date and currency checks passed on the first attempt. Grounding exact on 8 of 9 fields.</span>
-                  </div>
-                </div>
-                <div class="step">
-                  <span class="step-dot">3</span>
-                  <div class="step-body">
-                    <strong>Auto-accepted</strong>
-                    <span>8 fields with score ≥ 0.70 written to <span class="field-name">out/inv-20481.json</span> and CSV.</span>
-                  </div>
-                </div>
-                <div class="step">
-                  <span class="step-dot pending">4</span>
-                  <div class="step-body">
-                    <strong>Queued for review</strong>
-                    <span><span class="field-name">due_date</span> at 0.68 (fuzzy grounding on page 2).</span>
-                  </div>
-                </div>
-                <div class="step">
-                  <span class="step-dot muted-dot">5</span>
-                  <div class="step-body">
-                    <strong>Awaiting reviewer</strong>
-                    <span>Accept or correct; the final export includes the reviewer's decision in the audit trail.</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card">
-              <h3 style="font-size: 1rem;">Run log <span class="badge badge-tbd" style="vertical-align: middle;">sample values — mock</span></h3>
-              <div class="table-wrap" style="box-shadow: none;">
-                <table style="min-width: 0;">
-                  <thead>
-                    <tr>
-                      <th scope="col">Stage</th>
-                      <th scope="col">Detail</th>
-                      <th scope="col">ms</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr><td>ingest</td><td>text_pdf · 2 pages · 3,410 chars</td><td class="field-name">120</td></tr>
-                    <tr><td>llm_extract</td><td>tool use · 1 call · temperature 0</td><td class="field-name">1,840</td></tr>
-                    <tr><td>validate</td><td>9 rules · 0 issues</td><td class="field-name">18</td></tr>
-                    <tr><td>correct</td><td>no retries needed</td><td class="field-name">0</td></tr>
-                    <tr><td>confidence</td><td>9 fields scored</td><td class="field-name">4</td></tr>
-                    <tr><td>write</td><td>JSON + CSV + metrics</td><td class="field-name">9</td></tr>
-                    <tr><th scope="row">total</th><td>doc inv-20481</td><td class="field-name">1,991</td></tr>
-                  </tbody>
-                </table>
-              </div>
-              <p class="small muted" style="margin-top: 12px;">
-                Token usage and dollar cost are recorded per document alongside these timings
-                (fields: <span class="field-name">input_tokens</span>,
-                <span class="field-name">output_tokens</span>,
-                <span class="field-name">cost_usd</span>). The measured cost/time tables live on the
-                <a href="index.html#results">Results page</a> and stay as placeholders until the evaluation run.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- ================= PANEL 5: ALERTS & HEALTH ================= -->
-        <section class="tab-panel" id="panel-health" aria-label="Alerts and health">
-          <div class="panel-title">
-            <h2>Alert feed &amp; health status</h2>
-            <div>
-              <span class="badge badge-demo">Mock data</span>
-              <span class="badge badge-ok">All systems nominal</span>
-            </div>
-          </div>
-          <p class="muted small" style="margin-bottom: 16px;">
-            Demo-mode guardrails and pipeline events, as an operator would see them. Sample counters —
-            the live demo resets them daily.
-          </p>
-
-          <div class="health-grid">
-            <div class="health-card">
-              <div class="h-label">Pipeline</div>
-              <div class="h-value" style="color: var(--ok);">Ready</div>
-              <div class="h-sub">Router, loaders, LLM client</div>
-            </div>
-            <div class="health-card">
-              <div class="h-label">OCR engine</div>
-              <div class="h-value">Tesseract 5</div>
-              <div class="h-sub">Local · no API cost</div>
-            </div>
-            <div class="health-card">
-              <div class="h-label">Demo budget today</div>
-              <div class="h-value">6 / 20 used</div>
-              <div class="h-sub">Global daily cap (sample)</div>
-            </div>
-            <div class="health-card">
-              <div class="h-label">Upload limits</div>
-              <div class="h-value">2 MB · 3 pages</div>
-              <div class="h-sub">Per-IP rate limit active</div>
-            </div>
-          </div>
-
-          <h3 style="font-size: 1rem;">Alert feed</h3>
-          <div class="alert-feed">
-            <div class="alert">
-              <span class="sev sev-warn">review</span>
-              <div>
-                <strong>INV-20492: arithmetic still failing after 2 retries.</strong>
-                <div class="muted">total vs line-item sum — 70.00 discrepancy; field routed to the review queue with the printed value preserved.</div>
-                <time>2026-10-16 09:14:02 · sample entry</time>
-              </div>
-            </div>
-            <div class="alert">
-              <span class="sev sev-danger">rejected</span>
-              <div>
-                <strong>Upload rejected: 3.1 MB exceeds the 2 MB demo cap.</strong>
-                <div class="muted">Client builds remove this cap and run entirely inside your environment.</div>
-                <time>2026-10-16 09:11:47 · sample entry</time>
-              </div>
-            </div>
-            <div class="alert">
-              <span class="sev sev-warn">ocr</span>
-              <div>
-                <strong>copperfield-inv-20492.pdf: low OCR word confidence on page 1 (mean 71).</strong>
-                <div class="muted">Confidence scores on that page were scaled down automatically before routing.</div>
-                <time>2026-10-16 09:09:31 · sample entry</time>
-              </div>
-            </div>
-            <div class="alert">
-              <span class="sev sev-info">info</span>
-              <div>
-                <strong>Sample document replayed from cache — zero LLM cost.</strong>
-                <div class="muted">The “sample documents” button on the live demo serves cached results so visitors can explore without spend.</div>
-                <time>2026-10-16 09:05:12 · sample entry</time>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        
       </div><!-- /tab-panels -->
     </div><!-- /app-window -->
 

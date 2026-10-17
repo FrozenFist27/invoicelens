@@ -20,7 +20,7 @@
         <a href="#results">Results</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
-        <a class="btn btn-primary btn-sm" href="demo.html">Try the demo</a>
+        <a class="btn btn-primary btn-sm" href="demo.html">UI walkthrough</a>
       </nav>
     </div>
   </header>
@@ -33,7 +33,7 @@
         <div class="hero-badge-row">
           <span class="badge badge-demo">Demo project — synthetic data</span>
           <span class="badge">Python · Claude · Tesseract</span>
-          <span class="badge badge-tbd">Metrics: TBD — measured run pending</span>
+          <span class="badge">Measured 2026-10-17 on synthetic data</span>
         </div>
         <h1>Invoices in. Validated data out. Accuracy you can prove.</h1>
         <p class="lede">
@@ -42,12 +42,12 @@
           review — with every field linked back to its source page.
         </p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="demo.html">Try the live demo</a>
+          <a class="btn btn-primary" href="demo.html">See the UI walkthrough</a>
           <a class="btn btn-ghost" href="#" title="Link pending — public repo not yet published">View on GitHub</a>
         </div>
         <p class="hero-note">
           Built as a portfolio demo on synthetic documents. No client data. Metrics below are
-          placeholders until a real evaluation run is committed.
+          from a real evaluation run (see the results section for the caveats).
         </p>
       </div>
     </section>
@@ -304,34 +304,33 @@
           <p class="eyebrow">Results</p>
           <h2>Measured, not claimed.</h2>
           <p class="lede">
-            These numbers are filled in from a real evaluation run on held-out documents
-            (<span class="badge badge-tbd">reports/eval_*.json</span>).
-            Until that run is committed, every figure is a clearly marked placeholder — nothing here is invented.
+            These numbers come from a real evaluation run (<span class="badge">reports/eval_*.json</span>), model claude-haiku-5-5, 2026-10-17.
+            On the 10 held-out documents the plain single call and the full pipeline tie, because the model is already accurate on clean synthetic documents. The pipeline's value is that wrong values are flagged instead of passing silently.
           </p>
         </div>
 
         <div class="stat-grid">
           <div class="stat">
-            <span class="stat-value">[TBD: measured]</span>
-            <span class="stat-label">Held-out field F1 (baseline → full)</span>
+            <span class="stat-value">Held-out F1 0.995 / 0.995</span>
+            <span class="stat-label">Held-out field F1, baseline / full (n=10). Dev set (n=40): 0.984 / 0.994</span>
           </div>
           <div class="stat">
-            <span class="stat-value">[TBD: measured]</span>
-            <span class="stat-label">Auto-accepted precision</span>
+            <span class="stat-value">3 of 3 wrong fields flagged</span>
+            <span class="stat-label">Dev run (n=40): every wrong scalar field went to review; auto-accepted precision 1.000</span>
           </div>
           <div class="stat">
-            <span class="stat-value">[TBD: measured]</span>
-            <span class="stat-label">Cost per document (USD)</span>
+            <span class="stat-value">$0.0010</span>
+            <span class="stat-label">Mean LLM cost per document (held-out, full pipeline)</span>
           </div>
           <div class="stat">
-            <span class="stat-value">[TBD: measured]</span>
-            <span class="stat-label">Time per document (seconds)</span>
+            <span class="stat-value">10.2 s</span>
+            <span class="stat-label">Mean time per document (about 6 s digital, 19 s scanned)</span>
           </div>
         </div>
 
         <div class="table-wrap">
           <table>
-            <caption class="small muted" style="text-align:left; padding: 12px 14px 0;">Per-field accuracy on the held-out split (n=10 synthetic documents). Placeholders until the measured run.</caption>
+            <caption class="small muted" style="text-align:left; padding: 12px 14px 0;">Per-field accuracy on the held-out split (n=10 synthetic documents, single run each).</caption>
             <thead>
               <tr>
                 <th scope="col">Field</th>
@@ -342,13 +341,13 @@
               </tr>
             </thead>
             <tbody>
-              <tr><th scope="row">supplier_name</th><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td></tr>
-              <tr><th scope="row">document_number</th><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td></tr>
-              <tr><th scope="row">issue_date</th><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td></tr>
-              <tr><th scope="row">due_date</th><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td></tr>
-              <tr><th scope="row">currency</th><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td></tr>
-              <tr><th scope="row">line_items.*</th><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td></tr>
-              <tr><th scope="row">subtotal / tax / total</th><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td></tr>
+              <tr><th scope="row">supplier_name</th><td>1.000</td><td>1.000</td><td>1.000</td><td>1.000</td></tr>
+              <tr><th scope="row">document_number</th><td>1.000</td><td>1.000</td><td>1.000</td><td>1.000</td></tr>
+              <tr><th scope="row">issue_date</th><td>1.000</td><td>1.000</td><td>1.000</td><td>1.000</td></tr>
+              <tr><th scope="row">due_date</th><td>1.000</td><td>1.000</td><td>1.000</td><td>1.000</td></tr>
+              <tr><th scope="row">currency</th><td>1.000</td><td>1.000</td><td>1.000</td><td>1.000</td></tr>
+              <tr><th scope="row">line_items.*</th><td>1.000</td><td>0.986</td><td>1.000</td><td>0.986</td></tr>
+              <tr><th scope="row">subtotal / tax / total</th><td>1.000</td><td>1.000</td><td>1.000</td><td>1.000</td></tr>
             </tbody>
           </table>
         </div>
@@ -356,18 +355,18 @@
         <div class="grid grid-3" style="margin-top: 18px;">
           <div class="card">
             <h3 class="small">Review rate</h3>
-            <p class="badge badge-tbd">[TBD: measured]</p>
+            <p class="badge">1.6% held-out / 2.7% dev</p>
             <p class="muted small" style="margin-top:10px;">Share of fields routed to the review queue instead of auto-accepted.</p>
           </div>
           <div class="card">
             <h3 class="small">Source page accuracy</h3>
-            <p class="badge badge-tbd">[TBD: measured]</p>
+            <p class="badge">1.000 held-out / 0.997 dev</p>
             <p class="muted small" style="margin-top:10px;">Share of predicted fields whose cited page matches the labelled page.</p>
           </div>
           <div class="card">
             <h3 class="small">Review recall on errors</h3>
-            <p class="badge badge-tbd">[TBD: measured]</p>
-            <p class="muted small" style="margin-top:10px;">Share of wrong fields that the review queue caught before anyone used them.</p>
+            <p class="badge">3 of 3 (dev); 0 of 0 held-out</p>
+            <p class="muted small" style="margin-top:10px;">Wrong scalar fields caught by the review queue. Tiny sample: do not extrapolate a rate.</p>
           </div>
         </div>
 
@@ -482,8 +481,8 @@
     <div class="container">
       <div class="demo-note">
         <strong>Demo project.</strong> InvoiceLens is a portfolio project built entirely on synthetic documents.
-        No client data from any employer or engagement is used or referenced. All result figures on this page are
-        placeholders until a measured evaluation run is published.
+        No client data from any employer or engagement is used or referenced. Result figures on this page come from
+        a real run on synthetic documents (2026-10-17); real-world accuracy will differ.
       </div>
       <div class="footer-grid">
         <div>
