@@ -1,0 +1,99 @@
+{
+  "doc_id": "doc_034",
+  "doc_kind": "purchase_order",
+  "supplier_name": "Dyer, Potter and Mack",
+  "supplier_tax_id": "TAX-229592",
+  "document_number": "PO-60609",
+  "issue_date": "2026-06-03",
+  "due_date": "2026-06-17",
+  "currency": "AUD",
+  "line_items": [
+    {
+      "description": "Translation services",
+      "quantity": 9,
+      "unit_price": 294.36,
+      "amount": 2649.24
+    },
+    {
+      "description": "USB-C cables",
+      "quantity": 12,
+      "unit_price": 58.63,
+      "amount": 703.56
+    },
+    {
+      "description": "Support retainer",
+      "quantity": 16,
+      "unit_price": 17.39,
+      "amount": 278.24
+    },
+    {
+      "description": "Ergonomic chair",
+      "quantity": 11,
+      "unit_price": 458.05,
+      "amount": 5038.55
+    },
+    {
+      "description": "Support retainer",
+      "quantity": 3,
+      "unit_price": 319.52,
+      "amount": 958.56
+    },
+    {
+      "description": "Maintenance contract",
+      "quantity": 10,
+      "unit_price": 326.37,
+      "amount": 3263.7
+    },
+    {
+      "description": "Hardware purchase",
+      "quantity": 5,
+      "unit_price": 27.45,
+      "amount": 137.25
+    }
+  ],
+  "subtotal": 13029.1,
+  "tax_total": 2605.82,
+  "total": 15634.92,
+  "source_pages": {
+    "doc_kind": "p1",
+    "supplier_name": "p1",
+    "supplier_tax_id": "p1",
+    "document_number": "p1",
+    "issue_date": "p1",
+    "due_date": "p1",
+    "currency": "p1",
+    "line_items[0].description": "p1",
+    "line_items[0].quantity": "p1",
+    "line_items[0].unit_price": "p1",
+    "line_items[0].amount": "p1",
+    "line_items[1].description": "p1",
+    "line_items[1].quantity": "p1",
+    "line_items[1].unit_price": "p1",
+    "line_items[1].amount": "p1",
+    "line_items[2].description": "p1",
+    "line_items[2].quantity": "p1",
+    "line_items[2].unit_price": "p1",
+    "line_items[2].amount": "p1",
+    "line_items[3].description": "p1",
+    "line_items[3].quantity": "p1",
+    "line_items[3].unit_price": "p1",
+    "line_items[3].amount": "p1",
+    "line_items[4].description": "p1",
+    "line_items[4].quantity": "p1",
+    "line_items[4].unit_price": "p1",
+    "line_items[4].amount": "p1",
+    "line_items[5].description": "p1",
+    "line_items[5].quantity": "p1",
+    "line_items[5].unit_price": "p1",
+    "line_items[5].amount": "p1",
+    "line_items[6].description": "p1",
+    "line_items[6].quantity": "p1",
+    "line_items[6].unit_price": "p1",
+    "line_items[6].amount": "p1",
+    "subtotal": "p1",
+    "tax_total": "p1",
+    "total": "p1"
+  },
+  "inconsistent_total": false,
+  "ambiguous_numbers": false
+}

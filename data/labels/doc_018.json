@@ -1,0 +1,89 @@
+{
+  "doc_id": "doc_018",
+  "doc_kind": "invoice",
+  "supplier_name": "Adams, Zuniga and Wong",
+  "supplier_tax_id": "TAX-972335",
+  "document_number": "INV-56255",
+  "issue_date": "2026-08-11",
+  "due_date": "2026-10-10",
+  "currency": "EUR",
+  "line_items": [
+    {
+      "description": "Training workshop",
+      "quantity": 3,
+      "unit_price": 237.8,
+      "amount": 713.4
+    },
+    {
+      "description": "Ergonomic chair",
+      "quantity": 2,
+      "unit_price": 499.95,
+      "amount": 999.9
+    },
+    {
+      "description": "Translation services",
+      "quantity": 8,
+      "unit_price": 326.82,
+      "amount": 2614.56
+    },
+    {
+      "description": "USB-C cables",
+      "quantity": 2,
+      "unit_price": 378.35,
+      "amount": 756.7
+    },
+    {
+      "description": "Support retainer",
+      "quantity": 7,
+      "unit_price": 420.42,
+      "amount": 2942.94
+    },
+    {
+      "description": "Whiteboard markers",
+      "quantity": 5,
+      "unit_price": 123.08,
+      "amount": 615.4
+    }
+  ],
+  "subtotal": 8642.9,
+  "tax_total": 432.15,
+  "total": 9075.05,
+  "source_pages": {
+    "supplier_name": "Invoice",
+    "doc_kind": "Invoice",
+    "document_number": "Invoice",
+    "issue_date": "Invoice",
+    "currency": "Invoice",
+    "total": "Invoice",
+    "subtotal": "Invoice",
+    "due_date": "Invoice",
+    "supplier_tax_id": "Invoice",
+    "tax_total": "Invoice",
+    "line_items[0].description": "Invoice",
+    "line_items[0].quantity": "Invoice",
+    "line_items[0].unit_price": "Invoice",
+    "line_items[0].amount": "Invoice",
+    "line_items[1].description": "Invoice",
+    "line_items[1].quantity": "Invoice",
+    "line_items[1].unit_price": "Invoice",
+    "line_items[1].amount": "Invoice",
+    "line_items[2].description": "Invoice",
+    "line_items[2].quantity": "Invoice",
+    "line_items[2].unit_price": "Invoice",
+    "line_items[2].amount": "Invoice",
+    "line_items[3].description": "Invoice",
+    "line_items[3].quantity": "Invoice",
+    "line_items[3].unit_price": "Invoice",
+    "line_items[3].amount": "Invoice",
+    "line_items[4].description": "Invoice",
+    "line_items[4].quantity": "Invoice",
+    "line_items[4].unit_price": "Invoice",
+    "line_items[4].amount": "Invoice",
+    "line_items[5].description": "Invoice",
+    "line_items[5].quantity": "Invoice",
+    "line_items[5].unit_price": "Invoice",
+    "line_items[5].amount": "Invoice"
+  },
+  "inconsistent_total": false,
+  "ambiguous_numbers": false
+}

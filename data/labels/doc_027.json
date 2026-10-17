@@ -1,0 +1,79 @@
+{
+  "doc_id": "doc_027",
+  "doc_kind": "invoice",
+  "supplier_name": "Hoffman, Baker and Richards",
+  "supplier_tax_id": "TAX-668950",
+  "document_number": "INV-61552",
+  "issue_date": "2026-02-25",
+  "due_date": "2026-03-11",
+  "currency": "GBP",
+  "line_items": [
+    {
+      "description": "Security audit",
+      "quantity": 2,
+      "unit_price": 97.85,
+      "amount": 195.7
+    },
+    {
+      "description": "Translation services",
+      "quantity": 20,
+      "unit_price": 379.44,
+      "amount": 7588.8
+    },
+    {
+      "description": "USB-C cables",
+      "quantity": 15,
+      "unit_price": 381.2,
+      "amount": 5718.0
+    },
+    {
+      "description": "Cloud storage plan",
+      "quantity": 9,
+      "unit_price": 276.86,
+      "amount": 2491.74
+    },
+    {
+      "description": "Travel expenses",
+      "quantity": 15,
+      "unit_price": 441.02,
+      "amount": 6615.3
+    }
+  ],
+  "subtotal": 22609.54,
+  "tax_total": 1130.48,
+  "total": 23740.02,
+  "source_pages": {
+    "doc_kind": "p1",
+    "supplier_name": "p1",
+    "supplier_tax_id": "p1",
+    "document_number": "p1",
+    "issue_date": "p1",
+    "due_date": "p1",
+    "currency": "p1",
+    "line_items[0].description": "p1",
+    "line_items[0].quantity": "p1",
+    "line_items[0].unit_price": "p1",
+    "line_items[0].amount": "p1",
+    "line_items[1].description": "p1",
+    "line_items[1].quantity": "p1",
+    "line_items[1].unit_price": "p1",
+    "line_items[1].amount": "p1",
+    "line_items[2].description": "p1",
+    "line_items[2].quantity": "p1",
+    "line_items[2].unit_price": "p1",
+    "line_items[2].amount": "p1",
+    "line_items[3].description": "p1",
+    "line_items[3].quantity": "p1",
+    "line_items[3].unit_price": "p1",
+    "line_items[3].amount": "p1",
+    "line_items[4].description": "p1",
+    "line_items[4].quantity": "p1",
+    "line_items[4].unit_price": "p1",
+    "line_items[4].amount": "p1",
+    "subtotal": "p1",
+    "tax_total": "p1",
+    "total": "p1"
+  },
+  "inconsistent_total": false,
+  "ambiguous_numbers": false
+}

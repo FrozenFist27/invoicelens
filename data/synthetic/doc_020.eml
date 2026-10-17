@@ -1,0 +1,26 @@
+From: ap@supplier-demo.example
+To: accounting@buyer-demo.example
+Subject: Invoice INV-14833 from Gray-Mayo
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Please find our invoice below.
+
+Supplier: Gray-Mayo
+Document No: INV-14833
+Date: 09/21/2026
+Due: 11/20/2026
+Currency: USD
+
+Items:
+- Security audit x12 @ 319.61 = 3835.32
+- Maintenance contract x5 @ 220.57 = 1102.85
+- Laptop docking station x9 @ 309.88 = 2788.92
+- Ergonomic chair x16 @ 235.11 = 3761.76
+- Desk lamp x9 @ 164.54 = 1480.86
+- Support retainer x3 @ 143.07 = 429.21
+
+Subtotal: 13398.92
+Tax: 2679.78
+TOTAL: 16078.70

@@ -1,0 +1,25 @@
+From: ap@supplier-demo.example
+To: accounting@buyer-demo.example
+Subject: Purchase Order PO-80254 from Harris, Collins and Carney
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Please find our purchase order below.
+
+Supplier: Harris, Collins and Carney
+Document No: PO-80254
+Date: 09/14/2026
+Currency: AUD
+
+Items:
+- Network equipment x9 @ 30.83 = 277.47
+- Server rack x12 @ 279.50 = 3354.00
+- Hardware purchase x17 @ 426.33 = 7247.61
+- Travel expenses x3 @ 382.74 = 1148.22
+- Training workshop x15 @ 453.13 = 6796.95
+- Network equipment x14 @ 50.40 = 705.60
+- Support retainer x15 @ 442.89 = 6643.35
+
+Subtotal: 26173.20
+TOTAL: 26173.20

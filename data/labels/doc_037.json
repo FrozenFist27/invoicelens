@@ -1,0 +1,59 @@
+{
+  "doc_id": "doc_037",
+  "doc_kind": "invoice",
+  "supplier_name": "Baker, Mason and White",
+  "supplier_tax_id": "TAX-127032",
+  "document_number": "INV-18275",
+  "issue_date": "2026-09-09",
+  "due_date": "2026-09-23",
+  "currency": "EUR",
+  "line_items": [
+    {
+      "description": "Monthly hosting subscription",
+      "quantity": 12,
+      "unit_price": 396.04,
+      "amount": 4752.48
+    },
+    {
+      "description": "Support retainer",
+      "quantity": 19,
+      "unit_price": 165.27,
+      "amount": 3140.13
+    },
+    {
+      "description": "Office supplies",
+      "quantity": 9,
+      "unit_price": 30.94,
+      "amount": 278.46
+    }
+  ],
+  "subtotal": 8171.07,
+  "tax_total": 408.55,
+  "total": 8579.62,
+  "source_pages": {
+    "doc_kind": "p1",
+    "supplier_name": "p1",
+    "supplier_tax_id": "p1",
+    "document_number": "p1",
+    "issue_date": "p1",
+    "due_date": "p1",
+    "currency": "p1",
+    "line_items[0].description": "p1",
+    "line_items[0].quantity": "p1",
+    "line_items[0].unit_price": "p1",
+    "line_items[0].amount": "p1",
+    "line_items[1].description": "p1",
+    "line_items[1].quantity": "p1",
+    "line_items[1].unit_price": "p1",
+    "line_items[1].amount": "p1",
+    "line_items[2].description": "p1",
+    "line_items[2].quantity": "p1",
+    "line_items[2].unit_price": "p1",
+    "line_items[2].amount": "p1",
+    "subtotal": "p1",
+    "tax_total": "p1",
+    "total": "p1"
+  },
+  "inconsistent_total": false,
+  "ambiguous_numbers": false
+}

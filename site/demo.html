@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="InvoiceLens UI mockup — a static walkthrough of the upload, extraction, review queue, citations chat, run log and health screens, with synthetic sample data.">
+  <title>InvoiceLens — UI demo mockup</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html"><span class="brand-mark">IL</span>InvoiceLens</a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Overview</a>
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#results">Results</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a class="btn btn-ghost btn-sm" href="index.html#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="mock-banner">
+    <div class="container">
+      <div>
+        <strong>UI mockup — not a live application.</strong>
+        <span class="muted"> Static HTML with synthetic sample data. Nothing is uploaded, no AI is called,
+        and every figure below (timings, budgets, totals) is an illustrative sample — not a measurement.</span>
+      </div>
+      <button class="btn btn-ghost btn-sm btn-static" type="button" aria-disabled="true" title="Disabled in the static mockup">Upload a file</button>
+    </div>
+  </div>
+
+  <main class="app-shell">
+    <div class="app-window">
+
+      <div class="app-bar">
+        <div class="app-title"><span class="brand-mark">IL</span> InvoiceLens workspace</div>
+        <div class="app-meta">
+          <span class="badge badge-demo">Mock data</span>
+          <span class="badge badge-ok">Pipeline: ready</span>
+          <span class="badge">Demo caps: 2 MB · 3 pages · 20 docs/day</span>
+        </div>
+      </div>
+
+      <input class="tab-radio" type="radio" name="demo-tabs" id="tab-extract" checked>
+      <input class="tab-radio" type="radio" name="demo-tabs" id="tab-review">
+      <input class="tab-radio" type="radio" name="demo-tabs" id="tab-chat">
+      <input class="tab-radio" type="radio" name="demo-tabs" id="tab-run">
+      <input class="tab-radio" type="radio" name="demo-tabs" id="tab-health">
+
+      <div class="tab-labels" aria-label="Demo screens">
+        <label for="tab-extract">1 · Upload &amp; extract</label>
+        <label for="tab-review">2 · Review queue</label>
+        <label for="tab-chat">3 · Chat with citations</label>
+        <label for="tab-run">4 · Approvals &amp; run log</label>
+        <label for="tab-health">5 · Alerts &amp; health</label>
+      </div>
+
+      <div class="tab-panels">
+
+        <!-- ================= PANEL 1: EXTRACT ================= -->
+        <section class="tab-panel" id="panel-extract" aria-label="Upload and extracted fields">
+          <div class="panel-title">
+            <h2>Upload &amp; extracted fields</h2>
+            <div>
+              <span class="badge badge-info">doc: inv-20481</span>
+              <span class="badge">type: text_pdf</span>
+              <span class="badge badge-ok">status: auto-accepted</span>
+            </div>
+          </div>
+
+          <div class="dropzone">
+            <div class="dz-title">Drop a PDF, spreadsheet or .eml file</div>
+            <div class="dz-sub">Demo limits: 2 MB, 3 pages. Scanned pages are OCR'd locally.</div>
+            <button class="btn btn-primary btn-sm btn-static" type="button" aria-disabled="true" title="Static mockup">Choose file</button>
+            <div style="margin-top: 14px;">
+              <span class="badge">or use a sample document:</span><br>
+              <span class="file-chip">halcyon-inv-20481.pdf</span>
+              <span class="file-chip">copperfield-inv-20492.pdf (scan)</span>
+              <span class="file-chip">meridian-po-7781.xlsx</span>
+              <span class="file-chip">orders-thread.eml</span>
+            </div>
+          </div>
+
+          <h3 style="font-size: 1rem;">Sample result — halcyon-inv-20481.pdf</h3>
+          <p class="muted small">Each field shows its value, the source page, and the final confidence score (model confidence + source grounding + rule checks).</p>
+
+          <div class="field-list">
+            <div class="field-row">
+              <div class="field-name">supplier_name</div>
+              <div class="field-value">Halcyon Paper Co.<span class="src">[p1] “Halcyon Paper Co. — Unit 4, Canal Works”</span></div>
+              <div class="field-meta">
+                <span class="conf"><span class="conf-bar"><i style="width: 96%"></i></span>0.96</span>
+                <span class="badge badge-ok">ok</span>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field-name">supplier_tax_id</div>
+              <div class="field-value">GB482917322<span class="src">[p1] “VAT: GB482917322”</span></div>
+              <div class="field-meta">
+                <span class="conf"><span class="conf-bar"><i style="width: 94%"></i></span>0.94</span>
+                <span class="badge badge-ok">ok</span>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field-name">document_number</div>
+              <div class="field-value">INV-20481<span class="src">[p1] “Invoice No. INV-20481”</span></div>
+              <div class="field-meta">
+                <span class="conf"><span class="conf-bar"><i style="width: 98%"></i></span>0.98</span>
+                <span class="badge badge-ok">ok</span>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field-name">issue_date</div>
+              <div class="field-value">2026-03-04<span class="src">[p1] “4 March 2026” → normalised to ISO</span></div>
+              <div class="field-meta">
+                <span class="conf"><span class="conf-bar"><i style="width: 97%"></i></span>0.97</span>
+                <span class="badge badge-ok">ok</span>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field-name">due_date</div>
+              <div class="field-value">2026-04-03<span class="src">[p2] “Payable by 3 Apr 2026” (fuzzy ground)</span></div>
+              <div class="field-meta">
+                <span class="conf"><span class="conf-bar warn"><i style="width: 68%"></i></span>0.68</span>
+                <span class="badge badge-warn">needs review</span>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field-name">currency</div>
+              <div class="field-value">USD<span class="src">[p1] “Currency: USD”</span></div>
+              <div class="field-meta">
+                <span class="conf"><span class="conf-bar"><i style="width: 99%"></i></span>0.99</span>
+                <span class="badge badge-ok">ok</span>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field-name">subtotal</div>
+              <div class="field-value">538.60<span class="src">[p1] “Subtotal: 538.60” · sums match line items</span></div>
+              <div class="field-meta">
+                <span class="conf"><span class="conf-bar"><i style="width: 95%"></i></span>0.95</span>
+                <span class="badge badge-ok">ok</span>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field-name">tax_total</div>
+              <div class="field-value">44.43<span class="src">[p1] “Tax (8.25%): 44.43”</span></div>
+              <div class="field-meta">
+                <span class="conf"><span class="conf-bar"><i style="width: 93%"></i></span>0.93</span>
+                <span class="badge badge-ok">ok</span>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field-name">total</div>
+              <div class="field-value">583.03<span class="src">[p1] “Grand Total: USD 583.03” · subtotal + tax verified</span></div>
+              <div class="field-meta">
+                <span class="conf"><span class="conf-bar"><i style="width: 97%"></i></span>0.97</span>
+                <span class="badge badge-ok">ok</span>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="font-size: 1rem;">Line items</h3>
+          <div class="table-wrap" style="margin-bottom: 18px;">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Qty</th>
+                  <th scope="col">Unit price</th>
+                  <th scope="col">Amount</th>
+                  <th scope="col">Source</th>
+                  <th scope="col">Checks</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>A4 copy paper, 500 sheets</td>
+                  <td>12</td>
+                  <td>4.80</td>
+                  <td>57.60</td>
+                  <td class="field-name">[p1]</td>
+                  <td><span class="badge badge-ok">12 × 4.80 = 57.60</span></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Toner cartridge, high yield</td>
+                  <td>4</td>
+                  <td>89.00</td>
+                  <td>356.00</td>
+                  <td class="field-name">[p1]</td>
+                  <td><span class="badge badge-ok">4 × 89.00 = 356.00</span></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Archive boxes, pack of 10</td>
+                  <td>20</td>
+                  <td>6.25</td>
+                  <td>125.00</td>
+                  <td class="field-name">[p1]</td>
+                  <td><span class="badge badge-ok">20 × 6.25 = 125.00</span></td>
+                </tr>
+                <tr>
+                  <th scope="row" colspan="4">Subtotal / tax / total cross-check</th>
+                  <td>538.60 + 44.43</td>
+                  <td class="field-name">[p1]</td>
+                  <td><span class="badge badge-ok">= 583.03</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="small muted">
+            Output of a real run: <span class="field-name">out/inv-20481.json</span> and
+            <span class="field-name">out/inv-20481.csv</span> (one row per field, with
+            <span class="field-name">source_page</span> and <span class="field-name">source_link</span>).
+            In the live app, clicking a source chip opens the rendered page with the snippet highlighted.
+          </p>
+        </section>
+
+        <!-- ================= PANEL 2: REVIEW QUEUE ================= -->
+        <section class="tab-panel" id="panel-review" aria-label="Review queue">
+          <div class="panel-title">
+            <h2>Review queue</h2>
+            <div>
+              <span class="badge badge-warn">3 pending</span>
+              <span class="badge">threshold: 0.70</span>
+            </div>
+          </div>
+          <p class="muted small" style="margin-bottom: 16px;">
+            Only fields the system is unsure about appear here, with the suggested value, the failed checks
+            and the source snippet. Nothing was invented: the suggestion is the model's best reading, held back
+            from the output until a human decides.
+          </p>
+
+          <div class="review-list">
+            <article class="review-item">
+              <h3>INV-20492 · total <span class="badge badge-danger">arith_total</span></h3>
+              <dl class="review-grid">
+                <div>
+                  <dt>Suggested value</dt>
+                  <dd>1,250.00 (as printed)</dd>
+                </div>
+                <div>
+                  <dt>Confidence</dt>
+                  <dd><span class="conf"><span class="conf-bar bad"><i style="width: 42%"></i></span>0.42</span></dd>
+                </div>
+                <div>
+                  <dt>Issue</dt>
+                  <dd>Line items sum to 1,180.00 but the printed total is 1,250.00.</dd>
+                </div>
+                <div>
+                  <dt>Source</dt>
+                  <dd class="field-name">p1</dd>
+                </div>
+              </dl>
+              <p class="snippet">“Grand Total: USD 1,250.00” · lines: 640.00 + 310.00 + 230.00</p>
+              <p class="small muted" style="margin-bottom: 12px;">
+                The source document itself is inconsistent, so the pipeline kept the printed value and lowered
+                confidence instead of forcing the arithmetic. Two correction retries were attempted.
+              </p>
+              <div class="review-actions">
+                <button class="btn btn-primary btn-sm btn-static" type="button" aria-disabled="true">Accept as printed</button>
+                <button class="btn btn-ghost btn-sm btn-static" type="button" aria-disabled="true">Correct value…</button>
+                <button class="btn btn-ghost btn-sm btn-static" type="button" aria-disabled="true">Open source page</button>
+              </div>
+            </article>
+
+            <article class="review-item">
+              <h3>INV-20481 · due_date <span class="badge badge-warn">not_grounded</span></h3>
+              <dl class="review-grid">
+                <div>
+                  <dt>Suggested value</dt>
+                  <dd>2026-04-03</dd>
+                </div>
+                <div>
+                  <dt>Confidence</dt>
+                  <dd><span class="conf"><span class="conf-bar warn"><i style="width: 68%"></i></span>0.68</span></dd>
+                </div>
+                <div>
+                  <dt>Issue</dt>
+                  <dd>Found on page 2 in short form; fuzzy match 87% against page text.</dd>
+                </div>
+                <div>
+                  <dt>Source</dt>
+                  <dd class="field-name">p2</dd>
+                </div>
+              </dl>
+              <p class="snippet">“Payment terms: net 30 — payable by 3 Apr 2026”</p>
+              <div class="review-actions">
+                <button class="btn btn-primary btn-sm btn-static" type="button" aria-disabled="true">Accept</button>
+                <button class="btn btn-ghost btn-sm btn-static" type="button" aria-disabled="true">Correct value…</button>
+              </div>
+            </article>
+
+            <article class="review-item">
+              <h3>PO-7781 · currency <span class="badge badge-warn">currency_code</span></h3>
+              <dl class="review-grid">
+                <div>
+                  <dt>Suggested value</dt>
+                  <dd>EUR</dd>
+                </div>
+                <div>
+                  <dt>Confidence</dt>
+                  <dd><span class="conf"><span class="conf-bar warn"><i style="width: 55%"></i></span>0.55</span></dd>
+                </div>
+                <div>
+                  <dt>Issue</dt>
+                  <dd>Only a symbol found (€); no explicit ISO code in the spreadsheet.</dd>
+                </div>
+                <div>
+                  <dt>Source</dt>
+                  <dd class="field-name">Sheet1!D9</dd>
+                </div>
+              </dl>
+              <p class="snippet">Sheet1!D9 = “€2,140.00” · no “EUR” token anywhere in the sheet</p>
+              <div class="review-actions">
+                <button class="btn btn-primary btn-sm btn-static" type="button" aria-disabled="true">Accept EUR</button>
+                <button class="btn btn-ghost btn-sm btn-static" type="button" aria-disabled="true">Correct value…</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ================= PANEL 3: CHAT ================= -->
+        <section class="tab-panel" id="panel-chat" aria-label="Chat with citations">
+          <div class="panel-title">
+            <h2>Chat with citations</h2>
+            <div>
+              <span class="badge badge-demo">Mock conversation</span>
+              <span class="badge">answers grounded in extracted docs only</span>
+            </div>
+          </div>
+          <p class="muted small" style="margin-bottom: 16px;">
+            Ask questions across the documents this workspace has processed. Every claim carries a citation chip
+            pointing at the page it came from — the chat cannot answer from outside the processed set.
+          </p>
+
+          <div class="chat">
+            <div class="msg msg-user">
+              <span class="who">You</span>
+              Which documents have totals that don't add up?
+            </div>
+            <div class="msg msg-bot">
+              <span class="who">InvoiceLens</span>
+              One document: <strong>INV-20492</strong> (Copperfield Tools GmbH). The line items sum to 1,180.00,
+              but the printed grand total is 1,250.00 — a 70.00 discrepancy. The pipeline kept the printed value,
+              scored it 0.42, and sent it to the review queue rather than "fixing" the source.
+              <div class="cites">
+                <a class="cite" href="#panel-extract" title="Mock citation">INV-20492 · p1 · total</a>
+                <a class="cite" href="#panel-review" title="Mock citation">INV-20492 · p1 · line items</a>
+              </div>
+            </div>
+            <div class="msg msg-user">
+              <span class="who">You</span>
+              What is the total due on the Halcyon invoice, and by when?
+            </div>
+            <div class="msg msg-bot">
+              <span class="who">InvoiceLens</span>
+              <strong>USD 583.03</strong> on invoice INV-20481, payable by <strong>2026-04-03</strong>.
+              The arithmetic was verified: subtotal 538.60 + tax 44.43 = 583.03, and every line item
+              multiplies out. The due date came from the payment-terms line on page 2 and is currently
+              in the review queue at confidence 0.68.
+              <div class="cites">
+                <a class="cite" href="#panel-extract" title="Mock citation">INV-20481 · p1 · total</a>
+                <a class="cite" href="#panel-extract" title="Mock citation">INV-20481 · p1 · line items</a>
+                <a class="cite" href="#panel-review" title="Mock citation">INV-20481 · p2 · due_date</a>
+              </div>
+            </div>
+            <div class="msg msg-user">
+              <span class="who">You</span>
+              How many purchase orders are in this workspace?
+            </div>
+            <div class="msg msg-bot">
+              <span class="who">InvoiceLens</span>
+              One: <strong>PO-7781</strong> (Bright Meridian Logistics), read from a spreadsheet.
+              Its currency field (€ symbol, no ISO code) is awaiting review, so the document is not yet final.
+              <div class="cites">
+                <a class="cite" href="#panel-review" title="Mock citation">PO-7781 · Sheet1!D9 · currency</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= PANEL 4: APPROVALS & RUN LOG ================= -->
+        <section class="tab-panel" id="panel-run" aria-label="Approvals and run log">
+          <div class="panel-title">
+            <h2>Approval flow &amp; run log</h2>
+            <div>
+              <span class="badge badge-demo">Mock run</span>
+              <span class="badge">doc: inv-20481</span>
+            </div>
+          </div>
+          <p class="muted small" style="margin-bottom: 18px;">
+            Sample run of a text-PDF invoice through the full pipeline. Timings below are illustrative mock values,
+            not measurements — real runs write <span class="field-name">out/metrics.jsonl</span> with
+            token counts, dollar cost and stage timings.
+          </p>
+
+          <div class="grid grid-2">
+            <div class="card">
+              <h3 style="font-size: 1rem;">Approval flow</h3>
+              <div class="stepper">
+                <div class="step">
+                  <span class="step-dot">1</span>
+                  <div class="step-body">
+                    <strong>Extracted</strong>
+                    <span>LLM returned a schema-complete draft; 9 fields + 3 line items, each with a page citation.</span>
+                  </div>
+                </div>
+                <div class="step">
+                  <span class="step-dot">2</span>
+                  <div class="step-body">
+                    <strong>Validated</strong>
+                    <span>All arithmetic, date and currency checks passed on the first attempt. Grounding exact on 8 of 9 fields.</span>
+                  </div>
+                </div>
+                <div class="step">
+                  <span class="step-dot">3</span>
+                  <div class="step-body">
+                    <strong>Auto-accepted</strong>
+                    <span>8 fields with score ≥ 0.70 written to <span class="field-name">out/inv-20481.json</span> and CSV.</span>
+                  </div>
+                </div>
+                <div class="step">
+                  <span class="step-dot pending">4</span>
+                  <div class="step-body">
+                    <strong>Queued for review</strong>
+                    <span><span class="field-name">due_date</span> at 0.68 (fuzzy grounding on page 2).</span>
+                  </div>
+                </div>
+                <div class="step">
+                  <span class="step-dot muted-dot">5</span>
+                  <div class="step-body">
+                    <strong>Awaiting reviewer</strong>
+                    <span>Accept or correct; the final export includes the reviewer's decision in the audit trail.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3 style="font-size: 1rem;">Run log <span class="badge badge-tbd" style="vertical-align: middle;">sample values — mock</span></h3>
+              <div class="table-wrap" style="box-shadow: none;">
+                <table style="min-width: 0;">
+                  <thead>
+                    <tr>
+                      <th scope="col">Stage</th>
+                      <th scope="col">Detail</th>
+                      <th scope="col">ms</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>ingest</td><td>text_pdf · 2 pages · 3,410 chars</td><td class="field-name">120</td></tr>
+                    <tr><td>llm_extract</td><td>tool use · 1 call · temperature 0</td><td class="field-name">1,840</td></tr>
+                    <tr><td>validate</td><td>9 rules · 0 issues</td><td class="field-name">18</td></tr>
+                    <tr><td>correct</td><td>no retries needed</td><td class="field-name">0</td></tr>
+                    <tr><td>confidence</td><td>9 fields scored</td><td class="field-name">4</td></tr>
+                    <tr><td>write</td><td>JSON + CSV + metrics</td><td class="field-name">9</td></tr>
+                    <tr><th scope="row">total</th><td>doc inv-20481</td><td class="field-name">1,991</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="small muted" style="margin-top: 12px;">
+                Token usage and dollar cost are recorded per document alongside these timings
+                (fields: <span class="field-name">input_tokens</span>,
+                <span class="field-name">output_tokens</span>,
+                <span class="field-name">cost_usd</span>). The measured cost/time tables live on the
+                <a href="index.html#results">Results page</a> and stay as placeholders until the evaluation run.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= PANEL 5: ALERTS & HEALTH ================= -->
+        <section class="tab-panel" id="panel-health" aria-label="Alerts and health">
+          <div class="panel-title">
+            <h2>Alert feed &amp; health status</h2>
+            <div>
+              <span class="badge badge-demo">Mock data</span>
+              <span class="badge badge-ok">All systems nominal</span>
+            </div>
+          </div>
+          <p class="muted small" style="margin-bottom: 16px;">
+            Demo-mode guardrails and pipeline events, as an operator would see them. Sample counters —
+            the live demo resets them daily.
+          </p>
+
+          <div class="health-grid">
+            <div class="health-card">
+              <div class="h-label">Pipeline</div>
+              <div class="h-value" style="color: var(--ok);">Ready</div>
+              <div class="h-sub">Router, loaders, LLM client</div>
+            </div>
+            <div class="health-card">
+              <div class="h-label">OCR engine</div>
+              <div class="h-value">Tesseract 5</div>
+              <div class="h-sub">Local · no API cost</div>
+            </div>
+            <div class="health-card">
+              <div class="h-label">Demo budget today</div>
+              <div class="h-value">6 / 20 used</div>
+              <div class="h-sub">Global daily cap (sample)</div>
+            </div>
+            <div class="health-card">
+              <div class="h-label">Upload limits</div>
+              <div class="h-value">2 MB · 3 pages</div>
+              <div class="h-sub">Per-IP rate limit active</div>
+            </div>
+          </div>
+
+          <h3 style="font-size: 1rem;">Alert feed</h3>
+          <div class="alert-feed">
+            <div class="alert">
+              <span class="sev sev-warn">review</span>
+              <div>
+                <strong>INV-20492: arithmetic still failing after 2 retries.</strong>
+                <div class="muted">total vs line-item sum — 70.00 discrepancy; field routed to the review queue with the printed value preserved.</div>
+                <time>2026-10-16 09:14:02 · sample entry</time>
+              </div>
+            </div>
+            <div class="alert">
+              <span class="sev sev-danger">rejected</span>
+              <div>
+                <strong>Upload rejected: 3.1 MB exceeds the 2 MB demo cap.</strong>
+                <div class="muted">Client builds remove this cap and run entirely inside your environment.</div>
+                <time>2026-10-16 09:11:47 · sample entry</time>
+              </div>
+            </div>
+            <div class="alert">
+              <span class="sev sev-warn">ocr</span>
+              <div>
+                <strong>copperfield-inv-20492.pdf: low OCR word confidence on page 1 (mean 71).</strong>
+                <div class="muted">Confidence scores on that page were scaled down automatically before routing.</div>
+                <time>2026-10-16 09:09:31 · sample entry</time>
+              </div>
+            </div>
+            <div class="alert">
+              <span class="sev sev-info">info</span>
+              <div>
+                <strong>Sample document replayed from cache — zero LLM cost.</strong>
+                <div class="muted">The “sample documents” button on the live demo serves cached results so visitors can explore without spend.</div>
+                <time>2026-10-16 09:05:12 · sample entry</time>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div><!-- /tab-panels -->
+    </div><!-- /app-window -->
+
+    <p class="small muted" style="text-align: center; margin-top: 18px;">
+      This screen is a static product mockup for the InvoiceLens demo project.
+      See the <a href="index.html">overview page</a> for the architecture, honest results placeholders,
+      and fixed-scope build options.
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="demo-note">
+        <strong>Demo project.</strong> All companies, invoices, POs, snippets and timings on this page are
+        synthetic fabrications for UI illustration. No client data is used or referenced.
+      </div>
+      <div class="footer-bottom">
+        <span>MIT license · synthetic data only · built for a public portfolio</span>
+        <span><a href="index.html">InvoiceLens overview</a></span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

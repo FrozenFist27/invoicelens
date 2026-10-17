@@ -1,0 +1,109 @@
+{
+  "doc_id": "doc_029",
+  "doc_kind": "invoice",
+  "supplier_name": "Snyder, Campos and Callahan",
+  "supplier_tax_id": "TAX-437408",
+  "document_number": "INV-25727",
+  "issue_date": "2026-06-18",
+  "due_date": "2026-08-17",
+  "currency": "GBP",
+  "line_items": [
+    {
+      "description": "Support retainer",
+      "quantity": 19,
+      "unit_price": 194.57,
+      "amount": 3696.83
+    },
+    {
+      "description": "Security audit",
+      "quantity": 2,
+      "unit_price": 162.5,
+      "amount": 325.0
+    },
+    {
+      "description": "Server rack",
+      "quantity": 13,
+      "unit_price": 196.11,
+      "amount": 2549.43
+    },
+    {
+      "description": "Backup generator service",
+      "quantity": 5,
+      "unit_price": 250.19,
+      "amount": 1250.95
+    },
+    {
+      "description": "Annual software licence",
+      "quantity": 5,
+      "unit_price": 253.63,
+      "amount": 1268.15
+    },
+    {
+      "description": "Desk lamp",
+      "quantity": 11,
+      "unit_price": 435.5,
+      "amount": 4790.5
+    },
+    {
+      "description": "Maintenance contract",
+      "quantity": 4,
+      "unit_price": 265.35,
+      "amount": 1061.4
+    },
+    {
+      "description": "Maintenance contract",
+      "quantity": 1,
+      "unit_price": 362.61,
+      "amount": 362.61
+    }
+  ],
+  "subtotal": 15304.87,
+  "tax_total": 1530.49,
+  "total": 16832.11,
+  "source_pages": {
+    "supplier_name": "body",
+    "doc_kind": "body",
+    "document_number": "body",
+    "issue_date": "body",
+    "currency": "body",
+    "total": "body",
+    "subtotal": "body",
+    "due_date": "body",
+    "supplier_tax_id": "body",
+    "tax_total": "body",
+    "line_items[0].description": "body",
+    "line_items[0].quantity": "body",
+    "line_items[0].unit_price": "body",
+    "line_items[0].amount": "body",
+    "line_items[1].description": "body",
+    "line_items[1].quantity": "body",
+    "line_items[1].unit_price": "body",
+    "line_items[1].amount": "body",
+    "line_items[2].description": "body",
+    "line_items[2].quantity": "body",
+    "line_items[2].unit_price": "body",
+    "line_items[2].amount": "body",
+    "line_items[3].description": "body",
+    "line_items[3].quantity": "body",
+    "line_items[3].unit_price": "body",
+    "line_items[3].amount": "body",
+    "line_items[4].description": "body",
+    "line_items[4].quantity": "body",
+    "line_items[4].unit_price": "body",
+    "line_items[4].amount": "body",
+    "line_items[5].description": "body",
+    "line_items[5].quantity": "body",
+    "line_items[5].unit_price": "body",
+    "line_items[5].amount": "body",
+    "line_items[6].description": "body",
+    "line_items[6].quantity": "body",
+    "line_items[6].unit_price": "body",
+    "line_items[6].amount": "body",
+    "line_items[7].description": "body",
+    "line_items[7].quantity": "body",
+    "line_items[7].unit_price": "body",
+    "line_items[7].amount": "body"
+  },
+  "inconsistent_total": true,
+  "ambiguous_numbers": false
+}

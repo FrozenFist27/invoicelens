@@ -1,0 +1,89 @@
+{
+  "doc_id": "doc_021",
+  "doc_kind": "invoice",
+  "supplier_name": "Watts, Robinson and Nguyen",
+  "supplier_tax_id": "TAX-725113",
+  "document_number": "INV-92905",
+  "issue_date": "2026-08-07",
+  "due_date": "2026-09-21",
+  "currency": "EUR",
+  "line_items": [
+    {
+      "description": "Training workshop",
+      "quantity": 18,
+      "unit_price": 10.02,
+      "amount": 180.36
+    },
+    {
+      "description": "Cloud storage plan",
+      "quantity": 3,
+      "unit_price": 124.47,
+      "amount": 373.41
+    },
+    {
+      "description": "Security audit",
+      "quantity": 16,
+      "unit_price": 279.81,
+      "amount": 4476.96
+    },
+    {
+      "description": "Support retainer",
+      "quantity": 16,
+      "unit_price": 324.72,
+      "amount": 5195.52
+    },
+    {
+      "description": "Server rack",
+      "quantity": 15,
+      "unit_price": 397.5,
+      "amount": 5962.5
+    },
+    {
+      "description": "Consulting hours",
+      "quantity": 10,
+      "unit_price": 114.69,
+      "amount": 1146.9
+    }
+  ],
+  "subtotal": 17335.65,
+  "tax_total": 3120.42,
+  "total": 20456.07,
+  "source_pages": {
+    "doc_kind": "p1",
+    "supplier_name": "p1",
+    "supplier_tax_id": "p1",
+    "document_number": "p1",
+    "issue_date": "p1",
+    "due_date": "p1",
+    "currency": "p1",
+    "line_items[0].description": "p1",
+    "line_items[0].quantity": "p1",
+    "line_items[0].unit_price": "p1",
+    "line_items[0].amount": "p1",
+    "line_items[1].description": "p1",
+    "line_items[1].quantity": "p1",
+    "line_items[1].unit_price": "p1",
+    "line_items[1].amount": "p1",
+    "line_items[2].description": "p1",
+    "line_items[2].quantity": "p1",
+    "line_items[2].unit_price": "p1",
+    "line_items[2].amount": "p1",
+    "line_items[3].description": "p1",
+    "line_items[3].quantity": "p1",
+    "line_items[3].unit_price": "p1",
+    "line_items[3].amount": "p1",
+    "line_items[4].description": "p1",
+    "line_items[4].quantity": "p1",
+    "line_items[4].unit_price": "p1",
+    "line_items[4].amount": "p1",
+    "line_items[5].description": "p1",
+    "line_items[5].quantity": "p1",
+    "line_items[5].unit_price": "p1",
+    "line_items[5].amount": "p1",
+    "subtotal": "p1",
+    "tax_total": "p1",
+    "total": "p1"
+  },
+  "inconsistent_total": false,
+  "ambiguous_numbers": false
+}

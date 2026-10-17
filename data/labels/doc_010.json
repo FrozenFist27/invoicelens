@@ -1,0 +1,89 @@
+{
+  "doc_id": "doc_010",
+  "doc_kind": "invoice",
+  "supplier_name": "Blair PLC",
+  "supplier_tax_id": "TAX-548462",
+  "document_number": "INV-74519",
+  "issue_date": "2026-11-09",
+  "due_date": "2027-01-08",
+  "currency": "EUR",
+  "line_items": [
+    {
+      "description": "Monthly hosting subscription",
+      "quantity": 4,
+      "unit_price": 42.25,
+      "amount": 169.0
+    },
+    {
+      "description": "Network equipment",
+      "quantity": 18,
+      "unit_price": 22.83,
+      "amount": 410.94
+    },
+    {
+      "description": "Translation services",
+      "quantity": 19,
+      "unit_price": 278.5,
+      "amount": 5291.5
+    },
+    {
+      "description": "Security audit",
+      "quantity": 5,
+      "unit_price": 25.71,
+      "amount": 128.55
+    },
+    {
+      "description": "Translation services",
+      "quantity": 2,
+      "unit_price": 449.97,
+      "amount": 899.94
+    },
+    {
+      "description": "Cloud storage plan",
+      "quantity": 8,
+      "unit_price": 335.13,
+      "amount": 2681.04
+    }
+  ],
+  "subtotal": 9580.97,
+  "tax_total": 1916.19,
+  "total": 11497.16,
+  "source_pages": {
+    "supplier_name": "Invoice",
+    "doc_kind": "Invoice",
+    "document_number": "Invoice",
+    "issue_date": "Invoice",
+    "currency": "Invoice",
+    "total": "Invoice",
+    "subtotal": "Invoice",
+    "due_date": "Invoice",
+    "supplier_tax_id": "Invoice",
+    "tax_total": "Invoice",
+    "line_items[0].description": "Invoice",
+    "line_items[0].quantity": "Invoice",
+    "line_items[0].unit_price": "Invoice",
+    "line_items[0].amount": "Invoice",
+    "line_items[1].description": "Invoice",
+    "line_items[1].quantity": "Invoice",
+    "line_items[1].unit_price": "Invoice",
+    "line_items[1].amount": "Invoice",
+    "line_items[2].description": "Invoice",
+    "line_items[2].quantity": "Invoice",
+    "line_items[2].unit_price": "Invoice",
+    "line_items[2].amount": "Invoice",
+    "line_items[3].description": "Invoice",
+    "line_items[3].quantity": "Invoice",
+    "line_items[3].unit_price": "Invoice",
+    "line_items[3].amount": "Invoice",
+    "line_items[4].description": "Invoice",
+    "line_items[4].quantity": "Invoice",
+    "line_items[4].unit_price": "Invoice",
+    "line_items[4].amount": "Invoice",
+    "line_items[5].description": "Invoice",
+    "line_items[5].quantity": "Invoice",
+    "line_items[5].unit_price": "Invoice",
+    "line_items[5].amount": "Invoice"
+  },
+  "inconsistent_total": false,
+  "ambiguous_numbers": false
+}

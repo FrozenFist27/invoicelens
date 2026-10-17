@@ -1,0 +1,29 @@
+From: ap@supplier-demo.example
+To: accounting@buyer-demo.example
+Subject: Invoice INV-7734 from Morales-Jones
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Please find our invoice below.
+
+Supplier: Morales-Jones
+Tax ID: TAX-293319
+Document No: INV-7734
+Date: 2026-01-19
+Due: 2026-03-20
+Currency: USD
+
+Items:
+- Training workshop x16 @ 61.47 = 983.52
+- Consulting hours x13 @ 248.41 = 3229.33
+- Desk lamp x2 @ 80.10 = 160.20
+- Desk lamp x10 @ 47.16 = 471.60
+- Support retainer x4 @ 281.25 = 1125.00
+- Security audit x20 @ 300.08 = 6001.60
+- Whiteboard markers x8 @ 388.97 = 3111.76
+- Data plan x15 @ 454.71 = 6820.65
+
+Subtotal: 21903.66
+Tax: 4380.73
+TOTAL: 26284.39

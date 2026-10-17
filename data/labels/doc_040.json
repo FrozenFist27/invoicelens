@@ -1,0 +1,99 @@
+{
+  "doc_id": "doc_040",
+  "doc_kind": "invoice",
+  "supplier_name": "Ryan PLC",
+  "supplier_tax_id": "TAX-323072",
+  "document_number": "INV-21280",
+  "issue_date": "2026-05-20",
+  "due_date": "2026-06-03",
+  "currency": "USD",
+  "line_items": [
+    {
+      "description": "Backup generator service",
+      "quantity": 16,
+      "unit_price": 116.0,
+      "amount": 1856.0
+    },
+    {
+      "description": "Hardware purchase",
+      "quantity": 12,
+      "unit_price": 423.46,
+      "amount": 5081.52
+    },
+    {
+      "description": "Translation services",
+      "quantity": 4,
+      "unit_price": 382.49,
+      "amount": 1529.96
+    },
+    {
+      "description": "Desk lamp",
+      "quantity": 8,
+      "unit_price": 404.57,
+      "amount": 3236.56
+    },
+    {
+      "description": "Ergonomic chair",
+      "quantity": 20,
+      "unit_price": 308.72,
+      "amount": 6174.4
+    },
+    {
+      "description": "USB-C cables",
+      "quantity": 18,
+      "unit_price": 18.0,
+      "amount": 324.0
+    },
+    {
+      "description": "Backup generator service",
+      "quantity": 9,
+      "unit_price": 19.33,
+      "amount": 173.97
+    }
+  ],
+  "subtotal": 18376.41,
+  "tax_total": 3307.75,
+  "total": 21684.16,
+  "source_pages": {
+    "doc_kind": "p1",
+    "supplier_name": "p1",
+    "supplier_tax_id": "p1",
+    "document_number": "p1",
+    "issue_date": "p1",
+    "due_date": "p1",
+    "currency": "p1",
+    "line_items[0].description": "p1",
+    "line_items[0].quantity": "p1",
+    "line_items[0].unit_price": "p1",
+    "line_items[0].amount": "p1",
+    "line_items[1].description": "p1",
+    "line_items[1].quantity": "p1",
+    "line_items[1].unit_price": "p1",
+    "line_items[1].amount": "p1",
+    "line_items[2].description": "p1",
+    "line_items[2].quantity": "p1",
+    "line_items[2].unit_price": "p1",
+    "line_items[2].amount": "p1",
+    "line_items[3].description": "p1",
+    "line_items[3].quantity": "p1",
+    "line_items[3].unit_price": "p1",
+    "line_items[3].amount": "p1",
+    "line_items[4].description": "p1",
+    "line_items[4].quantity": "p1",
+    "line_items[4].unit_price": "p1",
+    "line_items[4].amount": "p1",
+    "line_items[5].description": "p1",
+    "line_items[5].quantity": "p1",
+    "line_items[5].unit_price": "p1",
+    "line_items[5].amount": "p1",
+    "line_items[6].description": "p1",
+    "line_items[6].quantity": "p1",
+    "line_items[6].unit_price": "p1",
+    "line_items[6].amount": "p1",
+    "subtotal": "p1",
+    "tax_total": "p1",
+    "total": "p1"
+  },
+  "inconsistent_total": false,
+  "ambiguous_numbers": false
+}

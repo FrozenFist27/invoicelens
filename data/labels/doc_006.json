@@ -1,0 +1,68 @@
+{
+  "doc_id": "doc_006",
+  "doc_kind": "purchase_order",
+  "supplier_name": "Blake and Sons",
+  "supplier_tax_id": null,
+  "document_number": "PO-22579",
+  "issue_date": "2026-07-16",
+  "due_date": "2026-09-14",
+  "currency": "EUR",
+  "line_items": [
+    {
+      "description": "Data plan",
+      "quantity": 1,
+      "unit_price": 492.73,
+      "amount": 492.73
+    },
+    {
+      "description": "Training workshop",
+      "quantity": 15,
+      "unit_price": 146.2,
+      "amount": 2193.0
+    },
+    {
+      "description": "Ergonomic chair",
+      "quantity": 16,
+      "unit_price": 81.62,
+      "amount": 1305.92
+    },
+    {
+      "description": "Travel expenses",
+      "quantity": 7,
+      "unit_price": 484.51,
+      "amount": 3391.57
+    }
+  ],
+  "subtotal": 7383.22,
+  "tax_total": 369.16,
+  "total": 7752.38,
+  "source_pages": {
+    "supplier_name": "Invoice",
+    "doc_kind": "Invoice",
+    "document_number": "Invoice",
+    "issue_date": "Invoice",
+    "currency": "Invoice",
+    "total": "Invoice",
+    "subtotal": "Invoice",
+    "due_date": "Invoice",
+    "tax_total": "Invoice",
+    "line_items[0].description": "Invoice",
+    "line_items[0].quantity": "Invoice",
+    "line_items[0].unit_price": "Invoice",
+    "line_items[0].amount": "Invoice",
+    "line_items[1].description": "Invoice",
+    "line_items[1].quantity": "Invoice",
+    "line_items[1].unit_price": "Invoice",
+    "line_items[1].amount": "Invoice",
+    "line_items[2].description": "Invoice",
+    "line_items[2].quantity": "Invoice",
+    "line_items[2].unit_price": "Invoice",
+    "line_items[2].amount": "Invoice",
+    "line_items[3].description": "Invoice",
+    "line_items[3].quantity": "Invoice",
+    "line_items[3].unit_price": "Invoice",
+    "line_items[3].amount": "Invoice"
+  },
+  "inconsistent_total": false,
+  "ambiguous_numbers": true
+}

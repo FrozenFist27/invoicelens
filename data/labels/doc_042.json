@@ -1,0 +1,77 @@
+{
+  "doc_id": "doc_042",
+  "doc_kind": "invoice",
+  "supplier_name": "Rodriguez LLC",
+  "supplier_tax_id": "TAX-314353",
+  "document_number": "INV-40507",
+  "issue_date": "2026-04-13",
+  "due_date": null,
+  "currency": "USD",
+  "line_items": [
+    {
+      "description": "Cloud storage plan",
+      "quantity": 5,
+      "unit_price": 383.26,
+      "amount": 1916.3
+    },
+    {
+      "description": "Travel expenses",
+      "quantity": 11,
+      "unit_price": 64.39,
+      "amount": 708.29
+    },
+    {
+      "description": "Server rack",
+      "quantity": 14,
+      "unit_price": 91.97,
+      "amount": 1287.58
+    },
+    {
+      "description": "Data plan",
+      "quantity": 18,
+      "unit_price": 353.32,
+      "amount": 6359.76
+    },
+    {
+      "description": "Laptop docking station",
+      "quantity": 18,
+      "unit_price": 417.51,
+      "amount": 7515.18
+    }
+  ],
+  "subtotal": 17787.11,
+  "tax_total": null,
+  "total": 17792.11,
+  "source_pages": {
+    "doc_kind": "p1",
+    "supplier_name": "p1",
+    "supplier_tax_id": "p1",
+    "document_number": "p1",
+    "issue_date": "p1",
+    "currency": "p1",
+    "line_items[0].description": "p1",
+    "line_items[0].quantity": "p1",
+    "line_items[0].unit_price": "p1",
+    "line_items[0].amount": "p1",
+    "line_items[1].description": "p1",
+    "line_items[1].quantity": "p1",
+    "line_items[1].unit_price": "p1",
+    "line_items[1].amount": "p1",
+    "line_items[2].description": "p1",
+    "line_items[2].quantity": "p1",
+    "line_items[2].unit_price": "p1",
+    "line_items[2].amount": "p1",
+    "line_items[3].description": "p1",
+    "line_items[3].quantity": "p1",
+    "line_items[3].unit_price": "p1",
+    "line_items[3].amount": "p1",
+    "line_items[4].description": "p1",
+    "line_items[4].quantity": "p1",
+    "line_items[4].unit_price": "p1",
+    "line_items[4].amount": "p1",
+    "subtotal": "p1",
+    "total": "p1"
+  },
+  "inconsistent_total": true,
+  "ambiguous_numbers": false
+}

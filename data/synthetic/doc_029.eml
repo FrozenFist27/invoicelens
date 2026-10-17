@@ -1,0 +1,29 @@
+From: ap@supplier-demo.example
+To: accounting@buyer-demo.example
+Subject: Invoice INV-25727 from Snyder, Campos and Callahan
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Please find our invoice below.
+
+Supplier: Snyder, Campos and Callahan
+Tax ID: TAX-437408
+Document No: INV-25727
+Date: 18 June 2026
+Due: 17 August 2026
+Currency: GBP
+
+Items:
+- Support retainer x19 @ 194.57 = 3696.83
+- Security audit x2 @ 162.50 = 325.00
+- Server rack x13 @ 196.11 = 2549.43
+- Backup generator service x5 @ 250.19 = 1250.95
+- Annual software licence x5 @ 253.63 = 1268.15
+- Desk lamp x11 @ 435.50 = 4790.50
+- Maintenance contract x4 @ 265.35 = 1061.40
+- Maintenance contract x1 @ 362.61 = 362.61
+
+Subtotal: 15304.87
+Tax: 1530.49
+TOTAL: 16832.11

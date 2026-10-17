@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "invoicelens"
+version = "0.1.0"
+description = "Invoice & PO extraction pipeline: validated JSON with per-field source tracing and measured accuracy."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic>=0.40",
+    "pydantic>=2.5",
+    "pydantic-settings>=2.1",
+    "pymupdf>=1.24",
+    "pytesseract>=0.3.10",
+    "pillow>=10.0",
+    "openpyxl>=3.1",
+    "typer>=0.12",
+    "fastapi>=0.110",
+    "uvicorn>=0.27",
+    "jinja2>=3.1",
+    "python-multipart>=0.0.9",
+    "rapidfuzz>=3.6",
+    "faker>=24.0",
+    "reportlab>=4.0",
+    "pyyaml>=6.0",
+    "python-dateutil>=2.8",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-cov>=4.1", "ruff>=0.3"]
+
+[project.scripts]
+invoicelens = "invoicelens.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+markers = [
+    "live: hits the real Anthropic API (skipped unless ANTHROPIC_API_KEY set)",
+]
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests", "eval", "scripts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+ignore = ["E501"]

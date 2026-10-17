@@ -1,0 +1,88 @@
+{
+  "doc_id": "doc_022",
+  "doc_kind": "invoice",
+  "supplier_name": "Perez Inc",
+  "supplier_tax_id": null,
+  "document_number": "INV-42359",
+  "issue_date": "2026-05-10",
+  "due_date": "2026-05-24",
+  "currency": "INR",
+  "line_items": [
+    {
+      "description": "Hardware purchase",
+      "quantity": 18,
+      "unit_price": 475.68,
+      "amount": 8562.24
+    },
+    {
+      "description": "Office supplies",
+      "quantity": 7,
+      "unit_price": 112.11,
+      "amount": 784.77
+    },
+    {
+      "description": "Server rack",
+      "quantity": 9,
+      "unit_price": 363.67,
+      "amount": 3273.03
+    },
+    {
+      "description": "Laptop docking station",
+      "quantity": 20,
+      "unit_price": 145.08,
+      "amount": 2901.6
+    },
+    {
+      "description": "Hardware purchase",
+      "quantity": 7,
+      "unit_price": 151.64,
+      "amount": 1061.48
+    },
+    {
+      "description": "Translation services",
+      "quantity": 6,
+      "unit_price": 154.62,
+      "amount": 927.72
+    }
+  ],
+  "subtotal": 17510.84,
+  "tax_total": 1751.08,
+  "total": 19261.92,
+  "source_pages": {
+    "supplier_name": "Invoice",
+    "doc_kind": "Invoice",
+    "document_number": "Invoice",
+    "issue_date": "Invoice",
+    "currency": "Invoice",
+    "total": "Invoice",
+    "subtotal": "Invoice",
+    "due_date": "Invoice",
+    "tax_total": "Invoice",
+    "line_items[0].description": "Invoice",
+    "line_items[0].quantity": "Invoice",
+    "line_items[0].unit_price": "Invoice",
+    "line_items[0].amount": "Invoice",
+    "line_items[1].description": "Invoice",
+    "line_items[1].quantity": "Invoice",
+    "line_items[1].unit_price": "Invoice",
+    "line_items[1].amount": "Invoice",
+    "line_items[2].description": "Invoice",
+    "line_items[2].quantity": "Invoice",
+    "line_items[2].unit_price": "Invoice",
+    "line_items[2].amount": "Invoice",
+    "line_items[3].description": "Invoice",
+    "line_items[3].quantity": "Invoice",
+    "line_items[3].unit_price": "Invoice",
+    "line_items[3].amount": "Invoice",
+    "line_items[4].description": "Invoice",
+    "line_items[4].quantity": "Invoice",
+    "line_items[4].unit_price": "Invoice",
+    "line_items[4].amount": "Invoice",
+    "line_items[5].description": "Invoice",
+    "line_items[5].quantity": "Invoice",
+    "line_items[5].unit_price": "Invoice",
+    "line_items[5].amount": "Invoice"
+  },
+  "inconsistent_total": false,
+  "ambiguous_numbers": false
+}

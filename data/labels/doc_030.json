@@ -1,0 +1,98 @@
+{
+  "doc_id": "doc_030",
+  "doc_kind": "purchase_order",
+  "supplier_name": "Burton Ltd",
+  "supplier_tax_id": "TAX-667296",
+  "document_number": "PO-5705",
+  "issue_date": "2026-11-23",
+  "due_date": null,
+  "currency": "GBP",
+  "line_items": [
+    {
+      "description": "Whiteboard markers",
+      "quantity": 3,
+      "unit_price": 121.21,
+      "amount": 363.63
+    },
+    {
+      "description": "Backup generator service",
+      "quantity": 10,
+      "unit_price": 498.73,
+      "amount": 4987.3
+    },
+    {
+      "description": "Consulting hours",
+      "quantity": 14,
+      "unit_price": 489.28,
+      "amount": 6849.92
+    },
+    {
+      "description": "USB-C cables",
+      "quantity": 4,
+      "unit_price": 224.62,
+      "amount": 898.48
+    },
+    {
+      "description": "Travel expenses",
+      "quantity": 1,
+      "unit_price": 27.77,
+      "amount": 27.77
+    },
+    {
+      "description": "Annual software licence",
+      "quantity": 10,
+      "unit_price": 182.44,
+      "amount": 1824.4
+    },
+    {
+      "description": "Security audit",
+      "quantity": 5,
+      "unit_price": 125.88,
+      "amount": 629.4
+    }
+  ],
+  "subtotal": 15580.9,
+  "tax_total": 1558.09,
+  "total": 17138.99,
+  "source_pages": {
+    "supplier_name": "body",
+    "doc_kind": "body",
+    "document_number": "body",
+    "issue_date": "body",
+    "currency": "body",
+    "total": "body",
+    "subtotal": "body",
+    "supplier_tax_id": "body",
+    "tax_total": "body",
+    "line_items[0].description": "body",
+    "line_items[0].quantity": "body",
+    "line_items[0].unit_price": "body",
+    "line_items[0].amount": "body",
+    "line_items[1].description": "body",
+    "line_items[1].quantity": "body",
+    "line_items[1].unit_price": "body",
+    "line_items[1].amount": "body",
+    "line_items[2].description": "body",
+    "line_items[2].quantity": "body",
+    "line_items[2].unit_price": "body",
+    "line_items[2].amount": "body",
+    "line_items[3].description": "body",
+    "line_items[3].quantity": "body",
+    "line_items[3].unit_price": "body",
+    "line_items[3].amount": "body",
+    "line_items[4].description": "body",
+    "line_items[4].quantity": "body",
+    "line_items[4].unit_price": "body",
+    "line_items[4].amount": "body",
+    "line_items[5].description": "body",
+    "line_items[5].quantity": "body",
+    "line_items[5].unit_price": "body",
+    "line_items[5].amount": "body",
+    "line_items[6].description": "body",
+    "line_items[6].quantity": "body",
+    "line_items[6].unit_price": "body",
+    "line_items[6].amount": "body"
+  },
+  "inconsistent_total": false,
+  "ambiguous_numbers": true
+}

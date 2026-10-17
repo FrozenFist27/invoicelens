@@ -1,0 +1,88 @@
+{
+  "doc_id": "doc_015",
+  "doc_kind": "invoice",
+  "supplier_name": "Galloway-Wyatt",
+  "supplier_tax_id": "TAX-148458",
+  "document_number": "INV-33092",
+  "issue_date": "2026-04-22",
+  "due_date": "2026-05-22",
+  "currency": "USD",
+  "line_items": [
+    {
+      "description": "Server rack",
+      "quantity": 20,
+      "unit_price": 425.62,
+      "amount": 8512.4
+    },
+    {
+      "description": "Consulting hours",
+      "quantity": 15,
+      "unit_price": 210.15,
+      "amount": 3152.25
+    },
+    {
+      "description": "USB-C cables",
+      "quantity": 19,
+      "unit_price": 101.25,
+      "amount": 1923.75
+    },
+    {
+      "description": "Data plan",
+      "quantity": 16,
+      "unit_price": 202.83,
+      "amount": 3245.28
+    },
+    {
+      "description": "Network equipment",
+      "quantity": 1,
+      "unit_price": 446.87,
+      "amount": 446.87
+    },
+    {
+      "description": "Hardware purchase",
+      "quantity": 14,
+      "unit_price": 113.33,
+      "amount": 1586.62
+    }
+  ],
+  "subtotal": 18867.17,
+  "tax_total": null,
+  "total": 18867.17,
+  "source_pages": {
+    "supplier_name": "body",
+    "doc_kind": "body",
+    "document_number": "body",
+    "issue_date": "body",
+    "currency": "body",
+    "total": "body",
+    "subtotal": "body",
+    "due_date": "body",
+    "supplier_tax_id": "body",
+    "line_items[0].description": "body",
+    "line_items[0].quantity": "body",
+    "line_items[0].unit_price": "body",
+    "line_items[0].amount": "body",
+    "line_items[1].description": "body",
+    "line_items[1].quantity": "body",
+    "line_items[1].unit_price": "body",
+    "line_items[1].amount": "body",
+    "line_items[2].description": "body",
+    "line_items[2].quantity": "body",
+    "line_items[2].unit_price": "body",
+    "line_items[2].amount": "body",
+    "line_items[3].description": "body",
+    "line_items[3].quantity": "body",
+    "line_items[3].unit_price": "body",
+    "line_items[3].amount": "body",
+    "line_items[4].description": "body",
+    "line_items[4].quantity": "body",
+    "line_items[4].unit_price": "body",
+    "line_items[4].amount": "body",
+    "line_items[5].description": "body",
+    "line_items[5].quantity": "body",
+    "line_items[5].unit_price": "body",
+    "line_items[5].amount": "body"
+  },
+  "inconsistent_total": false,
+  "ambiguous_numbers": false
+}

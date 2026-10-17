@@ -1,0 +1,59 @@
+{
+  "doc_id": "doc_026",
+  "doc_kind": "purchase_order",
+  "supplier_name": "Baker and Sons",
+  "supplier_tax_id": "TAX-713762",
+  "document_number": "PO-58132",
+  "issue_date": "2026-09-21",
+  "due_date": "2026-11-05",
+  "currency": "INR",
+  "line_items": [
+    {
+      "description": "USB-C cables",
+      "quantity": 16,
+      "unit_price": 484.68,
+      "amount": 7754.88
+    },
+    {
+      "description": "Server rack",
+      "quantity": 12,
+      "unit_price": 207.13,
+      "amount": 2485.56
+    },
+    {
+      "description": "Printing services",
+      "quantity": 4,
+      "unit_price": 429.58,
+      "amount": 1718.32
+    }
+  ],
+  "subtotal": 11958.76,
+  "tax_total": 2391.75,
+  "total": 14350.51,
+  "source_pages": {
+    "supplier_name": "Invoice",
+    "doc_kind": "Invoice",
+    "document_number": "Invoice",
+    "issue_date": "Invoice",
+    "currency": "Invoice",
+    "total": "Invoice",
+    "subtotal": "Invoice",
+    "due_date": "Invoice",
+    "supplier_tax_id": "Invoice",
+    "tax_total": "Invoice",
+    "line_items[0].description": "Invoice",
+    "line_items[0].quantity": "Invoice",
+    "line_items[0].unit_price": "Invoice",
+    "line_items[0].amount": "Invoice",
+    "line_items[1].description": "Invoice",
+    "line_items[1].quantity": "Invoice",
+    "line_items[1].unit_price": "Invoice",
+    "line_items[1].amount": "Invoice",
+    "line_items[2].description": "Invoice",
+    "line_items[2].quantity": "Invoice",
+    "line_items[2].unit_price": "Invoice",
+    "line_items[2].amount": "Invoice"
+  },
+  "inconsistent_total": false,
+  "ambiguous_numbers": false
+}

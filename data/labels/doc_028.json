@@ -1,0 +1,98 @@
+{
+  "doc_id": "doc_028",
+  "doc_kind": "invoice",
+  "supplier_name": "Ross, Robinson and Bright",
+  "supplier_tax_id": "TAX-223172",
+  "document_number": "INV-85896",
+  "issue_date": "2026-04-27",
+  "due_date": null,
+  "currency": "USD",
+  "line_items": [
+    {
+      "description": "Network equipment",
+      "quantity": 16,
+      "unit_price": 466.66,
+      "amount": 7466.56
+    },
+    {
+      "description": "Travel expenses",
+      "quantity": 17,
+      "unit_price": 354.18,
+      "amount": 6021.06
+    },
+    {
+      "description": "Security audit",
+      "quantity": 16,
+      "unit_price": 490.22,
+      "amount": 7843.52
+    },
+    {
+      "description": "Support retainer",
+      "quantity": 15,
+      "unit_price": 277.88,
+      "amount": 4168.2
+    },
+    {
+      "description": "Data plan",
+      "quantity": 7,
+      "unit_price": 461.32,
+      "amount": 3229.24
+    },
+    {
+      "description": "Laptop docking station",
+      "quantity": 5,
+      "unit_price": 432.69,
+      "amount": 2163.45
+    },
+    {
+      "description": "Training workshop",
+      "quantity": 14,
+      "unit_price": 173.24,
+      "amount": 2425.36
+    }
+  ],
+  "subtotal": 33317.39,
+  "tax_total": 5997.13,
+  "total": 39314.52,
+  "source_pages": {
+    "doc_kind": "p1",
+    "supplier_name": "p1",
+    "supplier_tax_id": "p1",
+    "document_number": "p1",
+    "issue_date": "p1",
+    "currency": "p1",
+    "line_items[0].description": "p1",
+    "line_items[0].quantity": "p1",
+    "line_items[0].unit_price": "p1",
+    "line_items[0].amount": "p1",
+    "line_items[1].description": "p1",
+    "line_items[1].quantity": "p1",
+    "line_items[1].unit_price": "p1",
+    "line_items[1].amount": "p1",
+    "line_items[2].description": "p1",
+    "line_items[2].quantity": "p1",
+    "line_items[2].unit_price": "p1",
+    "line_items[2].amount": "p1",
+    "line_items[3].description": "p1",
+    "line_items[3].quantity": "p1",
+    "line_items[3].unit_price": "p1",
+    "line_items[3].amount": "p1",
+    "line_items[4].description": "p1",
+    "line_items[4].quantity": "p1",
+    "line_items[4].unit_price": "p1",
+    "line_items[4].amount": "p1",
+    "line_items[5].description": "p1",
+    "line_items[5].quantity": "p1",
+    "line_items[5].unit_price": "p1",
+    "line_items[5].amount": "p1",
+    "line_items[6].description": "p1",
+    "line_items[6].quantity": "p1",
+    "line_items[6].unit_price": "p1",
+    "line_items[6].amount": "p1",
+    "subtotal": "p1",
+    "tax_total": "p1",
+    "total": "p1"
+  },
+  "inconsistent_total": false,
+  "ambiguous_numbers": false
+}

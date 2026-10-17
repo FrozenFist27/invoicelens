@@ -1,0 +1,28 @@
+From: ap@supplier-demo.example
+To: accounting@buyer-demo.example
+Subject: Invoice INV-54354 from Gardner, Robinson and Lawrence
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Please find our invoice below.
+
+Supplier: Gardner, Robinson and Lawrence
+Tax ID: TAX-595948
+Document No: INV-54354
+Date: 2026-09-05
+Due: 2026-11-04
+Currency: EUR
+
+Items:
+- Cloud storage plan x4 @ 52,98 = 211,92
+- Security audit x12 @ 214,67 = 2.576,04
+- Maintenance contract x2 @ 338,32 = 676,64
+- USB-C cables x4 @ 35,00 = 140,00
+- Printing services x4 @ 128,08 = 512,32
+- Cloud storage plan x18 @ 227,06 = 4.087,08
+- Security audit x6 @ 142,88 = 857,28
+- Support retainer x3 @ 224,35 = 673,05
+
+Subtotal: 9.734,33
+TOTAL: 9.734,33

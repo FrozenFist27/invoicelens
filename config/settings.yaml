@@ -1,0 +1,21 @@
+review_threshold: 0.7
+max_retries: 2
+max_prompt_tokens: 12000
+ocr_min_chars_per_page: 50
+ocr_dpi: 300
+temperature: 0.0
+max_tokens: 4000
+# confidence weights (heuristics, not tuned on held-out data)
+confidence_weights:
+  llm: 0.5
+  grounding: 0.3
+  rules: 0.2
+grounding:
+  exact: 1.0
+  fuzzy: 0.6
+  none: 0.0
+  fuzzy_threshold: 85  # rapidfuzz ratio for OCR pages
+demo:
+  max_upload_mb: 2
+  max_pages: 3
+  daily_doc_limit: 20

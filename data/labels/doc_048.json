@@ -1,0 +1,58 @@
+{
+  "doc_id": "doc_048",
+  "doc_kind": "purchase_order",
+  "supplier_name": "Hickman Ltd",
+  "supplier_tax_id": null,
+  "document_number": "PO-6726",
+  "issue_date": "2026-07-05",
+  "due_date": "2026-08-04",
+  "currency": "AUD",
+  "line_items": [
+    {
+      "description": "Security audit",
+      "quantity": 12,
+      "unit_price": 339.8,
+      "amount": 4077.6
+    },
+    {
+      "description": "Support retainer",
+      "quantity": 15,
+      "unit_price": 307.24,
+      "amount": 4608.6
+    },
+    {
+      "description": "Maintenance contract",
+      "quantity": 8,
+      "unit_price": 269.34,
+      "amount": 2154.72
+    }
+  ],
+  "subtotal": 10840.92,
+  "tax_total": 2168.18,
+  "total": 13009.1,
+  "source_pages": {
+    "doc_kind": "p1",
+    "supplier_name": "p1",
+    "document_number": "p1",
+    "issue_date": "p1",
+    "due_date": "p1",
+    "currency": "p1",
+    "line_items[0].description": "p1",
+    "line_items[0].quantity": "p1",
+    "line_items[0].unit_price": "p1",
+    "line_items[0].amount": "p1",
+    "line_items[1].description": "p1",
+    "line_items[1].quantity": "p1",
+    "line_items[1].unit_price": "p1",
+    "line_items[1].amount": "p1",
+    "line_items[2].description": "p1",
+    "line_items[2].quantity": "p1",
+    "line_items[2].unit_price": "p1",
+    "line_items[2].amount": "p1",
+    "subtotal": "p1",
+    "tax_total": "p1",
+    "total": "p1"
+  },
+  "inconsistent_total": false,
+  "ambiguous_numbers": false
+}

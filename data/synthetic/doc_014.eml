@@ -1,0 +1,21 @@
+From: ap@supplier-demo.example
+To: accounting@buyer-demo.example
+Subject: Invoice INV-89555 from Williams and Sons
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Please find our invoice below.
+
+Supplier: Williams and Sons
+Tax ID: TAX-563638
+Document No: INV-89555
+Date: 2026-05-07
+Due: 2026-06-21
+Currency: GBP
+
+Items:
+- Cloud storage plan x17 @ 239.23 = 4,066.91
+
+Subtotal: 4,066.91
+TOTAL: 4,066.91

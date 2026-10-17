@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="InvoiceLens — invoices and POs in, validated JSON out, with every field traced to its source page and accuracy you can measure. Demo project on synthetic data.">
+  <title>InvoiceLens — validated invoice &amp; PO extraction</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html"><span class="brand-mark">IL</span>InvoiceLens</a>
+      <nav class="nav" aria-label="Main">
+        <a href="#problem">Problem</a>
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#results">Results</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-primary btn-sm" href="demo.html">Try the demo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-badge-row">
+          <span class="badge badge-demo">Demo project — synthetic data</span>
+          <span class="badge">Python · Claude · Tesseract</span>
+          <span class="badge badge-tbd">Metrics: TBD — measured run pending</span>
+        </div>
+        <h1>Invoices in. Validated data out. Accuracy you can prove.</h1>
+        <p class="lede">
+          InvoiceLens extracts supplier invoices and purchase orders from PDFs, scans,
+          spreadsheets and emails, checks the maths, and flags anything uncertain for
+          review — with every field linked back to its source page.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="demo.html">Try the live demo</a>
+          <a class="btn btn-ghost" href="#" title="Link pending — public repo not yet published">View on GitHub</a>
+        </div>
+        <p class="hero-note">
+          Built as a portfolio demo on synthetic documents. No client data. Metrics below are
+          placeholders until a real evaluation run is committed.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ PROBLEM ============ -->
+    <section class="section section-alt" id="problem">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">The problem</p>
+          <h2>Retyping is slow. Guessing is worse.</h2>
+          <p class="lede">Accounts-payable documents arrive in four different formats — and generic AI extraction fails in the one way that hurts most: silently.</p>
+        </div>
+        <ul class="problem-list">
+          <li>
+            <span class="mark" aria-hidden="true">!</span>
+            <div>
+              <strong>AP teams retype by hand.</strong>
+              <span class="muted"> Supplier invoices and POs arrive as text PDFs, phone-camera scans, spreadsheets and email bodies. Each format means a different manual path into the ERP or spreadsheet.</span>
+            </div>
+          </li>
+          <li>
+            <span class="mark" aria-hidden="true">!</span>
+            <div>
+              <strong>AI extraction looks right but fails silently.</strong>
+              <span class="muted"> A wrong total or a swapped date goes straight into the ledger with no error, no warning, and no way to check it later.</span>
+            </div>
+          </li>
+          <li>
+            <span class="mark" aria-hidden="true">!</span>
+            <div>
+              <strong>Nobody can say how accurate it is — so nobody trusts it.</strong>
+              <span class="muted"> Happy-path demos prove nothing. Without per-field precision/recall on held-out documents, automation never gets signed off.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">How it works</p>
+          <h2>Route, read, extract, check, route again.</h2>
+          <p class="lede">Five steps per document. Deterministic checks sit around the model, so nothing uncertain is ever silently accepted.</p>
+        </div>
+
+        <div class="grid grid-3" style="margin-bottom: 28px;">
+          <div class="card">
+            <div class="step-num">1</div>
+            <h3>Ingest</h3>
+            <p class="muted">Drop a file or forward an email; the document type is detected automatically (text PDF, scanned PDF, spreadsheet, email).</p>
+          </div>
+          <div class="card">
+            <div class="step-num">2</div>
+            <h3>Read</h3>
+            <p class="muted">Text PDFs are parsed directly, scans are OCR'd locally, spreadsheets are read cell by cell — every line carries a page or cell marker.</p>
+          </div>
+          <div class="card">
+            <div class="step-num">3</div>
+            <h3>Extract</h3>
+            <p class="muted">An LLM fills a fixed schema (supplier, numbers, dates, currency, line items, totals) and must cite the page and a verbatim snippet for each value.</p>
+          </div>
+          <div class="card">
+            <div class="step-num">4</div>
+            <h3>Check</h3>
+            <p class="muted">Line items must sum to totals, dates must be real and ordered, currencies must be valid ISO codes. Failures trigger a targeted correction retry (max 2).</p>
+          </div>
+          <div class="card">
+            <div class="step-num">5</div>
+            <h3>Route</h3>
+            <p class="muted">Confident fields go to JSON/CSV with source links. Uncertain ones go to a review queue — never a silent guess.</p>
+          </div>
+          <div class="card card-accent">
+            <div class="step-num">+</div>
+            <h3>Measure</h3>
+            <p class="muted">Every run logs tokens, cost and time per document. An evaluation harness reports per-field precision/recall on held-out documents.</p>
+          </div>
+        </div>
+
+        <figure class="diagram-wrap">
+          <svg class="arch-svg" viewBox="0 0 980 640" role="img" aria-labelledby="arch-title arch-desc" width="980" height="640">
+            <title id="arch-title">InvoiceLens architecture</title>
+            <desc id="arch-desc">Documents enter an ingest router, are read by one of four loaders, extracted by an LLM into a draft schema, validated by deterministic rules, corrected with up to two retries, scored for confidence, then written as JSON and CSV or sent to a review queue, with run metrics recorded.</desc>
+            <defs>
+              <marker id="arrowhead" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+                <polygon points="0 0, 9 3.5, 0 7" fill="var(--muted)"></polygon>
+              </marker>
+              <marker id="arrowhead-accent" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+                <polygon points="0 0, 9 3.5, 0 7" fill="var(--accent)"></polygon>
+              </marker>
+              <marker id="arrowhead-ok" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+                <polygon points="0 0, 9 3.5, 0 7" fill="var(--ok)"></polygon>
+              </marker>
+              <marker id="arrowhead-warn" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+                <polygon points="0 0, 9 3.5, 0 7" fill="var(--warn)"></polygon>
+              </marker>
+            </defs>
+
+            <!-- Inputs -->
+            <text class="t-label" x="16" y="16">INPUTS</text>
+            <rect class="box" x="16" y="28" width="140" height="34" rx="8"></rect>
+            <text class="t" x="86" y="49" text-anchor="middle">Text PDF</text>
+            <rect class="box" x="16" y="70" width="140" height="34" rx="8"></rect>
+            <text class="t" x="86" y="91" text-anchor="middle">Scanned PDF</text>
+            <rect class="box" x="16" y="112" width="140" height="34" rx="8"></rect>
+            <text class="t" x="86" y="133" text-anchor="middle">Spreadsheet</text>
+            <rect class="box" x="16" y="154" width="140" height="34" rx="8"></rect>
+            <text class="t" x="86" y="175" text-anchor="middle">Email (.eml)</text>
+
+            <!-- Router -->
+            <rect class="box-accent" x="220" y="70" width="140" height="70" rx="10"></rect>
+            <text class="t" x="290" y="98" text-anchor="middle">Ingest router</text>
+            <text class="t-sub" x="290" y="118" text-anchor="middle">detects type</text>
+
+            <!-- arrows inputs -> router -->
+            <path class="arrow" d="M156 45 H190 V100 H214"></path>
+            <path class="arrow" d="M156 87 H214"></path>
+            <path class="arrow" d="M156 129 H190 V110 H214"></path>
+            <path class="arrow" d="M156 171 H190 V120 H214"></path>
+
+            <!-- Loaders -->
+            <text class="t-label" x="16" y="216">LOADERS (page-tagged text)</text>
+            <rect class="box" x="30" y="228" width="160" height="58" rx="10"></rect>
+            <text class="t" x="110" y="252" text-anchor="middle">text_pdf</text>
+            <text class="t-sub" x="110" y="270" text-anchor="middle">PyMuPDF</text>
+            <rect class="box" x="210" y="228" width="160" height="58" rx="10"></rect>
+            <text class="t" x="290" y="252" text-anchor="middle">scanned_pdf</text>
+            <text class="t-sub" x="290" y="270" text-anchor="middle">render + Tesseract OCR</text>
+            <rect class="box" x="390" y="228" width="160" height="58" rx="10"></rect>
+            <text class="t" x="470" y="252" text-anchor="middle">spreadsheet</text>
+            <text class="t-sub" x="470" y="270" text-anchor="middle">openpyxl / csv cells</text>
+            <rect class="box" x="570" y="228" width="160" height="58" rx="10"></rect>
+            <text class="t" x="650" y="252" text-anchor="middle">email</text>
+            <text class="t-sub" x="650" y="270" text-anchor="middle">body + attachments re-routed</text>
+
+            <!-- router -> loaders -->
+            <path class="arrow" d="M290 140 V184 H110 V222"></path>
+            <path class="arrow" d="M290 184 V222"></path>
+            <path class="arrow" d="M290 184 H470 V222"></path>
+            <path class="arrow" d="M290 184 H650 V222"></path>
+
+            <!-- DocumentText -->
+            <rect class="box" x="210" y="320" width="340" height="52" rx="10"></rect>
+            <text class="t" x="380" y="343" text-anchor="middle">DocumentText</text>
+            <text class="t-sub" x="380" y="361" text-anchor="middle">pages tagged [p1] / [Sheet1!B7] for citations</text>
+
+            <path class="arrow" d="M110 286 V346 H204"></path>
+            <path class="arrow" d="M290 286 V314"></path>
+            <path class="arrow" d="M470 286 V346 H556"></path>
+            <path class="arrow" d="M650 286 V346 H560 V346 H556"></path>
+
+            <!-- Extractor / Validator / Corrector -->
+            <rect class="box-accent" x="70" y="410" width="200" height="66" rx="10"></rect>
+            <text class="t" x="170" y="436" text-anchor="middle">Extractor</text>
+            <text class="t-sub" x="170" y="454" text-anchor="middle">Claude tool-use → draft InvoiceDoc</text>
+
+            <rect class="box" x="330" y="410" width="190" height="66" rx="10"></rect>
+            <text class="t" x="425" y="436" text-anchor="middle">Validator</text>
+            <text class="t-sub" x="425" y="454" text-anchor="middle">schema · arithmetic · dates ·</text>
+            <text class="t-sub" x="425" y="468" text-anchor="middle">currency · source grounding</text>
+
+            <rect class="box-warn" x="580" y="410" width="200" height="66" rx="10"></rect>
+            <text class="t" x="680" y="436" text-anchor="middle">Corrector</text>
+            <text class="t-sub" x="680" y="454" text-anchor="middle">targeted retry, max 2</text>
+
+            <path class="arrow-accent" d="M380 372 V404 H170 V404"></path>
+            <path class="arrow" d="M270 443 H324"></path>
+            <path class="arrow-warn" d="M520 443 H574"></path>
+            <!-- retry loop back into validator -->
+            <path class="arrow-warn" d="M680 404 V388 H425 V404"></path>
+            <text class="t-label" x="552" y="382" text-anchor="middle">retry with failing fields only</text>
+
+            <!-- Confidence -->
+            <rect class="box" x="330" y="508" width="190" height="56" rx="10"></rect>
+            <text class="t" x="425" y="532" text-anchor="middle">Confidence scorer</text>
+            <text class="t-sub" x="425" y="550" text-anchor="middle">LLM conf + grounding + rules</text>
+            <path class="arrow" d="M425 476 V502"></path>
+            <text class="t-label" x="437" y="496">checks passed</text>
+
+            <!-- Outputs -->
+            <rect class="box-ok" x="90" y="590" width="200" height="44" rx="10"></rect>
+            <text class="t" x="190" y="617" text-anchor="middle">Writer → JSON + CSV</text>
+
+            <rect class="box-warn" x="330" y="590" width="200" height="44" rx="10"></rect>
+            <text class="t" x="430" y="617" text-anchor="middle">Review queue (SQLite)</text>
+
+            <rect class="box" x="600" y="590" width="180" height="44" rx="10"></rect>
+            <text class="t" x="690" y="612" text-anchor="middle">Run metrics</text>
+            <text class="t-sub" x="690" y="626" text-anchor="middle">tokens · $ · ms → reports/</text>
+
+            <path class="arrow-ok" d="M380 564 V576 H190 V584"></path>
+            <text class="t-label" x="250" y="574" text-anchor="middle">score ≥ threshold</text>
+            <path class="arrow-warn" d="M470 564 V576 H430 V584"></path>
+            <text class="t-label" x="500" y="574">&lt; threshold / invalid</text>
+            <path class="arrow" d="M290 612 H594"></path>
+          </svg>
+          <figcaption>
+            Architecture of the extraction pipeline. Every arrow is a real module boundary in the repo;
+            the LLM is constrained by a JSON schema and surrounded by deterministic checks.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="section section-alt" id="features">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Features</p>
+          <h2>Built to be trusted, not just demoed.</h2>
+        </div>
+        <div class="grid grid-4">
+          <div class="card feature-card">
+            <div class="feature-title"><span class="feature-dot" aria-hidden="true"></span>Four inputs, one schema</div>
+            <p class="muted small">Text PDFs, scanned PDFs, spreadsheets and emails all land in the same fixed output schema.</p>
+          </div>
+          <div class="card feature-card">
+            <div class="feature-title"><span class="feature-dot" aria-hidden="true"></span>Per-field confidence</div>
+            <p class="muted small">Each value carries a score combining model confidence, source grounding and rule checks.</p>
+          </div>
+          <div class="card feature-card">
+            <div class="feature-title"><span class="feature-dot" aria-hidden="true"></span>Source traceability</div>
+            <p class="muted small">Every field links to its page or cell with a verbatim snippet — an auditor can click back to the source.</p>
+          </div>
+          <div class="card feature-card">
+            <div class="feature-title"><span class="feature-dot" aria-hidden="true"></span>Arithmetic validation</div>
+            <p class="muted small">Line items must multiply out and sum to the totals; dates, currencies and required fields are checked too.</p>
+          </div>
+          <div class="card feature-card">
+            <div class="feature-title"><span class="feature-dot" aria-hidden="true"></span>Targeted retries</div>
+            <p class="muted small">When checks fail, only the failing fields go back to the model with the relevant page text — max 2 retries.</p>
+          </div>
+          <div class="card feature-card">
+            <div class="feature-title"><span class="feature-dot" aria-hidden="true"></span>Review queue, not guesses</div>
+            <p class="muted small">Low-confidence or still-invalid fields are held for a human, with the suggested value and the source snippet.</p>
+          </div>
+          <div class="card feature-card">
+            <div class="feature-title"><span class="feature-dot" aria-hidden="true"></span>Cost &amp; time reported</div>
+            <p class="muted small">Tokens, dollar cost and stage timings are logged per document, so you can budget before you automate.</p>
+          </div>
+          <div class="card feature-card">
+            <div class="feature-title"><span class="feature-dot" aria-hidden="true"></span>Tested pipeline</div>
+            <p class="muted small">Validation rules, retry logic, routing and output formats are covered by a pytest suite that runs offline.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESULTS ============ -->
+    <section class="section" id="results">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Results</p>
+          <h2>Measured, not claimed.</h2>
+          <p class="lede">
+            These numbers are filled in from a real evaluation run on held-out documents
+            (<span class="badge badge-tbd">reports/eval_*.json</span>).
+            Until that run is committed, every figure is a clearly marked placeholder — nothing here is invented.
+          </p>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat">
+            <span class="stat-value">[TBD: measured]</span>
+            <span class="stat-label">Held-out field F1 (baseline → full)</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">[TBD: measured]</span>
+            <span class="stat-label">Auto-accepted precision</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">[TBD: measured]</span>
+            <span class="stat-label">Cost per document (USD)</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">[TBD: measured]</span>
+            <span class="stat-label">Time per document (seconds)</span>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <caption class="small muted" style="text-align:left; padding: 12px 14px 0;">Per-field accuracy on the held-out split (n=10 synthetic documents). Placeholders until the measured run.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Field</th>
+                <th scope="col">Baseline precision</th>
+                <th scope="col">Baseline recall</th>
+                <th scope="col">Full pipeline precision</th>
+                <th scope="col">Full pipeline recall</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">supplier_name</th><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td></tr>
+              <tr><th scope="row">document_number</th><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td></tr>
+              <tr><th scope="row">issue_date</th><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td></tr>
+              <tr><th scope="row">due_date</th><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td></tr>
+              <tr><th scope="row">currency</th><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td></tr>
+              <tr><th scope="row">line_items.*</th><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td></tr>
+              <tr><th scope="row">subtotal / tax / total</th><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td><td class="tbd">[TBD: measured]</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid grid-3" style="margin-top: 18px;">
+          <div class="card">
+            <h3 class="small">Review rate</h3>
+            <p class="badge badge-tbd">[TBD: measured]</p>
+            <p class="muted small" style="margin-top:10px;">Share of fields routed to the review queue instead of auto-accepted.</p>
+          </div>
+          <div class="card">
+            <h3 class="small">Source page accuracy</h3>
+            <p class="badge badge-tbd">[TBD: measured]</p>
+            <p class="muted small" style="margin-top:10px;">Share of predicted fields whose cited page matches the labelled page.</p>
+          </div>
+          <div class="card">
+            <h3 class="small">Review recall on errors</h3>
+            <p class="badge badge-tbd">[TBD: measured]</p>
+            <p class="muted small" style="margin-top:10px;">Share of wrong fields that the review queue caught before anyone used them.</p>
+          </div>
+        </div>
+
+        <p class="footnote">
+          Measured on 10 held-out synthetic documents. The report will state the date, model id and commit
+          of the run. Real-world accuracy depends on your documents — that is exactly why client builds start
+          with an accuracy measurement on your own samples.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section class="section section-alt" id="pricing">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Get this built for your documents</p>
+          <h2>Fixed-scope packages on Upwork.</h2>
+          <p class="lede">Each tier ends with a measured accuracy report on your own sample documents — not a happy-path demo.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card tier">
+            <div class="tier-name">Starter</div>
+            <p class="muted small">1 document type (e.g. text PDF invoices), fixed schema, JSON/CSV output, accuracy report on up to 20 of your sample docs.</p>
+            <div class="tier-price">$[decide] <span class="badge badge-tbd">price placeholder</span></div>
+            <p class="tier-delivery">Delivery: 5 days</p>
+          </div>
+          <div class="card tier card-accent">
+            <div class="tier-name">Standard</div>
+            <p class="muted small">Up to 3 input types incl. scanned PDFs, validation + retry, review queue, accuracy report on up to 50 docs.</p>
+            <div class="tier-price">$[decide] <span class="badge badge-tbd">price placeholder</span></div>
+            <p class="tier-delivery">Delivery: 10 days</p>
+          </div>
+          <div class="card tier">
+            <div class="tier-name">Advanced</div>
+            <p class="muted small">All 4 input types incl. email, custom fields, simple web upload/review UI, deployment to your cloud, handover docs.</p>
+            <div class="tier-price">$[decide] <span class="badge badge-tbd">price placeholder</span></div>
+            <p class="tier-delivery">Delivery: 15 days</p>
+          </div>
+        </div>
+
+        <div class="pricing-cta">
+          <div>
+            <strong>Get this built for your documents.</strong>
+            <p class="muted small" style="margin: 4px 0 0;">
+              You provide: sample documents you're allowed to share (redacted is fine), the target field list,
+              and the output destination.
+            </p>
+          </div>
+          <a class="btn btn-primary" href="#" title="Link pending — Upwork Catalog listing not yet published">Open the Upwork Catalog listing</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">FAQ</p>
+          <h2>Straight answers.</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Does it work on my documents?</summary>
+            <div class="faq-body">
+              <p>The public demo runs on synthetic data. For a client build, accuracy is measured on your own sample documents before you commit to automation — that measurement is part of every tier.</p>
+            </div>
+          </details>
+          <details>
+            <summary>What happens when it is unsure?</summary>
+            <div class="faq-body">
+              <p>The field goes to a review queue with the suggested value, the confidence score, the validation issues and the source snippet. It is never silently guessed, and the original value is never overwritten by the model.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Which AI model does it use?</summary>
+            <div class="faq-body">
+              <p>Claude Haiku by default, called through a provider abstraction — so Gemini, OpenAI or a self-hosted model can be swapped in without touching the pipeline logic. Model id and prices live in a config file, not in code.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Is my data stored?</summary>
+            <div class="faq-body">
+              <p>The demo deletes uploads after processing and keeps only aggregate counters. Client builds run inside your own environment, on infrastructure you control.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Can it read handwriting?</summary>
+            <div class="faq-body">
+              <p>No. The OCR path uses Tesseract, which handles printed scans. Handwriting is out of scope for this demo and would be scoped separately if you need it.</p>
+            </div>
+          </details>
+          <details>
+            <summary>How much does it cost to run?</summary>
+            <div class="faq-body">
+              <p>The measured cost per document will appear in the Results section above after the evaluation run. You pay your own LLM usage; OCR and validation are local and free. Every run logs its own token usage and dollar cost.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Can it post to my ERP or accounting tool?</summary>
+            <div class="faq-body">
+              <p>Not in this demo — the output is JSON and CSV with source links. Integrations (e.g. into QuickBooks, Xero, NetSuite or an internal API) are available as an add-on in a client build.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="demo-note">
+        <strong>Demo project.</strong> InvoiceLens is a portfolio project built entirely on synthetic documents.
+        No client data from any employer or engagement is used or referenced. All result figures on this page are
+        placeholders until a measured evaluation run is published.
+      </div>
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="margin-bottom: 10px;"><span class="brand-mark">IL</span>InvoiceLens</div>
+          <p>Invoices and POs in, validated JSON out, with every field traced to its source page.</p>
+        </div>
+        <div>
+          <strong style="color: var(--text); display: block; margin-bottom: 8px;">Product</strong>
+          <p><a href="#how">How it works</a></p>
+          <p><a href="#results">Results</a></p>
+          <p><a href="demo.html">UI demo</a></p>
+        </div>
+        <div>
+          <strong style="color: var(--text); display: block; margin-bottom: 8px;">Links</strong>
+          <p><a href="#" title="Link pending — repo not yet published">GitHub repository</a></p>
+          <p><a href="#pricing">Upwork Catalog</a></p>
+          <p><a href="#faq">FAQ</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>MIT license · synthetic data only · built for a public portfolio</span>
+        <span>Python · Claude API · Tesseract · FastAPI</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
