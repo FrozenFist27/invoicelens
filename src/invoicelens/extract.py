@@ -22,7 +22,7 @@ from .llm.prompts import (
     TOOL_NAME,
 )
 from .models import Field, InvoiceDoc, LineItem, SourceRef, Usage
-from .validate import fields_with_issues, validate_doc
+from .validate import fields_with_issues
 
 
 def _parse_date(v: Any) -> date | None:

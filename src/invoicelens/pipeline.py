@@ -7,13 +7,11 @@ config: "baseline" (single call, no validation/retry/review) or "full"
 from __future__ import annotations
 
 import tempfile
-import time
 from pathlib import Path
 
 from .confidence import iter_fields, score_doc
 from .extract import correct, extract
 from .ingest import email_msg, router, scanned_pdf, spreadsheet, text_pdf
-from .ingest.email_msg import ExtractedAttachment
 from .metrics import Timer, add_usage, usage_cost
 from .models import DocumentText, PipelineResult, RunMetrics, Usage
 from .settings import get_settings
@@ -164,6 +162,7 @@ def process_document(
     write_outputs: bool = False,
     out_dir: str | Path | None = None,
     db_path: str | Path | None = None,
+    include_attachments: bool = True,
 ) -> list[PipelineResult]:
     """Process one file. An email with attachments yields one result per attachment too."""
     p = Path(path)
@@ -171,7 +170,7 @@ def process_document(
     results: list[PipelineResult] = []
     first, attachments = _process_one(llm, p, doc_id, config, write_outputs, out_dir, db_path)
     results.append(first)
-    for att in attachments:
+    for att in attachments if include_attachments else []:
         try:
             att_id = f"{doc_id}_{att.stem}"
             r, _ = _process_one(llm, att, att_id, config, write_outputs, out_dir, db_path)

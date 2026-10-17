@@ -25,7 +25,10 @@ class AnthropicClient:
         self.effort = effort or cfg.extraction_effort
         self.max_tokens = cfg.max_tokens
         key = api_key or cfg.anthropic_api_key
-        self._client = anthropic.Anthropic(api_key=key) if key else anthropic.Anthropic()
+        # Pin the endpoint: never inherit ANTHROPIC_BASE_URL from the shell, which may point at a
+        # third-party proxy and would receive the API key. Override only via ANTHROPIC_API_BASE.
+        base_url = cfg.anthropic_api_base or "https://api.anthropic.com"
+        self._client = anthropic.Anthropic(api_key=key or None, base_url=base_url)
         self.pricing = get_pricing(self.model)
 
     def cost_usd(self, usage: Usage) -> float:

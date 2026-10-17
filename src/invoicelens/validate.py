@@ -173,38 +173,121 @@ def normalize_for_grounding(value) -> str:
 
 
 def digits_of(value) -> str:
+    """Digits only (separators dropped), so 1.234,56 / 1,234.56 / 1234.56 all compare equal."""
     if value is None:
         return ""
-    return "".join(ch for ch in str(value) if ch.isdigit() or ch == ".")
+    return "".join(ch for ch in str(value) if ch.isdigit())
+
+
+def number_tokens(text: str) -> set[Decimal]:
+    """All numeric tokens in text, parsed with US or European separators."""
+    import re
+
+    vals: set[Decimal] = set()
+    for tok in re.findall(r"\d[\d.,\s]*\d|\d", text):
+        tok = tok.strip()
+        cands = []
+        t = tok.replace(" ", "")
+        if "," in t and "." in t:
+            if t.rfind(",") > t.rfind("."):
+                cands.append(t.replace(".", "").replace(",", "."))
+            else:
+                cands.append(t.replace(",", ""))
+        elif "," in t:
+            cands.append(t.replace(",", ""))
+            if len(t.split(",")[-1]) <= 2:
+                cands.append(t.replace(",", "."))
+        else:
+            cands.append(t)
+        for c in cands:
+            try:
+                vals.add(Decimal(c))
+            except InvalidOperation:
+                pass
+    return vals
+
+
+def date_variants(d) -> set[str]:
+    """Textual renderings of a date as they commonly appear in documents (lowercased)."""
+    out = {
+        d.isoformat(),
+        d.strftime("%d/%m/%Y"), d.strftime("%m/%d/%Y"),
+        d.strftime("%d-%m-%Y"), d.strftime("%m-%d-%Y"),
+        d.strftime("%d.%m.%Y"), d.strftime("%Y/%m/%d"),
+    }
+    for fmt in ("%d %B %Y", "%d %b %Y", "%B %d, %Y", "%b %d, %Y", "%B %d %Y", "%d-%b-%Y"):
+        out.add(d.strftime(fmt).lower())
+        out.add(d.strftime(fmt).lower().lstrip("0"))
+        out.add(d.strftime(fmt).lower().replace(" 0", " "))
+    out.add(f"{d.day}/{d.month}/{d.year}")
+    out.add(f"{d.month}/{d.day}/{d.year}")
+    return {v.lower() for v in out}
+
+
+def resolve_page(page: str | None, page_texts: dict[str, str]) -> str | None:
+    """Map a cited page ref (p1, Sheet!B7, body) to a key of page_texts, if possible."""
+    if not page or not page_texts:
+        return None
+    if page in page_texts:
+        return page
+    head = page.split("!", 1)[0]
+    if head in page_texts:
+        return head
+    if len(page_texts) == 1:  # single-page doc: any citation points at it
+        return next(iter(page_texts))
+    return None
+
+
+def grounding_match(value, text: str, fuzzy_threshold: int = 85) -> str | None:
+    """'exact' if the value (in any common rendering) is in text, 'fuzzy' if close, else None."""
+    if value is None or not text:
+        return None
+    norm_val = normalize_for_grounding(value)
+    norm_text = normalize_for_grounding(text)
+    numeric = isinstance(value, (Decimal, int, float))
+    if isinstance(value, date):
+        if any(v in norm_text for v in date_variants(value)):
+            return "exact"
+    elif numeric:
+        if Decimal(str(value)) in number_tokens(text):
+            return "exact"
+    else:
+        if norm_val and norm_val in norm_text:
+            return "exact"
+        dig = digits_of(value)
+        if dig and len(dig) >= 3 and dig in digits_of(text):
+            return "exact"
+    if norm_val and not isinstance(value, date) and not numeric:
+        if fuzz.partial_ratio(norm_val, norm_text) >= fuzzy_threshold:
+            return "fuzzy"
+    return None
 
 
 def check_grounded(doc: InvoiceDoc, page_texts: dict[str, str], fuzzy_threshold: int = 85) -> list[ValidationIssue]:
-    """Each non-null field's normalised value (or its digits) appears in the cited page text."""
+    """Each non-null field's value (in any common rendering) appears in the cited page text."""
     issues: list[ValidationIssue] = []
 
     def one(path: str, value, page: str | None):
         if value is None or page is None:
             return
-        text = page_texts.get(page, "")
-        if not text:
-            return
-        norm_val = normalize_for_grounding(value)
-        norm_text = normalize_for_grounding(text)
-        if norm_val and norm_val in norm_text:
-            return
-        dig = digits_of(value)
-        if dig and dig in digits_of(text):
-            return
-        # fuzzy (for OCR pages)
-        if norm_val and fuzz.partial_ratio(norm_val, norm_text) >= fuzzy_threshold:
-            return
-        issues.append(
-            ValidationIssue(
-                field_path=path,
-                code="not_grounded",
-                message=f"value {value!r} not found in cited page {page!r}",
+        key = resolve_page(page, page_texts)
+        if key is None:
+            issues.append(
+                ValidationIssue(
+                    field_path=path,
+                    code="not_grounded",
+                    message=f"cited page {page!r} does not exist in the document",
+                )
             )
-        )
+            return
+        if grounding_match(value, page_texts[key], fuzzy_threshold) is None:
+            issues.append(
+                ValidationIssue(
+                    field_path=path,
+                    code="not_grounded",
+                    message=f"value {value!r} not found in cited page {page!r}",
+                )
+            )
 
     for name in REQUIRED_FIELDS + ("supplier_tax_id", "due_date", "subtotal", "tax_total"):
         f = getattr(doc, name, None)

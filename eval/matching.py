@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import re
-from datetime import date
 from decimal import Decimal
 
 from rapidfuzz import fuzz
@@ -72,6 +71,15 @@ def match_bool(pred, label) -> bool:
     return str(pred).replace(" ", "_").lower() == str(label).replace(" ", "_").lower()
 
 
+def _num(v):
+    from decimal import Decimal, InvalidOperation
+
+    try:
+        return Decimal(str(v))
+    except (InvalidOperation, TypeError):
+        return None
+
+
 def desc_similarity(a, b) -> float:
     return fuzz.ratio(normalize_string(a), normalize_string(b)) / 100.0
 
@@ -84,23 +92,36 @@ def match_line_items(pred_items: list[dict], label_items: list[dict]) -> dict:
     pred_items = pred_items or []
     label_items = label_items or []
     # candidate pairs sorted by description similarity
-    pairs = []
-    for i, p in enumerate(pred_items):
-        for j, l in enumerate(label_items):
-            sim = desc_similarity(p.get("description", {}).get("value") if isinstance(p.get("description"), dict) else p.get("description"),
-                                  l.get("description", {}).get("value") if isinstance(l.get("description"), dict) else l.get("description"))
-            pairs.append((sim, i, j))
-    pairs.sort(reverse=True)
-    used_p, used_l = set(), set()
+    from decimal import Decimal
+
+    import numpy as np
+    from scipy.optimize import linear_sum_assignment
+
+    def _d(item):
+        d = item.get("description")
+        return d.get("value") if isinstance(d, dict) else d
+
+    def _a(item):
+        d = item.get("amount")
+        return d.get("value") if isinstance(d, dict) else d
+
     matched = []
-    for sim, i, j in pairs:
-        if i in used_p or j in used_l:
-            continue
-        if sim < 0.3:
-            continue
-        matched.append((i, j, sim))
-        used_p.add(i)
-        used_l.add(j)
+    used_p, used_l = set(), set()
+    if pred_items and label_items:
+        gain = np.zeros((len(pred_items), len(label_items)))
+        for i, p in enumerate(pred_items):
+            for j, lb in enumerate(label_items):
+                g = desc_similarity(_d(p), _d(lb))
+                pa, la = _num(_a(p)), _num(_a(lb))
+                if pa is not None and la is not None and abs(pa - la) <= Decimal("0.01"):
+                    g += 1.0  # amount agreement disambiguates duplicate descriptions
+                gain[i, j] = g
+        rows, cols = linear_sum_assignment(-gain)  # Hungarian assignment
+        for i, j in zip(rows, cols):
+            if gain[i, j] >= 0.3:
+                matched.append((int(i), int(j), float(gain[i, j])))
+                used_p.add(int(i))
+                used_l.add(int(j))
 
     def pval(item, key):
         v = item.get(key)
@@ -115,7 +136,7 @@ def match_line_items(pred_items: list[dict], label_items: list[dict]) -> dict:
     sub = {}
     for key, matcher in (
         ("description", lambda a, b: match_supplier(a, b) if a and b else (a is None and b is None)),
-        ("quantity", lambda a, b: str(a) == str(b) if a is not None and b is not None else (a is None and b is None)),
+        ("quantity", lambda a, b: (_num(a) == _num(b)) if a is not None and b is not None else (a is None and b is None)),
         ("unit_price", match_money),
         ("amount", match_money),
     ):
@@ -144,10 +165,10 @@ def match_line_items(pred_items: list[dict], label_items: list[dict]) -> dict:
                 continue
             if pval(p, key) is not None:
                 k_fp += 1
-        for j, l in enumerate(label_items):
+        for j, lb in enumerate(label_items):
             if j in used_l:
                 continue
-            if lval(l, key) is not None:
+            if lval(lb, key) is not None:
                 k_fn += 1
         sub[key] = {"tp": k_tp, "fp": k_fp, "fn": k_fn}
         tp += k_tp

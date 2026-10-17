@@ -1,11 +1,8 @@
 """Retry / correction tests with FakeLLMClient (IDEATION section 12)."""
 
-from datetime import date
-from decimal import Decimal
 
-from invoicelens.extract import apply_corrections, extract, parse_flat
+from invoicelens.extract import extract
 from invoicelens.llm.fake_client import FakeLLMClient
-from invoicelens.models import InvoiceDoc, SourceRef, Field
 from invoicelens.validate import validate_doc
 
 

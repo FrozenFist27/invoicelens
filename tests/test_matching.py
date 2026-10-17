@@ -7,8 +7,8 @@ from eval.matching import (
     match_line_items,
     match_money,
     match_supplier,
-    normalize_string,
     norm_doc_number,
+    normalize_string,
     prf,
 )
 
@@ -80,3 +80,21 @@ def test_prf_maths():
 
 def test_prf_zero():
     assert prf(0, 0, 0)["precision"] == 0.0
+
+
+def test_line_items_duplicate_descriptions_and_float_quantity():
+    from eval.matching import match_line_items
+
+    label = [
+        {"description": "Printing", "quantity": 1, "unit_price": 62.09, "amount": 62.09},
+        {"description": "Printing", "quantity": 14, "unit_price": 305.07, "amount": 4270.98},
+    ]
+    # predictions in swapped order, quantity as float
+    pred = [
+        {"description": {"value": "Printing"}, "quantity": {"value": 14.0},
+         "unit_price": {"value": 305.07}, "amount": {"value": 4270.98}},
+        {"description": {"value": "Printing"}, "quantity": {"value": 1.0},
+         "unit_price": {"value": 62.09}, "amount": {"value": 62.09}},
+    ]
+    r = match_line_items(pred, label)
+    assert (r["tp"], r["fp"], r["fn"]) == (8, 0, 0)

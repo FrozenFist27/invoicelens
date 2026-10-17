@@ -7,8 +7,8 @@ from contextlib import contextmanager
 from datetime import datetime, timezone
 from pathlib import Path
 
-from .models import InvoiceDoc, ReviewItem, ValidationIssue
 from .confidence import iter_fields
+from .models import InvoiceDoc, ReviewItem, ValidationIssue
 
 DEFAULT_DB = Path(__file__).resolve().parents[3] / "data" / "review.db"
 

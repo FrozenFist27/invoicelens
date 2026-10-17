@@ -11,13 +11,13 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from matching import (
+    match_bool,
     match_currency,
     match_date,
     match_doc_number,
     match_line_items,
     match_money,
     match_supplier,
-    match_bool,
     prf,
 )
 
@@ -123,7 +123,8 @@ def _traceability(pred_doc: dict | None, label: dict) -> tuple[int, int]:
         if pv is None or page is None:
             continue
         total += 1
-        if pages.get(key) == page:
+        lp = pages.get(key)
+        if lp and (page == lp or page.split("!", 1)[0] == lp):
             correct += 1
     return correct, total
 
@@ -142,8 +143,12 @@ def run_eval(config: str = "full", split: str = "heldout", limit: int = 0, write
     if limit:
         ids = ids[:limit]
 
-    init_db()
+    import tempfile
+
+    eval_db = Path(tempfile.mkdtemp(prefix="invoicelens_eval_")) / "review.db"
+    init_db(eval_db)  # keep eval runs out of the real review queue
     llm = AnthropicClient()
+    preds: dict[str, dict] = {}
 
     agg = {k: {"tp": 0, "fp": 0, "fn": 0} for k in (
         "supplier_name", "document_number", "issue_date", "due_date",
@@ -165,7 +170,10 @@ def run_eval(config: str = "full", split: str = "heldout", limit: int = 0, write
         path = _find_file(doc_id)
         if path is None:
             continue
-        results = process_document(llm, path, config=config, doc_id=doc_id, write_outputs=False)
+        results = process_document(
+            llm, path, config=config, doc_id=doc_id, write_outputs=False,
+            db_path=eval_db, include_attachments=False,
+        )
         r = results[0]
         if r.error:
             n_err += 1
@@ -173,6 +181,7 @@ def run_eval(config: str = "full", split: str = "heldout", limit: int = 0, write
             continue
         n_ok += 1
         pred = doc_to_dict(r.doc) if r.doc else None
+        preds[doc_id] = pred
         fields = score_doc(pred, label, config)
         for k, counters in fields.items():
             for outcome, _st in counters:
@@ -252,8 +261,11 @@ def run_eval(config: str = "full", split: str = "heldout", limit: int = 0, write
         "n_docs": len(ids),
         "n_ok": n_ok,
         "n_err": n_err,
-        "model": "claude-haiku-5-5",
+        "model": llm.model,
         "timestamp": datetime.now(timezone.utc).isoformat(),
+        "git_sha": _git_sha(),
+        "dataset_sha256": _dataset_hash(),
+        "note": "email attachments are not re-processed in eval (body carries the same data)",
         "aggregate": overall,
         "per_field": table,
         "ops": {
@@ -282,11 +294,71 @@ def run_eval(config: str = "full", split: str = "heldout", limit: int = 0, write
         "n_fields_with_page": trace_total,
     }
 
+    if config == "full":
+        result["threshold_sensitivity"] = _sensitivity(preds, ids)
+
     if write_report:
         REPORTS.mkdir(parents=True, exist_ok=True)
-        (REPORTS / f"eval_{config}.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
-        _write_md(result, REPORTS / "eval_report.md" if config == "full" else REPORTS / f"eval_report_{config}.md")
+        (REPORTS / f"eval_{config}_{split}.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
+        (REPORTS / f"preds_{config}_{split}.json").write_text(json.dumps(preds, indent=1), encoding="utf-8")
+        _write_md(result, REPORTS / f"eval_report_{config}_{split}.md")
     return result
+
+
+def _git_sha() -> str:
+    import subprocess
+
+    try:
+        return subprocess.check_output(
+            ["git", "rev-parse", "--short", "HEAD"], cwd=ROOT, text=True, stderr=subprocess.DEVNULL
+        ).strip()
+    except Exception:  # noqa: BLE001
+        return "unknown"
+
+
+def _dataset_hash() -> str:
+    import hashlib
+
+    h = hashlib.sha256()
+    for p in sorted(LABELS.glob("*.json")):
+        h.update(p.read_bytes())
+    return h.hexdigest()[:16]
+
+
+def _sensitivity(preds: dict, ids: list[str]) -> list[dict]:
+    """Auto-accept precision / review rate if the threshold were t (confidence-only)."""
+    checks = {
+        "supplier_name": match_supplier, "document_number": match_doc_number,
+        "issue_date": match_date, "due_date": match_date, "currency": match_currency,
+        "doc_kind": match_bool, "subtotal": match_money, "tax_total": match_money, "total": match_money,
+    }
+    rows = []
+    for t in (0.5, 0.6, 0.7, 0.8):
+        acc_ok = acc_bad = n = rev = 0
+        for doc_id in ids:
+            pred = preds.get(doc_id)
+            if not pred:
+                continue
+            label = json.loads((LABELS / f"{doc_id}.json").read_text(encoding="utf-8"))
+            for key, m in checks.items():
+                pf = pred.get(key)
+                pv = _field_value(pf)
+                if pv is None:
+                    continue
+                n += 1
+                wrong = label.get(key) is None or not m(pv, label[key])
+                if pf.get("confidence", 0) >= t:
+                    acc_bad += wrong
+                    acc_ok += not wrong
+                else:
+                    rev += 1
+        rows.append({
+            "threshold": t,
+            "review_rate": round(rev / n, 4) if n else None,
+            "auto_accepted_precision": round(acc_ok / (acc_ok + acc_bad), 4) if (acc_ok + acc_bad) else None,
+            "n_scalar_fields": n,
+        })
+    return rows
 
 
 def _p95(xs: list[float]) -> float:
@@ -301,7 +373,7 @@ def _write_md(result: dict, path: Path) -> None:
     lines = []
     lines.append(f"# InvoiceLens eval — {result['config']} ({result['split']})")
     lines.append("")
-    lines.append(f"- Model: `{result['model']}`")
+    lines.append(f"- Model: `{result['model']}`  |  commit: `{result['git_sha']}`  |  dataset: `{result['dataset_sha256']}`")
     lines.append(f"- Timestamp: {result['timestamp']}")
     lines.append(f"- Docs: {result['n_ok']} ok / {result['n_err']} error (of {result['n_docs']})")
     lines.append("")
@@ -329,6 +401,14 @@ def _write_md(result: dict, path: Path) -> None:
         lines.append(f"- Review rate (mean fields/doc): {r['review_rate_mean']}")
         lines.append(f"- Auto-accepted precision: {r['auto_accepted_precision']}")
         lines.append(f"- Review error recall: {r['review_error_recall']} ({r['caught_by_review']}/{r['wrong_scalar_fields']} wrong fields caught)")
+        lines.append("")
+    if "threshold_sensitivity" in result:
+        lines.append("## Threshold sensitivity (scalar fields, confidence-only)")
+        lines.append("")
+        lines.append("| Threshold | Review rate | Auto-accepted precision |")
+        lines.append("|---|---|---|")
+        for row in result["threshold_sensitivity"]:
+            lines.append(f"| {row['threshold']} | {row['review_rate']} | {row['auto_accepted_precision']} |")
         lines.append("")
     tr = result["traceability"]
     lines.append("## Traceability")

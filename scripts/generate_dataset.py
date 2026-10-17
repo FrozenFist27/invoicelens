@@ -13,7 +13,7 @@ import json
 import random
 import shutil
 from datetime import date, timedelta
-from decimal import Decimal, ROUND_HALF_UP
+from decimal import ROUND_HALF_UP, Decimal
 from pathlib import Path
 
 from faker import Faker
@@ -164,7 +164,6 @@ def _pdf_pages_count(text: str, items_per_page: int) -> int:
 
 def render_text_pdf(truth: dict, path: Path, rng: random.Random) -> dict[str, str]:
     """Render a text-based PDF. Returns source_pages map (best-effort page refs)."""
-    from reportlab.lib import colors
     from reportlab.lib.pagesizes import A4
     from reportlab.lib.units import mm
     from reportlab.pdfgen import canvas

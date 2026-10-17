@@ -1,7 +1,6 @@
 """Router + loader tests."""
 
-from invoicelens.ingest import router
-from invoicelens.ingest import email_msg, spreadsheet, text_pdf
+from invoicelens.ingest import email_msg, router, spreadsheet, text_pdf
 
 
 def test_detect_email(fixtures_dir):

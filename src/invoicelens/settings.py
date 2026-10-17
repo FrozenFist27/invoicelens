@@ -43,6 +43,7 @@ class Settings(BaseSettings):
 
     # LLM
     anthropic_api_key: str = ""
+    anthropic_api_base: str = ""  # blank = https://api.anthropic.com
     llm_provider: str = "anthropic"
     llm_model: str = "claude-haiku-5-5"
 

@@ -17,7 +17,7 @@ _FIELD = {
         },
         "page": {
             "type": ["string", "null"],
-            "description": "Page marker exactly as it appears in brackets, e.g. 'p1' or 'Sheet1!B7' or 'body'.",
+            "description": "Page marker exactly as it appears in the bracket heading the text: 'p1', 'p2', 'body', or for spreadsheets the sheet name plus cell, e.g. 'Invoice!D10'.",
         },
         "snippet": {
             "type": ["string", "null"],
@@ -158,7 +158,7 @@ Rules:
 - Dates as YYYY-MM-DD.
 - Currency as an ISO 4217 three-letter code. Map symbols: $ -> USD only if there is no other evidence, and lower the confidence in that case.
 - Numbers: no thousands separators, dot as decimal separator.
-- For every field return `page` exactly as the bracket marker that precedes the text (e.g. 'p1', 'Sheet1!C5', 'body') and a verbatim `snippet` from the source.
+- For every field return `page` exactly as the bracket marker that precedes the text (e.g. 'p1', 'p2', 'body'). For spreadsheets the marker is the sheet name shown in brackets: cite it with the cell, e.g. 'Invoice!D10' (never 'body') and a verbatim `snippet` from the source.
 - Confidence: 0.9+ only if the value is read verbatim and unambiguous. Use 0.5-0.8 when the value is inferred or the scan is noisy. Use 0 for absent.
 - doc_kind is 'invoice' or 'purchase_order'.
 You must call the record_invoice tool exactly once with your extraction.

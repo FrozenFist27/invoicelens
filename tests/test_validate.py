@@ -115,3 +115,34 @@ def test_missing_required():
 
 def test_validate_doc_empty_issues():
     assert validate_doc(_doc()) == []
+
+
+def test_date_grounding_accepts_non_iso_formats():
+    from datetime import date
+
+    from invoicelens.validate import date_variants
+
+    d = date(2026, 1, 6)
+    v = date_variants(d)
+    assert "06/01/2026" in v and "6 january 2026" in v and "2026-01-06" in v
+
+
+def test_number_tokens_handle_us_and_european_formats():
+    from decimal import Decimal
+
+    from invoicelens.validate import number_tokens
+
+    toks = number_tokens("Total 1.234,56 and 7,604.24 and 12")
+    assert Decimal("1234.56") in toks and Decimal("7604.24") in toks and Decimal("12") in toks
+
+
+def test_grounding_match_european_number_and_sheet_page_resolution():
+    from decimal import Decimal
+
+    from invoicelens.validate import grounding_match, resolve_page
+
+    assert grounding_match(Decimal("4387.56"), "Total 4.387,56 EUR") == "exact"
+    assert grounding_match(Decimal("4387.56"), "Total 9.999,00") is None
+    assert resolve_page("Invoice!D10", {"Invoice": "x", "Other": "y"}) == "Invoice"
+    assert resolve_page("body", {"Invoice": "x"}) == "Invoice"
+    assert resolve_page("p9", {"p1": "x", "p2": "y"}) is None

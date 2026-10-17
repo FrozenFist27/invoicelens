@@ -1,0 +1,199 @@
+{
+  "config": "baseline",
+  "split": "heldout",
+  "n_docs": 10,
+  "n_ok": 10,
+  "n_err": 0,
+  "model": "claude-haiku-5-5",
+  "timestamp": "2026-10-17T16:46:29.205396+00:00",
+  "git_sha": "c9acef9",
+  "dataset_sha256": "c39e15849db64f63",
+  "note": "email attachments are not re-processed in eval (body carries the same data)",
+  "aggregate": {
+    "tp": 305,
+    "fp": 0,
+    "fn": 3,
+    "precision": 1.0,
+    "recall": 0.9903,
+    "f1": 0.9951
+  },
+  "per_field": {
+    "supplier_name": {
+      "tp": 10,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "document_number": {
+      "tp": 10,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "issue_date": {
+      "tp": 10,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "due_date": {
+      "tp": 10,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "currency": {
+      "tp": 10,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "doc_kind": {
+      "tp": 10,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "subtotal": {
+      "tp": 10,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "tax_total": {
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "total": {
+      "tp": 10,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "line_items.*": {
+      "tp": 217,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.9864,
+      "f1": 0.9931
+    }
+  },
+  "ops": {
+    "cost_per_doc_mean_usd": 0.001032,
+    "cost_per_doc_p95_usd": 0.001276,
+    "time_per_doc_mean_s": 10.531,
+    "time_per_doc_p95_s": 25.143,
+    "total_cost_usd": 0.010319,
+    "total_input_tokens": 54733,
+    "total_output_tokens": 17553,
+    "cache_read_tokens": 45063,
+    "cache_write_tokens": 5007
+  },
+  "per_doc": [
+    {
+      "doc_id": "doc_011",
+      "doc_type": "scanned_pdf",
+      "cost_usd": 0.001276,
+      "ms_total": 25143,
+      "retries": 0,
+      "fields_needs_review": 6
+    },
+    {
+      "doc_id": "doc_012",
+      "doc_type": "text_pdf",
+      "cost_usd": 0.000926,
+      "ms_total": 5190,
+      "retries": 0,
+      "fields_needs_review": 16
+    },
+    {
+      "doc_id": "doc_015",
+      "doc_type": "email",
+      "cost_usd": 0.00108,
+      "ms_total": 5905,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_016",
+      "doc_type": "text_pdf",
+      "cost_usd": 0.001156,
+      "ms_total": 6315,
+      "retries": 0,
+      "fields_needs_review": 24
+    },
+    {
+      "doc_id": "doc_022",
+      "doc_type": "spreadsheet",
+      "cost_usd": 0.001147,
+      "ms_total": 6495,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_024",
+      "doc_type": "email",
+      "cost_usd": 0.001071,
+      "ms_total": 5879,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_026",
+      "doc_type": "spreadsheet",
+      "cost_usd": 0.000827,
+      "ms_total": 4761,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_034",
+      "doc_type": "scanned_pdf",
+      "cost_usd": 0.001088,
+      "ms_total": 21436,
+      "retries": 0,
+      "fields_needs_review": 14
+    },
+    {
+      "doc_id": "doc_046",
+      "doc_type": "scanned_pdf",
+      "cost_usd": 0.001045,
+      "ms_total": 18868,
+      "retries": 0,
+      "fields_needs_review": 16
+    },
+    {
+      "doc_id": "doc_048",
+      "doc_type": "text_pdf",
+      "cost_usd": 0.000703,
+      "ms_total": 5318,
+      "retries": 0,
+      "fields_needs_review": 9
+    }
+  ],
+  "traceability": {
+    "page_accuracy": 1.0,
+    "n_fields_with_page": 88
+  }
+}

@@ -7,26 +7,15 @@ Required + null value -> 0
 
 from __future__ import annotations
 
-from rapidfuzz import fuzz
-
 from .models import DocumentText, Field, InvoiceDoc
 from .settings import get_settings
-from .validate import normalize_for_grounding, fields_with_issues
+from .validate import fields_with_issues, grounding_match, resolve_page
 
 
-def grounding_score(value, page_text: str, ocr: bool, fuzzy_threshold: int = 85) -> float:
-    if value is None or not page_text:
-        return 0.0
-    norm_val = normalize_for_grounding(value)
-    norm_text = normalize_for_grounding(page_text)
-    if norm_val and norm_val in norm_text:
-        return 1.0
-    dig = "".join(ch for ch in str(value) if ch.isdigit() or ch == ".")
-    if dig and dig in "".join(ch for ch in norm_text if ch.isdigit() or ch == "."):
-        return 1.0
-    if norm_val and fuzz.partial_ratio(norm_val, norm_text) >= fuzzy_threshold:
-        return 0.6
-    return 0.0
+def grounding_score(value, page_text: str, ocr: bool = False, fuzzy_threshold: int = 85) -> float:
+    cfg = get_settings().grounding
+    m = grounding_match(value, page_text, fuzzy_threshold)
+    return cfg.exact if m == "exact" else cfg.fuzzy if m == "fuzzy" else cfg.none
 
 
 def _score_field(
@@ -45,8 +34,9 @@ def _score_field(
         f.confidence = 0.0
         return
     page = f.source.page if f.source else None
-    text = page_texts.get(page, "") if page else ""
-    is_ocr = bool(page and ocr_conf.get(page) is not None)
+    key = resolve_page(page, page_texts)
+    text = page_texts.get(key, "") if key else ""
+    is_ocr = bool(key and ocr_conf.get(key) is not None)
     g = grounding_score(f.value, text, is_ocr, cfg.grounding.fuzzy_threshold)
     rule_pass = 0.0 if path in issue_paths else 1.0
     score = (
@@ -54,8 +44,8 @@ def _score_field(
         + cfg.confidence_weights.grounding * g
         + cfg.confidence_weights.rules * rule_pass
     )
-    if page and ocr_conf.get(page) is not None:
-        score *= min(1.0, (ocr_conf[page] or 0) / 90.0)
+    if key and ocr_conf.get(key) is not None:
+        score *= min(1.0, (ocr_conf[key] or 0) / 90.0)
     f.confidence = max(0.0, min(1.0, score))
 
 

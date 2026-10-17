@@ -2,7 +2,6 @@
 
 import csv
 import json
-
 from datetime import date
 from decimal import Decimal
 
