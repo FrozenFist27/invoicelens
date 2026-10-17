@@ -146,3 +146,12 @@ def test_grounding_match_european_number_and_sheet_page_resolution():
     assert resolve_page("Invoice!D10", {"Invoice": "x", "Other": "y"}) == "Invoice"
     assert resolve_page("body", {"Invoice": "x"}) == "Invoice"
     assert resolve_page("p9", {"p1": "x", "p2": "y"}) is None
+
+
+def test_number_tokens_do_not_merge_across_newlines():
+    from decimal import Decimal
+
+    from invoicelens.validate import number_tokens
+
+    toks = number_tokens("Printing\n1\n62,09\n62,09\nTraining\n6\n292,39\n1.754,34")
+    assert {Decimal("1"), Decimal("62.09"), Decimal("1754.34"), Decimal("6")} <= toks

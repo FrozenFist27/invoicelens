@@ -184,7 +184,8 @@ def number_tokens(text: str) -> set[Decimal]:
     import re
 
     vals: set[Decimal] = set()
-    for tok in re.findall(r"\d[\d.,\s]*\d|\d", text):
+    pattern = r"\d{1,3}(?:[ .,]\d{3})+(?:[.,]\d{1,2})?(?!\d)|\d+(?:[.,]\d+)*"
+    for tok in re.findall(pattern, text):
         tok = tok.strip()
         cands = []
         t = tok.replace(" ", "")
