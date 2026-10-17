@@ -155,3 +155,57 @@ def test_number_tokens_do_not_merge_across_newlines():
 
     toks = number_tokens("Printing\n1\n62,09\n62,09\nTraining\n6\n292,39\n1.754,34")
     assert {Decimal("1"), Decimal("62.09"), Decimal("1754.34"), Decimal("6")} <= toks
+
+
+def test_number_tokens_do_not_merge_columns_separated_by_spaces():
+    from decimal import Decimal
+
+    from invoicelens.validate import number_tokens
+
+    toks = number_tokens("Desk lamp 15 342.16 5,132.40")
+    assert {Decimal("15"), Decimal("342.16"), Decimal("5132.40")} <= toks
+
+
+def _doc_with_dates(issue, due=None):
+    from decimal import Decimal  # noqa: F401
+
+    from invoicelens.models import Field, InvoiceDoc
+
+    def f(v):
+        return Field(value=v, llm_confidence=0.9)
+
+    return InvoiceDoc(
+        doc_id="d", doc_kind=f("invoice"), supplier_name=f("A"), supplier_tax_id=f(None),
+        document_number=f("1"), issue_date=f(issue), due_date=f(due), currency=f("USD"),
+        line_items=[], subtotal=f(None), tax_total=f(None), total=f(None),
+    )
+
+
+def test_date_ambiguous_when_order_cannot_be_resolved():
+    from datetime import date
+
+    from invoicelens.validate import check_date_ambiguity
+
+    doc = _doc_with_dates(date(2026, 6, 11))
+    issues = check_date_ambiguity(doc, {"p1": "Date: 11/06/2026"})
+    assert [i.code for i in issues] == ["date_ambiguous"]
+
+
+def test_date_order_resolved_by_other_date_and_wrong_reading_is_flagged():
+    from datetime import date
+
+    from invoicelens.validate import check_date_ambiguity
+
+    text = "Date: 11/06/2026  Due: 20/07/2026"  # 20 > 12 proves day-first
+    ok = check_date_ambiguity(_doc_with_dates(date(2026, 6, 11)), {"p1": text})
+    assert ok == []
+    bad = check_date_ambiguity(_doc_with_dates(date(2026, 11, 6)), {"p1": text})
+    assert [i.code for i in bad] == ["date_format"]
+
+
+def test_arith_total_implicates_subtotal_and_tax():
+    from invoicelens.models import ValidationIssue
+    from invoicelens.validate import fields_with_issues
+
+    i = ValidationIssue(field_path="total", code="arith_total", message="m", related=["subtotal", "tax_total"])
+    assert fields_with_issues([i]) == {"total", "subtotal", "tax_total"}

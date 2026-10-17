@@ -57,7 +57,7 @@ def test_invalid_then_valid_one_retry():
     assert issues
     from invoicelens.extract import correct
 
-    usage = correct(llm, doc, "text_pdf", "[p1] text", issues)
+    correct(llm, doc, "text_pdf", "[p1] text", issues)
     issues2 = validate_doc(doc)
     assert issues2 == []
     assert len(llm.calls) == 2

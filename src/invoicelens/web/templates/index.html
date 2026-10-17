@@ -1,0 +1,16 @@
+{% extends "base.html" %}{% block body %}
+<h1>Invoices in. Validated data out.</h1>
+<p>Upload a supplier invoice or purchase order (PDF, scanned PDF, XLSX, CSV or EML). Fields below the confidence threshold
+are flagged and sent to the review queue.</p>
+<div class="card">
+<form action="/extract" method="post" enctype="multipart/form-data">
+<input type="file" name="file" accept=".pdf,.xlsx,.csv,.eml" required>
+<button type="submit">Extract</button>
+</form>
+<p><span class="badge">Demo caps: {{ caps.max_mb }} MB, {{ caps.max_pages }} pages, {{ caps.daily }} documents/day. Uploads are deleted after 30 minutes.</span></p>
+</div>
+{% if samples %}<div class="card"><h2>Cached sample results (no LLM call)</h2>
+<p>Real results recorded from the evaluation run on synthetic documents.</p>
+{% for s in samples %}<form action="/sample/{{ s.id }}" method="post" style="display:inline-block;margin:4px">
+<button class="sec" type="submit">{{ s.id }} ({{ s.doc_type }}){% if s.note %} - {{ s.note }}{% endif %}</button></form>{% endfor %}</div>{% endif %}
+{% endblock %}

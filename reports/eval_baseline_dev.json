@@ -1,0 +1,439 @@
+{
+  "config": "baseline",
+  "split": "dev",
+  "n_docs": 40,
+  "n_ok": 40,
+  "n_err": 0,
+  "model": "claude-haiku-5-5",
+  "timestamp": "2026-10-17T17:01:14.011809+00:00",
+  "git_sha": "941dbe7",
+  "dataset_sha256": "c39e15849db64f63",
+  "note": "email attachments are not re-processed in eval (body carries the same data)",
+  "aggregate": {
+    "tp": 1149,
+    "fp": 4,
+    "fn": 10,
+    "precision": 0.9965,
+    "recall": 0.9914,
+    "f1": 0.9939
+  },
+  "per_field": {
+    "supplier_name": {
+      "tp": 40,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "document_number": {
+      "tp": 40,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "issue_date": {
+      "tp": 39,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.975,
+      "recall": 0.975,
+      "f1": 0.975
+    },
+    "due_date": {
+      "tp": 30,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "currency": {
+      "tp": 40,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "doc_kind": {
+      "tp": 40,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "subtotal": {
+      "tp": 40,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "tax_total": {
+      "tp": 28,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.9655,
+      "recall": 0.9655,
+      "f1": 0.9655
+    },
+    "total": {
+      "tp": 40,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "line_items.*": {
+      "tp": 812,
+      "fp": 2,
+      "fn": 8,
+      "precision": 0.9975,
+      "recall": 0.9902,
+      "f1": 0.9939
+    }
+  },
+  "ops": {
+    "cost_per_doc_mean_usd": 0.000983,
+    "cost_per_doc_p95_usd": 0.001409,
+    "time_per_doc_mean_s": 8.556,
+    "time_per_doc_p95_s": 24.316,
+    "total_cost_usd": 0.039309,
+    "total_input_tokens": 219155,
+    "total_output_tokens": 70837,
+    "cache_read_tokens": 200280,
+    "cache_write_tokens": 0
+  },
+  "per_doc": [
+    {
+      "doc_id": "doc_000",
+      "doc_type": "scanned_pdf",
+      "cost_usd": 0.001163,
+      "ms_total": 17761,
+      "retries": 0,
+      "fields_needs_review": 10
+    },
+    {
+      "doc_id": "doc_001",
+      "doc_type": "scanned_pdf",
+      "cost_usd": 0.000884,
+      "ms_total": 12566,
+      "retries": 0,
+      "fields_needs_review": 3
+    },
+    {
+      "doc_id": "doc_002",
+      "doc_type": "scanned_pdf",
+      "cost_usd": 0.000682,
+      "ms_total": 11494,
+      "retries": 0,
+      "fields_needs_review": 2
+    },
+    {
+      "doc_id": "doc_003",
+      "doc_type": "text_pdf",
+      "cost_usd": 0.000901,
+      "ms_total": 5173,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_004",
+      "doc_type": "text_pdf",
+      "cost_usd": 0.001127,
+      "ms_total": 6404,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_005",
+      "doc_type": "email",
+      "cost_usd": 0.001409,
+      "ms_total": 7664,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_006",
+      "doc_type": "spreadsheet",
+      "cost_usd": 0.001048,
+      "ms_total": 6138,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_007",
+      "doc_type": "text_pdf",
+      "cost_usd": 0.00069,
+      "ms_total": 4030,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_008",
+      "doc_type": "spreadsheet",
+      "cost_usd": 0.000744,
+      "ms_total": 4456,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_009",
+      "doc_type": "scanned_pdf",
+      "cost_usd": 0.000983,
+      "ms_total": 23008,
+      "retries": 0,
+      "fields_needs_review": 4
+    },
+    {
+      "doc_id": "doc_010",
+      "doc_type": "spreadsheet",
+      "cost_usd": 0.001066,
+      "ms_total": 6065,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_013",
+      "doc_type": "text_pdf",
+      "cost_usd": 0.000621,
+      "ms_total": 3671,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_014",
+      "doc_type": "email",
+      "cost_usd": 0.000564,
+      "ms_total": 3376,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_017",
+      "doc_type": "scanned_pdf",
+      "cost_usd": 0.00124,
+      "ms_total": 27502,
+      "retries": 0,
+      "fields_needs_review": 11
+    },
+    {
+      "doc_id": "doc_018",
+      "doc_type": "spreadsheet",
+      "cost_usd": 0.001076,
+      "ms_total": 5938,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_019",
+      "doc_type": "text_pdf",
+      "cost_usd": 0.000638,
+      "ms_total": 4743,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_020",
+      "doc_type": "email",
+      "cost_usd": 0.00117,
+      "ms_total": 6394,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_021",
+      "doc_type": "scanned_pdf",
+      "cost_usd": 0.000912,
+      "ms_total": 24316,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_023",
+      "doc_type": "email",
+      "cost_usd": 0.001409,
+      "ms_total": 7515,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_025",
+      "doc_type": "spreadsheet",
+      "cost_usd": 0.001017,
+      "ms_total": 5767,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_027",
+      "doc_type": "scanned_pdf",
+      "cost_usd": 0.001007,
+      "ms_total": 13213,
+      "retries": 0,
+      "fields_needs_review": 8
+    },
+    {
+      "doc_id": "doc_028",
+      "doc_type": "scanned_pdf",
+      "cost_usd": 0.000982,
+      "ms_total": 17374,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_029",
+      "doc_type": "email",
+      "cost_usd": 0.001326,
+      "ms_total": 7170,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_030",
+      "doc_type": "email",
+      "cost_usd": 0.001295,
+      "ms_total": 7015,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_031",
+      "doc_type": "spreadsheet",
+      "cost_usd": 0.000802,
+      "ms_total": 4594,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_032",
+      "doc_type": "spreadsheet",
+      "cost_usd": 0.000916,
+      "ms_total": 5108,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_033",
+      "doc_type": "email",
+      "cost_usd": 0.000752,
+      "ms_total": 4466,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_035",
+      "doc_type": "email",
+      "cost_usd": 0.001218,
+      "ms_total": 6883,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_036",
+      "doc_type": "email",
+      "cost_usd": 0.000516,
+      "ms_total": 3097,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_037",
+      "doc_type": "text_pdf",
+      "cost_usd": 0.0007,
+      "ms_total": 4974,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_038",
+      "doc_type": "spreadsheet",
+      "cost_usd": 0.000881,
+      "ms_total": 5230,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_039",
+      "doc_type": "spreadsheet",
+      "cost_usd": 0.001132,
+      "ms_total": 6149,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_040",
+      "doc_type": "text_pdf",
+      "cost_usd": 0.001013,
+      "ms_total": 5858,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_041",
+      "doc_type": "spreadsheet",
+      "cost_usd": 0.001491,
+      "ms_total": 8253,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_042",
+      "doc_type": "text_pdf",
+      "cost_usd": 0.000898,
+      "ms_total": 5093,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_043",
+      "doc_type": "text_pdf",
+      "cost_usd": 0.001112,
+      "ms_total": 6114,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_044",
+      "doc_type": "scanned_pdf",
+      "cost_usd": 0.000949,
+      "ms_total": 12811,
+      "retries": 0,
+      "fields_needs_review": 7
+    },
+    {
+      "doc_id": "doc_045",
+      "doc_type": "scanned_pdf",
+      "cost_usd": 0.001087,
+      "ms_total": 14041,
+      "retries": 0,
+      "fields_needs_review": 6
+    },
+    {
+      "doc_id": "doc_047",
+      "doc_type": "text_pdf",
+      "cost_usd": 0.000621,
+      "ms_total": 3643,
+      "retries": 0,
+      "fields_needs_review": 0
+    },
+    {
+      "doc_id": "doc_049",
+      "doc_type": "email",
+      "cost_usd": 0.001265,
+      "ms_total": 7167,
+      "retries": 0,
+      "fields_needs_review": 0
+    }
+  ],
+  "traceability": {
+    "page_accuracy": 1.0,
+    "n_fields_with_page": 339
+  }
+}

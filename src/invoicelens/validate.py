@@ -52,6 +52,7 @@ def check_arith_line(item: LineItem, idx: int) -> ValidationIssue | None:
         return None
     return ValidationIssue(
         field_path=f"line_items[{idx}].amount",
+        related=[f"line_items[{idx}].quantity", f"line_items[{idx}].unit_price"],
         code="arith_line",
         message=f"line {idx}: quantity {q} x unit_price {u} = {expected}, but amount = {a}",
     )
@@ -69,6 +70,7 @@ def check_arith_subtotal(doc: InvoiceDoc) -> ValidationIssue | None:
         return None
     return ValidationIssue(
         field_path="subtotal",
+        related=[f"line_items[{i}].amount" for i in range(len(doc.line_items))],
         code="arith_subtotal",
         message=f"sum of line amounts = {s}, but subtotal = {subtotal}",
     )
@@ -86,6 +88,7 @@ def check_arith_total(doc: InvoiceDoc) -> ValidationIssue | None:
             return None
         return ValidationIssue(
             field_path="total",
+            related=["subtotal", "tax_total"],
             code="arith_total",
             message=f"tax_total is null and subtotal {subtotal} != total {total}",
         )
@@ -93,6 +96,7 @@ def check_arith_total(doc: InvoiceDoc) -> ValidationIssue | None:
         return None
     return ValidationIssue(
         field_path="total",
+        related=["subtotal", "tax_total"],
         code="arith_total",
         message=f"subtotal {subtotal} + tax_total {tax} = {subtotal + tax}, but total = {total}",
     )
@@ -184,11 +188,11 @@ def number_tokens(text: str) -> set[Decimal]:
     import re
 
     vals: set[Decimal] = set()
-    pattern = r"\d{1,3}(?:[ .,]\d{3})+(?:[.,]\d{1,2})?(?!\d)|\d+(?:[.,]\d+)*"
+    pattern = r"\d{1,3}(?:[.,]\d{3})+(?:[.,]\d{1,2})?(?!\d)|\d+(?:[.,]\d+)*"
     for tok in re.findall(pattern, text):
         tok = tok.strip()
         cands = []
-        t = tok.replace(" ", "")
+        t = tok
         if "," in t and "." in t:
             if t.rfind(",") > t.rfind("."):
                 cands.append(t.replace(".", "").replace(",", "."))
@@ -304,6 +308,64 @@ def check_grounded(doc: InvoiceDoc, page_texts: dict[str, str], fuzzy_threshold:
     return issues
 
 
+_NUMERIC_DATE = None
+
+
+def check_date_ambiguity(doc: InvoiceDoc, page_texts: dict[str, str]) -> list[ValidationIssue]:
+    """Detect dd/mm vs mm/dd confusion on numeric dates.
+
+    The ordering is resolved from any numeric date in the document whose first part is > 12
+    (day first) or whose second part is > 12 (month first). If the extracted date contradicts the
+    resolved ordering the issue is retriable (date_format); if the ordering cannot be resolved the
+    issue is `date_ambiguous` (not retriable, goes straight to review).
+    """
+    import re
+
+    global _NUMERIC_DATE
+    if _NUMERIC_DATE is None:
+        _NUMERIC_DATE = re.compile(r"(?<!\d)(\d{1,2})[/.\-](\d{1,2})[/.\-](\d{4})(?!\d)")
+    if not page_texts:
+        return []
+    tokens = [(int(a), int(b), int(y)) for t in page_texts.values() for a, b, y in _NUMERIC_DATE.findall(t)]
+    style = None
+    if any(a > 12 for a, _, _ in tokens):
+        style = "dmy"
+    elif any(b > 12 for _, b, _ in tokens):
+        style = "mdy"
+    issues: list[ValidationIssue] = []
+    for name in ("issue_date", "due_date"):
+        d = getattr(doc, name).value
+        if not isinstance(d, date) or d.day == d.month:
+            continue
+        pair = {d.day, d.month}
+        match = [(a, b) for a, b, y in tokens if y == d.year and {a, b} == pair]
+        if not match:
+            continue  # not printed in numeric form (or not found): nothing to resolve
+        if style is None:
+            issues.append(
+                ValidationIssue(
+                    field_path=name,
+                    code="date_ambiguous",
+                    message=f"{name} is printed as {match[0][0]:02d}/{match[0][1]:02d}/{d.year}; "
+                    "day/month order cannot be determined from the document",
+                )
+            )
+            continue
+        a, b = match[0]
+        expected = (a, b) if style == "dmy" else (b, a)  # (day, month)
+        if (d.day, d.month) != expected:
+            issues.append(
+                ValidationIssue(
+                    field_path=name,
+                    code="date_format",
+                    message=f"the document uses {'day/month/year' if style == 'dmy' else 'month/day/year'} "
+                    f"order (another date proves it); {a:02d}/{b:02d}/{d.year} means "
+                    f"{d.year}-{expected[1]:02d}-{expected[0]:02d}, not {d.isoformat()}",
+                )
+            )
+    return issues
+
+
 def validate_doc(
     doc: InvoiceDoc,
     page_texts: dict[str, str] | None = None,
@@ -331,9 +393,14 @@ def validate_doc(
             issues.append(li_issue)
     if page_texts:
         issues.extend(check_grounded(doc, page_texts, fuzzy_threshold))
+        issues.extend(check_date_ambiguity(doc, page_texts))
     return issues
 
 
 def fields_with_issues(issues: list[ValidationIssue]) -> set[str]:
-    """Set of field paths touched by any issue."""
-    return {i.field_path for i in issues}
+    """Set of field paths touched by any issue (the failing field plus fields implicated with it)."""
+    out: set[str] = set()
+    for i in issues:
+        out.add(i.field_path)
+        out.update(getattr(i, "related", []))
+    return out

@@ -28,7 +28,6 @@ def generate_data(seed: int = typer.Option(42, help="Random seed.")):
     """Generate the 50-document synthetic dataset + labels + splits."""
     import sys
 
-    script = PROJECT_ROOT / "scripts" / "generate_dataset.py"
     sys.path.insert(0, str(PROJECT_ROOT / "scripts"))
     from generate_dataset import generate  # type: ignore
 

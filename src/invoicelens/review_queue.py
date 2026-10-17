@@ -60,6 +60,8 @@ def add_items(
     now = datetime.now(timezone.utc).isoformat()
     init_db(db_path)
     with _conn(db_path) as conn:
+        # re-processing a document replaces its still-pending items instead of duplicating them
+        conn.execute("DELETE FROM review_items WHERE doc_id=? AND status='pending'", (doc.doc_id,))
         for path, f in iter_fields(doc):
             if f.status != "needs_review":
                 continue

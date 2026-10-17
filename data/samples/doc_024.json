@@ -1,0 +1,317 @@
+{
+ "doc_id": "doc_024",
+ "doc_kind": {
+  "value": "invoice",
+  "source": {
+   "page": "body",
+   "snippet": "Invoice INV-60048 from Walter, Edwards and Rios"
+  },
+  "llm_confidence": 0.95,
+  "confidence": 0.9749999999999999,
+  "status": "ok"
+ },
+ "supplier_name": {
+  "value": "Walter, Edwards and Rios",
+  "source": {
+   "page": "body",
+   "snippet": "Supplier: Walter, Edwards and Rios"
+  },
+  "llm_confidence": 0.95,
+  "confidence": 0.9749999999999999,
+  "status": "ok"
+ },
+ "supplier_tax_id": {
+  "value": "TAX-528361",
+  "source": {
+   "page": "body",
+   "snippet": "Tax ID: TAX-528361"
+  },
+  "llm_confidence": 0.95,
+  "confidence": 0.9749999999999999,
+  "status": "ok"
+ },
+ "document_number": {
+  "value": "INV-60048",
+  "source": {
+   "page": "body",
+   "snippet": "Document No: INV-60048"
+  },
+  "llm_confidence": 0.95,
+  "confidence": 0.9749999999999999,
+  "status": "ok"
+ },
+ "issue_date": {
+  "value": "2026-03-08",
+  "source": {
+   "page": "body",
+   "snippet": "Date: 2026-03-08"
+  },
+  "llm_confidence": 0.95,
+  "confidence": 0.9749999999999999,
+  "status": "ok"
+ },
+ "due_date": {
+  "value": "2026-03-22",
+  "source": {
+   "page": "body",
+   "snippet": "Due: 2026-03-22"
+  },
+  "llm_confidence": 0.95,
+  "confidence": 0.9749999999999999,
+  "status": "ok"
+ },
+ "currency": {
+  "value": "USD",
+  "source": {
+   "page": "body",
+   "snippet": "Currency: USD"
+  },
+  "llm_confidence": 0.95,
+  "confidence": 0.9749999999999999,
+  "status": "ok"
+ },
+ "line_items": [
+  {
+   "description": {
+    "value": "Whiteboard markers",
+    "source": {
+     "page": "body",
+     "snippet": "Whiteboard markers x16 @ 149.17 = 2386.72"
+    },
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
+    "status": "ok"
+   },
+   "quantity": {
+    "value": 16.0,
+    "source": {
+     "page": "body",
+     "snippet": "Whiteboard markers x16 @ 149.17 = 2386.72"
+    },
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
+    "status": "ok"
+   },
+   "unit_price": {
+    "value": 149.17,
+    "source": {
+     "page": "body",
+     "snippet": "Whiteboard markers x16 @ 149.17 = 2386.72"
+    },
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
+    "status": "ok"
+   },
+   "amount": {
+    "value": 2386.72,
+    "source": {
+     "page": "body",
+     "snippet": "Whiteboard markers x16 @ 149.17 = 2386.72"
+    },
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
+    "status": "ok"
+   }
+  },
+  {
+   "description": {
+    "value": "Support retainer",
+    "source": {
+     "page": "body",
+     "snippet": "Support retainer x10 @ 354.94 = 3549.40"
+    },
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
+    "status": "ok"
+   },
+   "quantity": {
+    "value": 10.0,
+    "source": {
+     "page": "body",
+     "snippet": "Support retainer x10 @ 354.94 = 3549.40"
+    },
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
+    "status": "ok"
+   },
+   "unit_price": {
+    "value": 354.94,
+    "source": {
+     "page": "body",
+     "snippet": "Support retainer x10 @ 354.94 = 3549.40"
+    },
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
+    "status": "ok"
+   },
+   "amount": {
+    "value": 3549.4,
+    "source": {
+     "page": "body",
+     "snippet": "Support retainer x10 @ 354.94 = 3549.40"
+    },
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
+    "status": "ok"
+   }
+  },
+  {
+   "description": {
+    "value": "Maintenance contract",
+    "source": {
+     "page": "body",
+     "snippet": "Maintenance contract x3 @ 345.26 = 1035.78"
+    },
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
+    "status": "ok"
+   },
+   "quantity": {
+    "value": 3.0,
+    "source": {
+     "page": "body",
+     "snippet": "Maintenance contract x3 @ 345.26 = 1035.78"
+    },
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
+    "status": "ok"
+   },
+   "unit_price": {
+    "value": 345.26,
+    "source": {
+     "page": "body",
+     "snippet": "Maintenance contract x3 @ 345.26 = 1035.78"
+    },
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
+    "status": "ok"
+   },
+   "amount": {
+    "value": 1035.78,
+    "source": {
+     "page": "body",
+     "snippet": "Maintenance contract x3 @ 345.26 = 1035.78"
+    },
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
+    "status": "ok"
+   }
+  },
+  {
+   "description": {
+    "value": "Training workshop",
+    "source": {
+     "page": "body",
+     "snippet": "Training workshop x19 @ 332.29 = 6313.51"
+    },
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
+    "status": "ok"
+   },
+   "quantity": {
+    "value": 19.0,
+    "source": {
+     "page": "body",
+     "snippet": "Training workshop x19 @ 332.29 = 6313.51"
+    },
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
+    "status": "ok"
+   },
+   "unit_price": {
+    "value": 332.29,
+    "source": {
+     "page": "body",
+     "snippet": "Training workshop x19 @ 332.29 = 6313.51"
+    },
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
+    "status": "ok"
+   },
+   "amount": {
+    "value": 6313.51,
+    "source": {
+     "page": "body",
+     "snippet": "Training workshop x19 @ 332.29 = 6313.51"
+    },
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
+    "status": "ok"
+   }
+  },
+  {
+   "description": {
+    "value": "Cloud storage plan",
+    "source": {
+     "page": "body",
+     "snippet": "Cloud storage plan x14 @ 61.81 = 865.34"
+    },
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
+    "status": "ok"
+   },
+   "quantity": {
+    "value": 14.0,
+    "source": {
+     "page": "body",
+     "snippet": "Cloud storage plan x14 @ 61.81 = 865.34"
+    },
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
+    "status": "ok"
+   },
+   "unit_price": {
+    "value": 61.81,
+    "source": {
+     "page": "body",
+     "snippet": "Cloud storage plan x14 @ 61.81 = 865.34"
+    },
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
+    "status": "ok"
+   },
+   "amount": {
+    "value": 865.34,
+    "source": {
+     "page": "body",
+     "snippet": "Cloud storage plan x14 @ 61.81 = 865.34"
+    },
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
+    "status": "ok"
+   }
+  }
+ ],
+ "subtotal": {
+  "value": 14150.75,
+  "source": {
+   "page": "body",
+   "snippet": "Subtotal: 14150.75"
+  },
+  "llm_confidence": 0.95,
+  "confidence": 0.9749999999999999,
+  "status": "ok"
+ },
+ "tax_total": {
+  "value": 1415.08,
+  "source": {
+   "page": "body",
+   "snippet": "Tax: 1415.08"
+  },
+  "llm_confidence": 0.95,
+  "confidence": 0.9749999999999999,
+  "status": "ok"
+ },
+ "total": {
+  "value": 15565.83,
+  "source": {
+   "page": "body",
+   "snippet": "TOTAL: 15565.83"
+  },
+  "llm_confidence": 0.95,
+  "confidence": 0.9749999999999999,
+  "status": "ok"
+ },
+ "_doc_type": "email",
+ "_note": "email + PDF attachment"
+}

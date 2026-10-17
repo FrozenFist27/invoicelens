@@ -52,10 +52,10 @@ def match_date(pred, label) -> bool:
 
 def match_money(pred, label) -> bool:
     p = to_dec(pred)
-    l = to_dec(label)
-    if p is None or l is None:
-        return p is None and l is None
-    return abs(p - l) <= Decimal("0.01")
+    lab = to_dec(label)
+    if p is None or lab is None:
+        return p is None and lab is None
+    return abs(p - lab) <= Decimal("0.01")
 
 
 def match_currency(pred, label) -> bool:
@@ -85,7 +85,7 @@ def desc_similarity(a, b) -> float:
 
 
 def match_line_items(pred_items: list[dict], label_items: list[dict]) -> dict:
-    """Greedy assignment on description similarity, then score each sub-field.
+    """Hungarian assignment on description similarity + amount agreement, then score each sub-field.
 
     Returns dict with tp/fp/fn counts for the sub-fields combined, and matched pairs.
     """

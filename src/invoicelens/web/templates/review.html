@@ -1,0 +1,10 @@
+{% extends "base.html" %}{% block body %}
+<h1>Review queue</h1>
+{% if not items %}<p>No pending items.</p>{% endif %}
+<div class="tbl"><table>{% if items %}<tr><th>#</th><th>Doc</th><th>Field</th><th>Suggested</th><th>Conf.</th><th>Why</th><th>Source snippet</th><th>Action</th></tr>{% endif %}
+{% for it in items %}<tr><td>{{ it.id }}</td><td>{{ it.doc_id }}</td><td>{{ it.field_path }}</td><td>{{ it.suggested_value }}</td>
+<td>{{ '%.2f'|format(it.confidence) }}</td><td>{% for i in it.issues %}{{ i }}<br>{% endfor %}</td>
+<td>{{ it.source_page }}: {{ it.snippet }}</td>
+<td><form method="post" action="/review/{{ it.id }}"><input type="hidden" name="action" value="accept"><button type="submit">Accept</button></form>
+<form method="post" action="/review/{{ it.id }}"><input type="hidden" name="action" value="correct"><input type="text" name="value" size="10" placeholder="corrected" required><button class="sec" type="submit">Correct</button></form></td></tr>{% endfor %}</table></div>
+{% endblock %}

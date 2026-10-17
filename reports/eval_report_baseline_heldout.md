@@ -1,7 +1,7 @@
 # InvoiceLens eval — baseline (heldout)
 
-- Model: `claude-haiku-5-5`  |  commit: `c9acef9`  |  dataset: `c39e15849db64f63`
-- Timestamp: 2026-10-17T16:46:29.205396+00:00
+- Model: `claude-haiku-5-5`  |  commit: `941dbe7`  |  dataset: `c39e15849db64f63`
+- Timestamp: 2026-10-17T16:53:41.021646+00:00
 - Docs: 10 ok / 0 error (of 10)
 
 ## Per-field precision / recall / F1
@@ -21,10 +21,10 @@
 | **overall** | 305 | 0 | 3 | 1.000 | 0.990 | 0.995 |
 
 ## Ops
-- Cost/doc mean: $0.001032  p95: $0.001276
-- Time/doc mean: 10.531s  p95: 25.143s
-- Total cost: $0.010319
-- Tokens in/out: 54733 / 17553
+- Cost/doc mean: $0.000973  p95: $0.001158
+- Time/doc mean: 12.066s  p95: 31.532s
+- Total cost: $0.009728
+- Tokens in/out: 54733 / 17523
 
 ## Traceability
 - Source-page accuracy: 1.0 over 88 fields

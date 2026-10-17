@@ -1,0 +1,15 @@
+{% extends "base.html" %}{% block body %}
+<h1>Result: {{ filename }}</h1>
+<p><span class="badge">{{ doc_type }}</span>
+{% if cached %}<span class="badge">cached sample, no LLM call</span>{% elif metrics %}
+<span class="badge">cost ${{ '%.5f'|format(metrics.cost_usd) }}</span>
+<span class="badge">{{ '%.1f'|format(metrics.ms_total/1000) }} s</span>
+<span class="badge">{{ metrics.retries }} retries</span>
+<span class="badge">{{ metrics.fields_needs_review }} / {{ metrics.fields_total }} fields need review</span>{% endif %}</p>
+{% if issues %}<div class="card"><strong>Validation issues remaining:</strong><ul>{% for i in issues %}<li>[{{ i.code }}] {{ i.field_path }}: {{ i.message }}</li>{% endfor %}</ul></div>{% endif %}
+<div class="tbl"><table><tr><th>Field</th><th>Value</th><th>Confidence</th><th>Status</th><th>Source</th></tr>
+{% for r in rows %}<tr><td>{{ r.path }}</td><td>{{ r.value }}</td><td>{{ '%.2f'|format(r.confidence) }}</td>
+<td class="{{ 'nr' if r.status == 'needs_review' else 'ok' }}">{{ r.status }}</td>
+<td>{% if r.source %}<a href="/source/{{ sid }}?page={{ r.source.page|urlencode }}&snippet={{ (r.source.snippet or '')|urlencode }}">{{ r.source.page }}</a>{% endif %}</td></tr>{% endfor %}</table></div>
+<h2>JSON</h2><pre>{{ raw }}</pre>
+{% endblock %}

@@ -5,17 +5,17 @@
   "n_ok": 10,
   "n_err": 0,
   "model": "claude-haiku-5-5",
-  "timestamp": "2026-10-17T16:50:04.343577+00:00",
-  "git_sha": "d8660e4",
+  "timestamp": "2026-10-17T16:55:13.533298+00:00",
+  "git_sha": "941dbe7",
   "dataset_sha256": "c39e15849db64f63",
   "note": "email attachments are not re-processed in eval (body carries the same data)",
   "aggregate": {
-    "tp": 307,
-    "fp": 0,
-    "fn": 1,
-    "precision": 1.0,
-    "recall": 0.9968,
-    "f1": 0.9984
+    "tp": 304,
+    "fp": 1,
+    "fn": 4,
+    "precision": 0.9967,
+    "recall": 0.987,
+    "f1": 0.9918
   },
   "per_field": {
     "supplier_name": {
@@ -83,71 +83,71 @@
       "f1": 1.0
     },
     "total": {
-      "tp": 10,
-      "fp": 0,
-      "fn": 0,
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0
+      "tp": 9,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.9,
+      "recall": 0.9,
+      "f1": 0.9
     },
     "line_items.*": {
-      "tp": 219,
+      "tp": 217,
       "fp": 0,
-      "fn": 1,
+      "fn": 3,
       "precision": 1.0,
-      "recall": 0.9955,
-      "f1": 0.9977
+      "recall": 0.9864,
+      "f1": 0.9931
     }
   },
   "ops": {
-    "cost_per_doc_mean_usd": 0.001734,
-    "cost_per_doc_p95_usd": 0.003128,
-    "time_per_doc_mean_s": 13.956,
-    "time_per_doc_p95_s": 31.964,
-    "total_cost_usd": 0.017336,
-    "total_input_tokens": 92194,
-    "total_output_tokens": 27260,
-    "cache_read_tokens": 61554,
-    "cache_write_tokens": 1044
+    "cost_per_doc_mean_usd": 0.001032,
+    "cost_per_doc_p95_usd": 0.001329,
+    "time_per_doc_mean_s": 8.297,
+    "time_per_doc_p95_s": 13.421,
+    "total_cost_usd": 0.010317,
+    "total_input_tokens": 61382,
+    "total_output_tokens": 18122,
+    "cache_read_tokens": 54246,
+    "cache_write_tokens": 0
   },
   "per_doc": [
     {
       "doc_id": "doc_011",
       "doc_type": "scanned_pdf",
-      "cost_usd": 0.001426,
-      "ms_total": 31964,
-      "retries": 2,
-      "fields_needs_review": 6
+      "cost_usd": 0.0007,
+      "ms_total": 11645,
+      "retries": 0,
+      "fields_needs_review": 0
     },
     {
       "doc_id": "doc_012",
       "doc_type": "text_pdf",
-      "cost_usd": 0.002442,
-      "ms_total": 12348,
+      "cost_usd": 0.001222,
+      "ms_total": 9021,
       "retries": 2,
-      "fields_needs_review": 17
+      "fields_needs_review": 1
     },
     {
       "doc_id": "doc_015",
       "doc_type": "email",
-      "cost_usd": 0.001164,
-      "ms_total": 6367,
+      "cost_usd": 0.00108,
+      "ms_total": 6201,
       "retries": 0,
       "fields_needs_review": 0
     },
     {
       "doc_id": "doc_016",
       "doc_type": "text_pdf",
-      "cost_usd": 0.003128,
-      "ms_total": 15469,
+      "cost_usd": 0.001329,
+      "ms_total": 8398,
       "retries": 2,
-      "fields_needs_review": 25
+      "fields_needs_review": 1
     },
     {
       "doc_id": "doc_022",
       "doc_type": "spreadsheet",
       "cost_usd": 0.001051,
-      "ms_total": 5892,
+      "ms_total": 5799,
       "retries": 0,
       "fields_needs_review": 0
     },
@@ -155,7 +155,7 @@
       "doc_id": "doc_024",
       "doc_type": "email",
       "cost_usd": 0.001071,
-      "ms_total": 6003,
+      "ms_total": 5946,
       "retries": 0,
       "fields_needs_review": 0
     },
@@ -163,41 +163,41 @@
       "doc_id": "doc_026",
       "doc_type": "spreadsheet",
       "cost_usd": 0.000917,
-      "ms_total": 5304,
+      "ms_total": 5383,
       "retries": 0,
       "fields_needs_review": 0
     },
     {
       "doc_id": "doc_034",
       "doc_type": "scanned_pdf",
-      "cost_usd": 0.002219,
-      "ms_total": 27287,
-      "retries": 2,
-      "fields_needs_review": 14
+      "cost_usd": 0.001087,
+      "ms_total": 13132,
+      "retries": 0,
+      "fields_needs_review": 0
     },
     {
       "doc_id": "doc_046",
       "doc_type": "scanned_pdf",
-      "cost_usd": 0.002416,
-      "ms_total": 20419,
-      "retries": 2,
-      "fields_needs_review": 18
+      "cost_usd": 0.001139,
+      "ms_total": 13421,
+      "retries": 0,
+      "fields_needs_review": 0
     },
     {
       "doc_id": "doc_048",
       "doc_type": "text_pdf",
-      "cost_usd": 0.001502,
-      "ms_total": 8510,
-      "retries": 2,
-      "fields_needs_review": 9
+      "cost_usd": 0.000721,
+      "ms_total": 4029,
+      "retries": 0,
+      "fields_needs_review": 0
     }
   ],
   "review": {
-    "review_rate_mean": 0.2574,
+    "review_rate_mean": 0.0053,
     "auto_accepted_precision": 1.0,
-    "review_error_recall": null,
-    "wrong_scalar_fields": 0,
-    "caught_by_review": 0
+    "review_error_recall": 1.0,
+    "wrong_scalar_fields": 1,
+    "caught_by_review": 1
   },
   "traceability": {
     "page_accuracy": 1.0,
@@ -206,19 +206,19 @@
   "threshold_sensitivity": [
     {
       "threshold": 0.5,
-      "review_rate": 0.0,
+      "review_rate": 0.0114,
       "auto_accepted_precision": 1.0,
       "n_scalar_fields": 88
     },
     {
       "threshold": 0.6,
-      "review_rate": 0.0,
+      "review_rate": 0.0114,
       "auto_accepted_precision": 1.0,
       "n_scalar_fields": 88
     },
     {
       "threshold": 0.7,
-      "review_rate": 0.0,
+      "review_rate": 0.0114,
       "auto_accepted_precision": 1.0,
       "n_scalar_fields": 88
     },

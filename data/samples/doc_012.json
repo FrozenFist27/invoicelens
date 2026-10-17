@@ -1,0 +1,359 @@
+{
+ "doc_id": "doc_012",
+ "doc_kind": {
+  "value": "invoice",
+  "source": {
+   "page": "p1",
+   "snippet": "INVOICE"
+  },
+  "llm_confidence": 0.95,
+  "confidence": 0.9749999999999999,
+  "status": "ok"
+ },
+ "supplier_name": {
+  "value": "Arnold Ltd",
+  "source": {
+   "page": "p1",
+   "snippet": "Arnold Ltd"
+  },
+  "llm_confidence": 0.9,
+  "confidence": 0.95,
+  "status": "ok"
+ },
+ "supplier_tax_id": {
+  "value": "TAX-984642",
+  "source": {
+   "page": "p1",
+   "snippet": "Tax ID: TAX-984642"
+  },
+  "llm_confidence": 0.9,
+  "confidence": 0.95,
+  "status": "ok"
+ },
+ "document_number": {
+  "value": "INV-71282",
+  "source": {
+   "page": "p1",
+   "snippet": "Document No: INV-71282"
+  },
+  "llm_confidence": 0.95,
+  "confidence": 0.9749999999999999,
+  "status": "ok"
+ },
+ "issue_date": {
+  "value": "2026-02-25",
+  "source": {
+   "page": "p1",
+   "snippet": "Date: 25/02/2026"
+  },
+  "llm_confidence": 0.95,
+  "confidence": 0.9749999999999999,
+  "status": "ok"
+ },
+ "due_date": {
+  "value": "2026-04-26",
+  "source": {
+   "page": "p1",
+   "snippet": "Due: 26/04/2026"
+  },
+  "llm_confidence": 0.95,
+  "confidence": 0.9749999999999999,
+  "status": "ok"
+ },
+ "currency": {
+  "value": "GBP",
+  "source": {
+   "page": "p1",
+   "snippet": "Currency: GBP"
+  },
+  "llm_confidence": 0.95,
+  "confidence": 0.9749999999999999,
+  "status": "ok"
+ },
+ "line_items": [
+  {
+   "description": {
+    "value": "Printing services",
+    "source": {
+     "page": "p1",
+     "snippet": "Printing services"
+    },
+    "llm_confidence": 0.9,
+    "confidence": 0.95,
+    "status": "ok"
+   },
+   "quantity": {
+    "value": 1.0,
+    "source": {
+     "page": "p1",
+     "snippet": "Printing services\n1\n62,09"
+    },
+    "llm_confidence": 0.85,
+    "confidence": 0.925,
+    "status": "ok"
+   },
+   "unit_price": {
+    "value": 62.09,
+    "source": {
+     "page": "p1",
+     "snippet": "62,09"
+    },
+    "llm_confidence": 0.85,
+    "confidence": 0.925,
+    "status": "ok"
+   },
+   "amount": {
+    "value": 62.09,
+    "source": {
+     "page": "p1",
+     "snippet": "62,09"
+    },
+    "llm_confidence": 0.85,
+    "confidence": 0.925,
+    "status": "ok"
+   }
+  },
+  {
+   "description": {
+    "value": "Training workshop",
+    "source": {
+     "page": "p1",
+     "snippet": "Training workshop"
+    },
+    "llm_confidence": 0.9,
+    "confidence": 0.95,
+    "status": "ok"
+   },
+   "quantity": {
+    "value": 6.0,
+    "source": {
+     "page": "p1",
+     "snippet": "Training workshop\n6\n292,39"
+    },
+    "llm_confidence": 0.85,
+    "confidence": 0.925,
+    "status": "ok"
+   },
+   "unit_price": {
+    "value": 292.39,
+    "source": {
+     "page": "p1",
+     "snippet": "292,39"
+    },
+    "llm_confidence": 0.85,
+    "confidence": 0.925,
+    "status": "ok"
+   },
+   "amount": {
+    "value": 1754.34,
+    "source": {
+     "page": "p1",
+     "snippet": "1.754,34"
+    },
+    "llm_confidence": 0.85,
+    "confidence": 0.925,
+    "status": "ok"
+   }
+  },
+  {
+   "description": {
+    "value": "Training workshop",
+    "source": {
+     "page": "p1",
+     "snippet": "Training workshop"
+    },
+    "llm_confidence": 0.9,
+    "confidence": 0.95,
+    "status": "ok"
+   },
+   "quantity": {
+    "value": 2.0,
+    "source": {
+     "page": "p1",
+     "snippet": "Training workshop\n2\n58,66"
+    },
+    "llm_confidence": 0.85,
+    "confidence": 0.925,
+    "status": "ok"
+   },
+   "unit_price": {
+    "value": 58.66,
+    "source": {
+     "page": "p1",
+     "snippet": "58,66"
+    },
+    "llm_confidence": 0.85,
+    "confidence": 0.925,
+    "status": "ok"
+   },
+   "amount": {
+    "value": 117.32,
+    "source": {
+     "page": "p1",
+     "snippet": "117,32"
+    },
+    "llm_confidence": 0.85,
+    "confidence": 0.925,
+    "status": "ok"
+   }
+  },
+  {
+   "description": {
+    "value": "Security audit",
+    "source": {
+     "page": "p1",
+     "snippet": "Security audit"
+    },
+    "llm_confidence": 0.9,
+    "confidence": 0.95,
+    "status": "ok"
+   },
+   "quantity": {
+    "value": 12.0,
+    "source": {
+     "page": "p1",
+     "snippet": "Security audit\n12\n365,63"
+    },
+    "llm_confidence": 0.85,
+    "confidence": 0.925,
+    "status": "ok"
+   },
+   "unit_price": {
+    "value": 365.63,
+    "source": {
+     "page": "p1",
+     "snippet": "365,63"
+    },
+    "llm_confidence": 0.85,
+    "confidence": 0.925,
+    "status": "ok"
+   },
+   "amount": {
+    "value": 4387.56,
+    "source": {
+     "page": "p1",
+     "snippet": "4.387,56"
+    },
+    "llm_confidence": 0.85,
+    "confidence": 0.925,
+    "status": "ok"
+   }
+  },
+  {
+   "description": {
+    "value": "Printing services",
+    "source": {
+     "page": "p1",
+     "snippet": "Printing services"
+    },
+    "llm_confidence": 0.9,
+    "confidence": 0.95,
+    "status": "ok"
+   },
+   "quantity": {
+    "value": 14.0,
+    "source": {
+     "page": "p1",
+     "snippet": "Printing services\n14\n305,07"
+    },
+    "llm_confidence": 0.85,
+    "confidence": 0.925,
+    "status": "ok"
+   },
+   "unit_price": {
+    "value": 305.07,
+    "source": {
+     "page": "p1",
+     "snippet": "305,07"
+    },
+    "llm_confidence": 0.85,
+    "confidence": 0.925,
+    "status": "ok"
+   },
+   "amount": {
+    "value": 4270.98,
+    "source": {
+     "page": "p1",
+     "snippet": "4.270,98"
+    },
+    "llm_confidence": 0.85,
+    "confidence": 0.925,
+    "status": "ok"
+   }
+  },
+  {
+   "description": {
+    "value": "Laptop docking station",
+    "source": {
+     "page": "p1",
+     "snippet": "Laptop docking station"
+    },
+    "llm_confidence": 0.9,
+    "confidence": 0.95,
+    "status": "ok"
+   },
+   "quantity": {
+    "value": 4.0,
+    "source": {
+     "page": "p1",
+     "snippet": "Laptop docking station\n4\n195,67"
+    },
+    "llm_confidence": 0.85,
+    "confidence": 0.925,
+    "status": "ok"
+   },
+   "unit_price": {
+    "value": 195.67,
+    "source": {
+     "page": "p1",
+     "snippet": "195,67"
+    },
+    "llm_confidence": 0.85,
+    "confidence": 0.925,
+    "status": "ok"
+   },
+   "amount": {
+    "value": 782.68,
+    "source": {
+     "page": "p1",
+     "snippet": "782,68"
+    },
+    "llm_confidence": 0.85,
+    "confidence": 0.925,
+    "status": "ok"
+   }
+  }
+ ],
+ "subtotal": {
+  "value": 11374.97,
+  "source": {
+   "page": "p1",
+   "snippet": "Subtotal: 11.374,97"
+  },
+  "llm_confidence": 0.9,
+  "confidence": 0.95,
+  "status": "ok"
+ },
+ "tax_total": {
+  "value": 2047.49,
+  "source": {
+   "page": "p1",
+   "snippet": "Tax: 2.047,49"
+  },
+  "llm_confidence": 0.9,
+  "confidence": 0.95,
+  "status": "ok"
+ },
+ "total": {
+  "value": 13522.46,
+  "source": {
+   "page": "p1",
+   "snippet": "TOTAL: 13.522,46"
+  },
+  "llm_confidence": 0.9,
+  "confidence": 0.75,
+  "status": "needs_review"
+ },
+ "_doc_type": "text_pdf",
+ "_note": "European number format"
+}

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>{% block title %}InvoiceLens{% endblock %}</title>
+<style>
+:root{--bg:#fff;--fg:#1b1f24;--mut:#5b6572;--line:#d8dee6;--acc:#1f5fbf;--ok:#1a7f4b;--warn:#a15c00;--warnbg:#fff4de;--card:#f6f8fa}
+@media(prefers-color-scheme:dark){:root{--bg:#14181d;--fg:#e6e9ee;--mut:#9aa5b1;--line:#2c343d;--acc:#6aa5ff;--ok:#4cc38a;--warn:#f0b35a;--warnbg:#3a2c12;--card:#1b2128}}
+*{box-sizing:border-box}body{margin:0;font:15px/1.5 system-ui,sans-serif;background:var(--bg);color:var(--fg)}
+main{max-width:980px;margin:0 auto;padding:16px}header{border-bottom:1px solid var(--line)}
+header div{max-width:980px;margin:0 auto;padding:12px 16px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+header a{color:var(--acc);text-decoration:none}header .brand{font-weight:700;color:var(--fg)}
+.badge{font-size:12px;border:1px solid var(--line);border-radius:99px;padding:2px 10px;color:var(--mut);display:inline-block}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin:16px 0}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl{overflow-x:auto}.ok{color:var(--ok)}.nr{background:var(--warnbg);color:var(--warn);font-weight:600}
+button{background:var(--acc);color:#fff;border:0;border-radius:6px;padding:8px 14px;font:inherit;cursor:pointer}
+button.sec{background:transparent;color:var(--acc);border:1px solid var(--acc)}
+pre{overflow:auto;background:var(--card);padding:12px;border-radius:8px;border:1px solid var(--line)}
+img{max-width:100%;border:1px solid var(--line)}input[type=text]{padding:6px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg)}
+</style></head><body>
+<header><div><a class="brand" href="/">InvoiceLens</a><a href="/">Upload</a><a href="/review">Review queue</a>
+<span class="badge">Demo project - synthetic data</span></div></header>
+<main>{% block body %}{% endblock %}</main></body></html>

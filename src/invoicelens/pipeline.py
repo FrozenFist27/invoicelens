@@ -70,8 +70,11 @@ def _process_one(
             t_val = Timer()
             page_texts = {p.ref: p.text for p in doc_text.pages}
             issues = validate_doc(doc, page_texts, cfg.grounding.fuzzy_threshold)
-            while issues and retries < cfg.max_retries:
-                u2 = correct(llm, doc, doc_text.doc_type, marked, issues)
+            def _retriable(iss):
+                return [i for i in iss if i.code != "date_ambiguous"]
+
+            while _retriable(issues) and retries < cfg.max_retries:
+                u2 = correct(llm, doc, doc_text.doc_type, marked, _retriable(issues))
                 usage = add_usage(usage, u2)
                 retries += 1
                 issues = validate_doc(doc, page_texts, cfg.grounding.fuzzy_threshold)

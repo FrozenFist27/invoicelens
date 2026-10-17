@@ -6,7 +6,8 @@ from datetime import date, datetime
 from decimal import Decimal
 from typing import Any, Generic, Literal, TypeVar
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
+from pydantic import Field as PField
 
 T = TypeVar("T")
 
@@ -42,7 +43,7 @@ class InvoiceDoc(BaseModel):
     issue_date: Field[date]
     due_date: Field[date | None]
     currency: Field[str]
-    line_items: list[LineItem] = Field(default_factory=list)
+    line_items: list[LineItem] = PField(default_factory=list)
     subtotal: Field[Decimal | None]
     tax_total: Field[Decimal | None]
     total: Field[Decimal | None]
@@ -60,8 +61,10 @@ class ValidationIssue(BaseModel):
         "currency_code",
         "not_grounded",
         "missing_required",
+        "date_ambiguous",
     ]
     message: str
+    related: list[str] = PField(default_factory=list)  # other fields implicated by the rule
 
 
 class Usage(BaseModel):
@@ -103,7 +106,7 @@ class ReviewItem(BaseModel):
     field_path: str
     suggested_value: str | None = None
     confidence: float = 0.0
-    issues: list[str] = Field(default_factory=list)
+    issues: list[str] = PField(default_factory=list)
     source_page: str | None = None
     snippet: str | None = None
     status: Literal["pending", "accepted", "corrected"] = "pending"
@@ -120,7 +123,7 @@ class Page(BaseModel):
 class DocumentText(BaseModel):
     doc_id: str
     doc_type: str  # text_pdf | scanned_pdf | spreadsheet | email
-    pages: list[Page] = Field(default_factory=list)
+    pages: list[Page] = PField(default_factory=list)
     source_path: str = ""
 
 
@@ -128,6 +131,6 @@ class PipelineResult(BaseModel):
     doc_id: str
     doc_type: str
     doc: InvoiceDoc | None = None
-    issues: list[ValidationIssue] = Field(default_factory=list)
+    issues: list[ValidationIssue] = PField(default_factory=list)
     metrics: RunMetrics | None = None
     error: str | None = None

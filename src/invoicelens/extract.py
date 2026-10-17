@@ -56,6 +56,10 @@ def _parse_dec(v: Any) -> Decimal | None:
         return None
 
 
+def _parse_ccy(v):
+    return str(v).upper() if v else None
+
+
 def _to_field(flat: dict | None, parser=None) -> Field:
     if not isinstance(flat, dict):
         return Field(value=None, source=None, llm_confidence=0.0)
@@ -153,19 +157,17 @@ def _set_field_by_path(doc: InvoiceDoc, path: str, flat: dict) -> None:
     elif path.endswith(".quantity") or path.endswith(".unit_price") or path.endswith(".amount"):
         parser = _parse_dec
     elif path == "currency":
-        parser = lambda v: str(v).upper() if v else None
+        parser = _parse_ccy
 
     if path.startswith("line_items[") and "]" in path:
         idx_s, rest = path[len("line_items["):].split("]", 1)
         idx = int(idx_s)
         rest = rest.lstrip(".")
         if 0 <= idx < len(doc.line_items) and rest:
-            f = getattr(doc.line_items[idx], rest)
             new = _to_field(flat, parser)
             setattr(doc.line_items[idx], rest, new)
         return
     if hasattr(doc, path):
-        f = getattr(doc, path)
         new = _to_field(flat, parser)
         setattr(doc, path, new)
 

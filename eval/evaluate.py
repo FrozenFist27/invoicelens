@@ -160,7 +160,7 @@ def run_eval(config: str = "full", split: str = "heldout", limit: int = 0, write
     review_rates = []
     review_error_caught = 0
     review_wrong_total = 0
-    auto_tp = auto_fp = auto_wrong = 0
+    auto_tp = auto_fp = 0
     trace_ok = trace_total = 0
     n_ok = n_err = 0
     per_doc = []
