@@ -46,8 +46,8 @@
    "page": "p1",
    "snippet": "Date: 25/02/2026"
   },
-  "llm_confidence": 0.95,
-  "confidence": 0.9749999999999999,
+  "llm_confidence": 0.92,
+  "confidence": 0.96,
   "status": "ok"
  },
  "due_date": {
@@ -56,8 +56,8 @@
    "page": "p1",
    "snippet": "Due: 26/04/2026"
   },
-  "llm_confidence": 0.95,
-  "confidence": 0.9749999999999999,
+  "llm_confidence": 0.92,
+  "confidence": 0.96,
   "status": "ok"
  },
  "currency": {
@@ -128,7 +128,7 @@
     "value": 6.0,
     "source": {
      "page": "p1",
-     "snippet": "Training workshop\n6\n292,39"
+     "snippet": "Training workshop\n6\n292,39\n1.754,34"
     },
     "llm_confidence": 0.85,
     "confidence": 0.925,
@@ -170,7 +170,7 @@
     "value": 2.0,
     "source": {
      "page": "p1",
-     "snippet": "Training workshop\n2\n58,66"
+     "snippet": "Training workshop\n2\n58,66\n117,32"
     },
     "llm_confidence": 0.85,
     "confidence": 0.925,
@@ -212,7 +212,7 @@
     "value": 12.0,
     "source": {
      "page": "p1",
-     "snippet": "Security audit\n12\n365,63"
+     "snippet": "Security audit\n12\n365,63\n4.387,56"
     },
     "llm_confidence": 0.85,
     "confidence": 0.925,
@@ -254,7 +254,7 @@
     "value": 14.0,
     "source": {
      "page": "p1",
-     "snippet": "Printing services\n14\n305,07"
+     "snippet": "Printing services\n14\n305,07\n4.270,98"
     },
     "llm_confidence": 0.85,
     "confidence": 0.925,
@@ -296,7 +296,7 @@
     "value": 4.0,
     "source": {
      "page": "p1",
-     "snippet": "Laptop docking station\n4\n195,67"
+     "snippet": "Laptop docking station\n4\n195,67\n782,68"
     },
     "llm_confidence": 0.85,
     "confidence": 0.925,
@@ -331,8 +331,8 @@
    "snippet": "Subtotal: 11.374,97"
   },
   "llm_confidence": 0.9,
-  "confidence": 0.95,
-  "status": "ok"
+  "confidence": 0.75,
+  "status": "needs_review"
  },
  "tax_total": {
   "value": 2047.49,
@@ -341,8 +341,8 @@
    "snippet": "Tax: 2.047,49"
   },
   "llm_confidence": 0.9,
-  "confidence": 0.95,
-  "status": "ok"
+  "confidence": 0.75,
+  "status": "needs_review"
  },
  "total": {
   "value": 13522.46,
@@ -350,8 +350,8 @@
    "page": "p1",
    "snippet": "TOTAL: 13.522,46"
   },
-  "llm_confidence": 0.9,
-  "confidence": 0.75,
+  "llm_confidence": 0.85,
+  "confidence": 0.725,
   "status": "needs_review"
  },
  "_doc_type": "text_pdf",

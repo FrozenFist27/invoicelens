@@ -229,6 +229,10 @@ def date_variants(d) -> set[str]:
     return {v.lower() for v in out}
 
 
+def _show(value) -> str:
+    return value.isoformat() if isinstance(value, date) else str(value) if isinstance(value, Decimal) else repr(value)
+
+
 def resolve_page(page: str | None, page_texts: dict[str, str]) -> str | None:
     """Map a cited page ref (p1, Sheet!B7, body) to a key of page_texts, if possible."""
     if not page or not page_texts:
@@ -290,7 +294,7 @@ def check_grounded(doc: InvoiceDoc, page_texts: dict[str, str], fuzzy_threshold:
                 ValidationIssue(
                     field_path=path,
                     code="not_grounded",
-                    message=f"value {value!r} not found in cited page {page!r}",
+                    message=f"value {_show(value)} not found in cited page {page!r}",
                 )
             )
 

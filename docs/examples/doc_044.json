@@ -1,0 +1,315 @@
+{
+  "doc_id": "doc_044",
+  "doc_kind": {
+    "value": "invoice",
+    "source": {
+      "page": "p1",
+      "snippet": "INVOICE"
+    },
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
+    "status": "ok"
+  },
+  "supplier_name": {
+    "value": "Arroyo, Miller and Tucker",
+    "source": {
+      "page": "p1",
+      "snippet": "Arroyo, Miller and Tucker"
+    },
+    "llm_confidence": 0.9,
+    "confidence": 0.95,
+    "status": "ok"
+  },
+  "supplier_tax_id": {
+    "value": "TAX-910389",
+    "source": {
+      "page": "p1",
+      "snippet": "Tax ID: TAX-910389"
+    },
+    "llm_confidence": 0.9,
+    "confidence": 0.95,
+    "status": "ok"
+  },
+  "document_number": {
+    "value": "INV-83306",
+    "source": {
+      "page": "p1",
+      "snippet": "Document No: INV-83306"
+    },
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
+    "status": "ok"
+  },
+  "issue_date": {
+    "value": "2026-03-20",
+    "source": {
+      "page": "p1",
+      "snippet": "Date: 2026-03-20"
+    },
+    "llm_confidence": 0.92,
+    "confidence": 0.96,
+    "status": "ok"
+  },
+  "due_date": {
+    "value": "2026-04-03",
+    "source": {
+      "page": "p1",
+      "snippet": "Due: 2026-04-03"
+    },
+    "llm_confidence": 0.92,
+    "confidence": 0.96,
+    "status": "ok"
+  },
+  "currency": {
+    "value": "EUR",
+    "source": {
+      "page": "p1",
+      "snippet": "Currency: EUR"
+    },
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
+    "status": "ok"
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Server rack",
+        "source": {
+          "page": "p1",
+          "snippet": "Server rack 15 378.45 5,676.75"
+        },
+        "llm_confidence": 0.85,
+        "confidence": 0.925,
+        "status": "ok"
+      },
+      "quantity": {
+        "value": 15.0,
+        "source": {
+          "page": "p1",
+          "snippet": "Server rack 15 378.45 5,676.75"
+        },
+        "llm_confidence": 0.85,
+        "confidence": 0.925,
+        "status": "ok"
+      },
+      "unit_price": {
+        "value": 378.45,
+        "source": {
+          "page": "p1",
+          "snippet": "Server rack 15 378.45 5,676.75"
+        },
+        "llm_confidence": 0.85,
+        "confidence": 0.925,
+        "status": "ok"
+      },
+      "amount": {
+        "value": 5676.75,
+        "source": {
+          "page": "p1",
+          "snippet": "Server rack 15 378.45 5,676.75"
+        },
+        "llm_confidence": 0.85,
+        "confidence": 0.925,
+        "status": "ok"
+      }
+    },
+    {
+      "description": {
+        "value": "Desk lamp",
+        "source": {
+          "page": "p1",
+          "snippet": "Desk lamp 15 342.16 5,132.40"
+        },
+        "llm_confidence": 0.85,
+        "confidence": 0.925,
+        "status": "ok"
+      },
+      "quantity": {
+        "value": 15.0,
+        "source": {
+          "page": "p1",
+          "snippet": "Desk lamp 15 342.16 5,132.40"
+        },
+        "llm_confidence": 0.85,
+        "confidence": 0.925,
+        "status": "ok"
+      },
+      "unit_price": {
+        "value": 342.16,
+        "source": {
+          "page": "p1",
+          "snippet": "Desk lamp 15 342.16 5,132.40"
+        },
+        "llm_confidence": 0.85,
+        "confidence": 0.925,
+        "status": "ok"
+      },
+      "amount": {
+        "value": 5132.4,
+        "source": {
+          "page": "p1",
+          "snippet": "Desk lamp 15 342.16 5,132.40"
+        },
+        "llm_confidence": 0.85,
+        "confidence": 0.925,
+        "status": "ok"
+      }
+    },
+    {
+      "description": {
+        "value": "Desk lamp",
+        "source": {
+          "page": "p1",
+          "snippet": "Desk lamp 20 164.99 3,299.80"
+        },
+        "llm_confidence": 0.85,
+        "confidence": 0.925,
+        "status": "ok"
+      },
+      "quantity": {
+        "value": 20.0,
+        "source": {
+          "page": "p1",
+          "snippet": "Desk lamp 20 164.99 3,299.80"
+        },
+        "llm_confidence": 0.85,
+        "confidence": 0.925,
+        "status": "ok"
+      },
+      "unit_price": {
+        "value": 164.99,
+        "source": {
+          "page": "p1",
+          "snippet": "Desk lamp 20 164.99 3,299.80"
+        },
+        "llm_confidence": 0.85,
+        "confidence": 0.925,
+        "status": "ok"
+      },
+      "amount": {
+        "value": 3299.8,
+        "source": {
+          "page": "p1",
+          "snippet": "Desk lamp 20 164.99 3,299.80"
+        },
+        "llm_confidence": 0.85,
+        "confidence": 0.925,
+        "status": "ok"
+      }
+    },
+    {
+      "description": {
+        "value": "USB-C cables",
+        "source": {
+          "page": "p1",
+          "snippet": "USB-C cables 11 79.72 876.92"
+        },
+        "llm_confidence": 0.85,
+        "confidence": 0.925,
+        "status": "ok"
+      },
+      "quantity": {
+        "value": 11.0,
+        "source": {
+          "page": "p1",
+          "snippet": "USB-C cables 11 79.72 876.92"
+        },
+        "llm_confidence": 0.85,
+        "confidence": 0.925,
+        "status": "ok"
+      },
+      "unit_price": {
+        "value": 79.72,
+        "source": {
+          "page": "p1",
+          "snippet": "USB-C cables 11 79.72 876.92"
+        },
+        "llm_confidence": 0.85,
+        "confidence": 0.925,
+        "status": "ok"
+      },
+      "amount": {
+        "value": 876.92,
+        "source": {
+          "page": "p1",
+          "snippet": "USB-C cables 11 79.72 876.92"
+        },
+        "llm_confidence": 0.85,
+        "confidence": 0.925,
+        "status": "ok"
+      }
+    },
+    {
+      "description": {
+        "value": "Consulting hours",
+        "source": {
+          "page": "p1",
+          "snippet": "Consulting hours 16 223.89 3,582.24"
+        },
+        "llm_confidence": 0.85,
+        "confidence": 0.925,
+        "status": "ok"
+      },
+      "quantity": {
+        "value": 16.0,
+        "source": {
+          "page": "p1",
+          "snippet": "Consulting hours 16 223.89 3,582.24"
+        },
+        "llm_confidence": 0.85,
+        "confidence": 0.925,
+        "status": "ok"
+      },
+      "unit_price": {
+        "value": 223.89,
+        "source": {
+          "page": "p1",
+          "snippet": "Consulting hours 16 223.89 3,582.24"
+        },
+        "llm_confidence": 0.85,
+        "confidence": 0.925,
+        "status": "ok"
+      },
+      "amount": {
+        "value": 3582.24,
+        "source": {
+          "page": "p1",
+          "snippet": "Consulting hours 16 223.89 3,582.24"
+        },
+        "llm_confidence": 0.85,
+        "confidence": 0.925,
+        "status": "ok"
+      }
+    }
+  ],
+  "subtotal": {
+    "value": 18568.11,
+    "source": {
+      "page": "p1",
+      "snippet": "Subtotal: 18,568.11"
+    },
+    "llm_confidence": 0.9,
+    "confidence": 0.75,
+    "status": "needs_review"
+  },
+  "tax_total": {
+    "value": 3942.26,
+    "source": {
+      "page": "p1",
+      "snippet": "Tax: 3,942.26"
+    },
+    "llm_confidence": 0.9,
+    "confidence": 0.75,
+    "status": "needs_review"
+  },
+  "total": {
+    "value": 21910.37,
+    "source": {
+      "page": "p1",
+      "snippet": "TOTAL: 21,910.37"
+    },
+    "llm_confidence": 0.3,
+    "confidence": 0.44999999999999996,
+    "status": "needs_review"
+  }
+}

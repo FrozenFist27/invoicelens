@@ -16,8 +16,8 @@
    "page": "Invoice!A1",
    "snippet": "Perez Inc"
   },
-  "llm_confidence": 0.9,
-  "confidence": 0.95,
+  "llm_confidence": 0.95,
+  "confidence": 0.9749999999999999,
   "status": "ok"
  },
  "supplier_tax_id": {
@@ -73,40 +73,40 @@
     "value": "Hardware purchase",
     "source": {
      "page": "Invoice!A10",
-     "snippet": "Hardware purchase"
+     "snippet": "Hardware purchase | B10=18 | C10=475.68 | D10=8562.24"
     },
-    "llm_confidence": 0.9,
-    "confidence": 0.95,
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
     "status": "ok"
    },
    "quantity": {
     "value": 18.0,
     "source": {
      "page": "Invoice!B10",
-     "snippet": "18"
+     "snippet": "B10=18"
     },
-    "llm_confidence": 0.9,
-    "confidence": 0.95,
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
     "status": "ok"
    },
    "unit_price": {
     "value": 475.68,
     "source": {
      "page": "Invoice!C10",
-     "snippet": "475.68"
+     "snippet": "C10=475.68"
     },
-    "llm_confidence": 0.9,
-    "confidence": 0.95,
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
     "status": "ok"
    },
    "amount": {
     "value": 8562.24,
     "source": {
      "page": "Invoice!D10",
-     "snippet": "8562.24"
+     "snippet": "D10=8562.24"
     },
-    "llm_confidence": 0.9,
-    "confidence": 0.95,
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
     "status": "ok"
    }
   },
@@ -115,40 +115,40 @@
     "value": "Office supplies",
     "source": {
      "page": "Invoice!A11",
-     "snippet": "Office supplies"
+     "snippet": "Office supplies | B11=7 | C11=112.11 | D11=784.77"
     },
-    "llm_confidence": 0.9,
-    "confidence": 0.95,
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
     "status": "ok"
    },
    "quantity": {
     "value": 7.0,
     "source": {
      "page": "Invoice!B11",
-     "snippet": "7"
+     "snippet": "B11=7"
     },
-    "llm_confidence": 0.9,
-    "confidence": 0.95,
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
     "status": "ok"
    },
    "unit_price": {
     "value": 112.11,
     "source": {
      "page": "Invoice!C11",
-     "snippet": "112.11"
+     "snippet": "C11=112.11"
     },
-    "llm_confidence": 0.9,
-    "confidence": 0.95,
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
     "status": "ok"
    },
    "amount": {
     "value": 784.77,
     "source": {
      "page": "Invoice!D11",
-     "snippet": "784.77"
+     "snippet": "D11=784.77"
     },
-    "llm_confidence": 0.9,
-    "confidence": 0.95,
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
     "status": "ok"
    }
   },
@@ -157,40 +157,40 @@
     "value": "Server rack",
     "source": {
      "page": "Invoice!A12",
-     "snippet": "Server rack"
+     "snippet": "Server rack | B12=9 | C12=363.67 | D12=3273.03"
     },
-    "llm_confidence": 0.9,
-    "confidence": 0.95,
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
     "status": "ok"
    },
    "quantity": {
     "value": 9.0,
     "source": {
      "page": "Invoice!B12",
-     "snippet": "9"
+     "snippet": "B12=9"
     },
-    "llm_confidence": 0.9,
-    "confidence": 0.95,
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
     "status": "ok"
    },
    "unit_price": {
     "value": 363.67,
     "source": {
      "page": "Invoice!C12",
-     "snippet": "363.67"
+     "snippet": "C12=363.67"
     },
-    "llm_confidence": 0.9,
-    "confidence": 0.95,
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
     "status": "ok"
    },
    "amount": {
     "value": 3273.03,
     "source": {
      "page": "Invoice!D12",
-     "snippet": "3273.03"
+     "snippet": "D12=3273.03"
     },
-    "llm_confidence": 0.9,
-    "confidence": 0.95,
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
     "status": "ok"
    }
   },
@@ -199,40 +199,40 @@
     "value": "Laptop docking station",
     "source": {
      "page": "Invoice!A13",
-     "snippet": "Laptop docking station"
+     "snippet": "Laptop docking station | B13=20 | C13=145.08 | D13=2901.6"
     },
-    "llm_confidence": 0.9,
-    "confidence": 0.95,
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
     "status": "ok"
    },
    "quantity": {
     "value": 20.0,
     "source": {
      "page": "Invoice!B13",
-     "snippet": "20"
+     "snippet": "B13=20"
     },
-    "llm_confidence": 0.9,
-    "confidence": 0.95,
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
     "status": "ok"
    },
    "unit_price": {
     "value": 145.08,
     "source": {
      "page": "Invoice!C13",
-     "snippet": "145.08"
+     "snippet": "C13=145.08"
     },
-    "llm_confidence": 0.9,
-    "confidence": 0.95,
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
     "status": "ok"
    },
    "amount": {
     "value": 2901.6,
     "source": {
      "page": "Invoice!D13",
-     "snippet": "2901.6"
+     "snippet": "D13=2901.6"
     },
-    "llm_confidence": 0.9,
-    "confidence": 0.95,
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
     "status": "ok"
    }
   },
@@ -241,40 +241,40 @@
     "value": "Hardware purchase",
     "source": {
      "page": "Invoice!A14",
-     "snippet": "Hardware purchase"
+     "snippet": "Hardware purchase | B14=7 | C14=151.64 | D14=1061.48"
     },
-    "llm_confidence": 0.9,
-    "confidence": 0.95,
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
     "status": "ok"
    },
    "quantity": {
     "value": 7.0,
     "source": {
      "page": "Invoice!B14",
-     "snippet": "7"
+     "snippet": "B14=7"
     },
-    "llm_confidence": 0.9,
-    "confidence": 0.95,
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
     "status": "ok"
    },
    "unit_price": {
     "value": 151.64,
     "source": {
      "page": "Invoice!C14",
-     "snippet": "151.64"
+     "snippet": "C14=151.64"
     },
-    "llm_confidence": 0.9,
-    "confidence": 0.95,
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
     "status": "ok"
    },
    "amount": {
     "value": 1061.48,
     "source": {
      "page": "Invoice!D14",
-     "snippet": "1061.48"
+     "snippet": "D14=1061.48"
     },
-    "llm_confidence": 0.9,
-    "confidence": 0.95,
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
     "status": "ok"
    }
   },
@@ -283,40 +283,40 @@
     "value": "Translation services",
     "source": {
      "page": "Invoice!A15",
-     "snippet": "Translation services"
+     "snippet": "Translation services | B15=6 | C15=154.62 | D15=927.72"
     },
-    "llm_confidence": 0.9,
-    "confidence": 0.95,
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
     "status": "ok"
    },
    "quantity": {
     "value": 6.0,
     "source": {
      "page": "Invoice!B15",
-     "snippet": "6"
+     "snippet": "B15=6"
     },
-    "llm_confidence": 0.9,
-    "confidence": 0.95,
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
     "status": "ok"
    },
    "unit_price": {
     "value": 154.62,
     "source": {
      "page": "Invoice!C15",
-     "snippet": "154.62"
+     "snippet": "C15=154.62"
     },
-    "llm_confidence": 0.9,
-    "confidence": 0.95,
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
     "status": "ok"
    },
    "amount": {
     "value": 927.72,
     "source": {
      "page": "Invoice!D15",
-     "snippet": "927.72"
+     "snippet": "D15=927.72"
     },
-    "llm_confidence": 0.9,
-    "confidence": 0.95,
+    "llm_confidence": 0.95,
+    "confidence": 0.9749999999999999,
     "status": "ok"
    }
   }
@@ -325,30 +325,30 @@
   "value": 17510.84,
   "source": {
    "page": "Invoice!D17",
-   "snippet": "Subtotal | D17=17510.84"
+   "snippet": "C17=Subtotal | D17=17510.84"
   },
-  "llm_confidence": 0.9,
-  "confidence": 0.95,
+  "llm_confidence": 0.95,
+  "confidence": 0.9749999999999999,
   "status": "ok"
  },
  "tax_total": {
   "value": 1751.08,
   "source": {
    "page": "Invoice!D18",
-   "snippet": "Tax | D18=1751.08"
+   "snippet": "C18=Tax | D18=1751.08"
   },
-  "llm_confidence": 0.9,
-  "confidence": 0.95,
+  "llm_confidence": 0.95,
+  "confidence": 0.9749999999999999,
   "status": "ok"
  },
  "total": {
   "value": 19261.92,
   "source": {
    "page": "Invoice!D19",
-   "snippet": "TOTAL | D19=19261.92"
+   "snippet": "C19=TOTAL | D19=19261.92"
   },
-  "llm_confidence": 0.9,
-  "confidence": 0.95,
+  "llm_confidence": 0.95,
+  "confidence": 0.9749999999999999,
   "status": "ok"
  },
  "_doc_type": "spreadsheet",

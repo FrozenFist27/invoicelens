@@ -41,3 +41,14 @@ def test_email_load_body(fixtures_dir):
     assert doc.pages[0].ref == "body"
     assert "INV-1001" in doc.pages[0].text
     assert atts == []
+
+
+def test_default_review_db_lives_inside_project():
+    # regression: the DB path once resolved one directory above the project
+    import importlib
+
+    import invoicelens.review_queue as rq
+    from invoicelens.settings import PROJECT_ROOT
+
+    importlib.reload(rq)
+    assert rq.DEFAULT_DB.parent == PROJECT_ROOT / "data"

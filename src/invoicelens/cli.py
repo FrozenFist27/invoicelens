@@ -82,32 +82,46 @@ def eval(
     typer.echo(json.dumps(result["aggregate"], indent=2))
 
 
-@app.command()
-def review(
-    list_: bool = typer.Option(False, "--list", help="List pending items."),
-    accept_id: int = typer.Option(None, "--accept", help="Accept an item by id."),
-    correct_id: int = typer.Option(None, "--correct", help="Correct an item by id."),
-    value: str = typer.Option("", "--value", help="Corrected value."),
-):
-    """Interact with the review queue."""
-    from .review_queue import accept, correct_item, init_db, list_pending
+@review_app.command("list")
+def review_list():
+    """List pending review items."""
+    from .review_queue import init_db, list_pending
 
     init_db()
-    if accept_id is not None:
-        accept(accept_id)
-        typer.echo(f"accepted {accept_id}")
-    elif correct_id is not None and value:
-        correct_item(correct_id, value)
-        typer.echo(f"corrected {correct_id} -> {value}")
-    else:
-        items = list_pending()
-        if not items:
-            typer.echo("no pending items")
-            return
-        for it in items:
-            typer.echo(f"#{it.id} {it.doc_id} {it.field_path} = {it.suggested_value!r} conf={it.confidence:.2f}")
-            for iss in it.issues:
-                typer.echo(f"    {iss}")
+    items = list_pending()
+    if not items:
+        typer.echo("no pending items")
+        return
+    for it in items:
+        typer.echo(
+            f"#{it.id} {it.doc_id} {it.field_path} = {it.suggested_value!r} "
+            f"conf={it.confidence:.2f} src={it.source_page}"
+        )
+        for iss in it.issues:
+            typer.echo(f"    {iss}")
+
+
+@review_app.command("accept")
+def review_accept(item_id: int = typer.Argument(..., help="Review item id.")):
+    """Accept the suggested value of an item."""
+    from .review_queue import accept, init_db
+
+    init_db()
+    accept(item_id)
+    typer.echo(f"accepted {item_id}")
+
+
+@review_app.command("correct")
+def review_correct(
+    item_id: int = typer.Argument(..., help="Review item id."),
+    value: str = typer.Argument(..., help="Corrected value."),
+):
+    """Replace the suggested value with a corrected one."""
+    from .review_queue import correct_item, init_db
+
+    init_db()
+    correct_item(item_id, value)
+    typer.echo(f"corrected {item_id} -> {value}")
 
 
 @app.command()

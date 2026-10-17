@@ -10,7 +10,7 @@ from pathlib import Path
 from .confidence import iter_fields
 from .models import InvoiceDoc, ReviewItem, ValidationIssue
 
-DEFAULT_DB = Path(__file__).resolve().parents[3] / "data" / "review.db"
+DEFAULT_DB = Path(__file__).resolve().parents[2] / "data" / "review.db"
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS review_items (

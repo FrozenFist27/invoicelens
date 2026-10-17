@@ -8,6 +8,12 @@ from pathlib import Path
 import pytest
 
 
+@pytest.fixture(autouse=True)
+def _isolated_review_db(tmp_path, monkeypatch):
+    """Never let tests write into the real data/review.db."""
+    monkeypatch.setattr("invoicelens.review_queue.DEFAULT_DB", tmp_path / "review.db")
+
+
 @pytest.fixture(scope="session")
 def fixtures_dir(tmp_path_factory) -> Path:
     d = tmp_path_factory.mktemp("fixtures")

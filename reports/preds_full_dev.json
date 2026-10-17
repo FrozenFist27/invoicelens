@@ -47,8 +47,8 @@
     "page": "p1",
     "snippet": "Date: 10/09/2026"
    },
-   "llm_confidence": 0.8,
-   "confidence": 0.8999999999999999,
+   "llm_confidence": 0.7,
+   "confidence": 0.8499999999999999,
    "status": "ok"
   },
   "due_date": {
@@ -79,8 +79,8 @@
       "page": "p1",
       "snippet": "Annual software licence 8 387.67 3,101.36"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "quantity": {
@@ -89,9 +89,9 @@
       "page": "p1",
       "snippet": "Annual software licence 8 387.67 3,101.36"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.425,
-     "status": "needs_review"
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
+     "status": "ok"
     },
     "unit_price": {
      "value": 387.67,
@@ -99,19 +99,19 @@
       "page": "p1",
       "snippet": "Annual software licence 8 387.67 3,101.36"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.425,
-     "status": "needs_review"
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
+     "status": "ok"
     },
     "amount": {
      "value": 3101.36,
      "source": {
       "page": "p1",
-      "snippet": "3,101.36"
+      "snippet": "Annual software licence 8 387.67 3,101.36"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
-     "status": "ok"
+     "llm_confidence": 0.8,
+     "confidence": 0.7,
+     "status": "needs_review"
     }
    },
    {
@@ -121,8 +121,8 @@
       "page": "p1",
       "snippet": "Consulting hours 8 433.91 3,471.28"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "quantity": {
@@ -131,9 +131,9 @@
       "page": "p1",
       "snippet": "Consulting hours 8 433.91 3,471.28"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.425,
-     "status": "needs_review"
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
+     "status": "ok"
     },
     "unit_price": {
      "value": 433.91,
@@ -141,19 +141,19 @@
       "page": "p1",
       "snippet": "Consulting hours 8 433.91 3,471.28"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.425,
-     "status": "needs_review"
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
+     "status": "ok"
     },
     "amount": {
      "value": 3471.28,
      "source": {
       "page": "p1",
-      "snippet": "3,471.28"
+      "snippet": "Consulting hours 8 433.91 3,471.28"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
-     "status": "ok"
+     "llm_confidence": 0.8,
+     "confidence": 0.7,
+     "status": "needs_review"
     }
    },
    {
@@ -163,8 +163,8 @@
       "page": "p1",
       "snippet": "Data plan 9 229.44 2,064.96"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "quantity": {
@@ -173,8 +173,8 @@
       "page": "p1",
       "snippet": "Data plan 9 229.44 2,064.96"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -183,19 +183,19 @@
       "page": "p1",
       "snippet": "Data plan 9 229.44 2,064.96"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.425,
-     "status": "needs_review"
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
+     "status": "ok"
     },
     "amount": {
      "value": 2064.96,
      "source": {
       "page": "p1",
-      "snippet": "2,064.96"
+      "snippet": "Data plan 9 229.44 2,064.96"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
-     "status": "ok"
+     "llm_confidence": 0.8,
+     "confidence": 0.7,
+     "status": "needs_review"
     }
    },
    {
@@ -205,8 +205,8 @@
       "page": "p1",
       "snippet": "Translation services 6 1388.24 4,129.44"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "quantity": {
@@ -215,19 +215,19 @@
       "page": "p1",
       "snippet": "Translation services 6 1388.24 4,129.44"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
-     "status": "ok"
+     "llm_confidence": 0.8,
+     "confidence": 0.7,
+     "status": "needs_review"
     },
     "unit_price": {
      "value": 1388.24,
      "source": {
       "page": "p1",
-      "snippet": "1388.24"
+      "snippet": "Translation services 6 1388.24 4,129.44"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
-     "status": "ok"
+     "llm_confidence": 0.8,
+     "confidence": 0.7,
+     "status": "needs_review"
     },
     "amount": {
      "value": 4129.44,
@@ -235,8 +235,8 @@
       "page": "p1",
       "snippet": "Translation services 6 1388.24 4,129.44"
      },
-     "llm_confidence": 0.4,
-     "confidence": 0.5,
+     "llm_confidence": 0.3,
+     "confidence": 0.44999999999999996,
      "status": "needs_review"
     }
    },
@@ -247,8 +247,8 @@
       "page": "p1",
       "snippet": "Cloud siorage plan 9 352.40 3,171.60"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "quantity": {
@@ -257,8 +257,8 @@
       "page": "p1",
       "snippet": "Cloud siorage plan 9 352.40 3,171.60"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -267,19 +267,19 @@
       "page": "p1",
       "snippet": "Cloud siorage plan 9 352.40 3,171.60"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.425,
-     "status": "needs_review"
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
+     "status": "ok"
     },
     "amount": {
      "value": 3171.6,
      "source": {
       "page": "p1",
-      "snippet": "3,171.60"
+      "snippet": "Cloud siorage plan 9 352.40 3,171.60"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
-     "status": "ok"
+     "llm_confidence": 0.8,
+     "confidence": 0.7,
+     "status": "needs_review"
     }
    },
    {
@@ -289,8 +289,8 @@
       "page": "p1",
       "snippet": "Backup generator service 3 306.52 919.56"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "quantity": {
@@ -299,9 +299,9 @@
       "page": "p1",
       "snippet": "Backup generator service 3 306.52 919.56"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.425,
-     "status": "needs_review"
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
+     "status": "ok"
     },
     "unit_price": {
      "value": 306.52,
@@ -309,19 +309,19 @@
       "page": "p1",
       "snippet": "Backup generator service 3 306.52 919.56"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.425,
-     "status": "needs_review"
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
+     "status": "ok"
     },
     "amount": {
      "value": 919.56,
      "source": {
       "page": "p1",
-      "snippet": "919.56"
+      "snippet": "Backup generator service 3 306.52 919.56"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
-     "status": "ok"
+     "llm_confidence": 0.8,
+     "confidence": 0.7,
+     "status": "needs_review"
     }
    },
    {
@@ -331,8 +331,8 @@
       "page": "p1",
       "snippet": "Office supplies 18 365.92 6,586.56"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "quantity": {
@@ -341,9 +341,9 @@
       "page": "p1",
       "snippet": "Office supplies 18 365.92 6,586.56"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.425,
-     "status": "needs_review"
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
+     "status": "ok"
     },
     "unit_price": {
      "value": 365.92,
@@ -351,19 +351,19 @@
       "page": "p1",
       "snippet": "Office supplies 18 365.92 6,586.56"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.425,
-     "status": "needs_review"
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
+     "status": "ok"
     },
     "amount": {
      "value": 6586.56,
      "source": {
       "page": "p1",
-      "snippet": "6,586.56"
+      "snippet": "Office supplies 18 365.92 6,586.56"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
-     "status": "ok"
+     "llm_confidence": 0.8,
+     "confidence": 0.7,
+     "status": "needs_review"
     }
    }
   ],
@@ -373,8 +373,8 @@
     "page": "p1",
     "snippet": "Subtotal: 20,444.76"
    },
-   "llm_confidence": 0.4,
-   "confidence": 0.5,
+   "llm_confidence": 0.3,
+   "confidence": 0.44999999999999996,
    "status": "needs_review"
   },
   "tax_total": {
@@ -383,8 +383,8 @@
     "page": "p1",
     "snippet": "Tax: 4,088.95"
    },
-   "llm_confidence": 0.9,
-   "confidence": 0.95,
+   "llm_confidence": 0.85,
+   "confidence": 0.925,
    "status": "ok"
   },
   "total": {
@@ -393,8 +393,8 @@
     "page": "p1",
     "snippet": "TOTAL: 24,533.71"
    },
-   "llm_confidence": 0.9,
-   "confidence": 0.95,
+   "llm_confidence": 0.85,
+   "confidence": 0.925,
    "status": "ok"
   }
  },
@@ -416,8 +416,8 @@
     "page": "p1",
     "snippet": "Doyle Ltd"
    },
-   "llm_confidence": 0.85,
-   "confidence": 0.925,
+   "llm_confidence": 0.8,
+   "confidence": 0.8999999999999999,
    "status": "ok"
   },
   "supplier_tax_id": {
@@ -569,9 +569,9 @@
       "page": "p1",
       "snippet": "Network equipment 8 373.77 2,990.16"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.45,
-     "status": "needs_review"
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
+     "status": "ok"
     },
     "unit_price": {
      "value": 373.77,
@@ -579,9 +579,9 @@
       "page": "p1",
       "snippet": "Network equipment 8 373.77 2,990.16"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.45,
-     "status": "needs_review"
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
+     "status": "ok"
     },
     "amount": {
      "value": 2990.16,
@@ -611,7 +611,7 @@
       "page": "p1",
       "snippet": "Ergonomic chair i) 374.77 3,372.93"
      },
-     "llm_confidence": 0.0,
+     "llm_confidence": 0.2,
      "confidence": 0.0,
      "status": "ok"
     },
@@ -621,8 +621,8 @@
       "page": "p1",
       "snippet": "Ergonomic chair i) 374.77 3,372.93"
      },
-     "llm_confidence": 0.5,
-     "confidence": 0.75,
+     "llm_confidence": 0.6,
+     "confidence": 0.8,
      "status": "ok"
     },
     "amount": {
@@ -643,8 +643,8 @@
     "page": "p1",
     "snippet": "Subtotal: 9,804.97"
    },
-   "llm_confidence": 0.9,
-   "confidence": 0.95,
+   "llm_confidence": 0.85,
+   "confidence": 0.925,
    "status": "ok"
   },
   "tax_total": {
@@ -653,8 +653,8 @@
     "page": "p1",
     "snippet": "Tax: 1,960.99"
    },
-   "llm_confidence": 0.9,
-   "confidence": 0.95,
+   "llm_confidence": 0.85,
+   "confidence": 0.925,
    "status": "ok"
   },
   "total": {
@@ -663,8 +663,8 @@
     "page": "p1",
     "snippet": "TOTAL: 11,765.96"
    },
-   "llm_confidence": 0.9,
-   "confidence": 0.95,
+   "llm_confidence": 0.85,
+   "confidence": 0.925,
    "status": "ok"
   }
  },
@@ -676,8 +676,8 @@
     "page": "p1",
     "snippet": "INVOICE"
    },
-   "llm_confidence": 0.9,
-   "confidence": 0.95,
+   "llm_confidence": 0.95,
+   "confidence": 0.9749999999999999,
    "status": "ok"
   },
   "supplier_name": {
@@ -686,8 +686,8 @@
     "page": "p1",
     "snippet": "Mcclain, Miller and Henderson"
    },
-   "llm_confidence": 0.9,
-   "confidence": 0.95,
+   "llm_confidence": 0.85,
+   "confidence": 0.925,
    "status": "ok"
   },
   "supplier_tax_id": {
@@ -711,24 +711,24 @@
    "status": "ok"
   },
   "issue_date": {
-   "value": "2026-06-11",
+   "value": "2026-11-06",
    "source": {
     "page": "p1",
     "snippet": "Date: 11/06/2026"
    },
-   "llm_confidence": 0.8,
-   "confidence": 0.8999999999999999,
-   "status": "ok"
+   "llm_confidence": 0.7,
+   "confidence": 0.6499999999999999,
+   "status": "needs_review"
   },
   "due_date": {
-   "value": "2027-05-01",
+   "value": "2027-01-05",
    "source": {
     "page": "p1",
     "snippet": "Due: 01/05/2027"
    },
-   "llm_confidence": 0.8,
-   "confidence": 0.8999999999999999,
-   "status": "ok"
+   "llm_confidence": 0.7,
+   "confidence": 0.6499999999999999,
+   "status": "needs_review"
   },
   "currency": {
    "value": "EUR",
@@ -748,8 +748,8 @@
       "page": "p1",
       "snippet": "Whiteboard markers 15 266.91 4,003.65"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.95,
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
      "status": "ok"
     },
     "quantity": {
@@ -758,9 +758,9 @@
       "page": "p1",
       "snippet": "Whiteboard markers 15 266.91 4,003.65"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.45,
-     "status": "needs_review"
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
+     "status": "ok"
     },
     "unit_price": {
      "value": 266.91,
@@ -768,9 +768,9 @@
       "page": "p1",
       "snippet": "Whiteboard markers 15 266.91 4,003.65"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.45,
-     "status": "needs_review"
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
+     "status": "ok"
     },
     "amount": {
      "value": 4003.65,
@@ -778,8 +778,8 @@
       "page": "p1",
       "snippet": "Whiteboard markers 15 266.91 4,003.65"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.95,
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
      "status": "ok"
     }
    },
@@ -790,8 +790,8 @@
       "page": "p1",
       "snippet": "Ergonomic chair 1 341.74 341.74"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.95,
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
      "status": "ok"
     },
     "quantity": {
@@ -800,8 +800,8 @@
       "page": "p1",
       "snippet": "Ergonomic chair 1 341.74 341.74"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.95,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -810,8 +810,8 @@
       "page": "p1",
       "snippet": "Ergonomic chair 1 341.74 341.74"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.95,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "amount": {
@@ -820,8 +820,8 @@
       "page": "p1",
       "snippet": "Ergonomic chair 1 341.74 341.74"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.95,
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
      "status": "ok"
     }
    }
@@ -865,8 +865,8 @@
     "page": "p1",
     "snippet": "INVOICE"
    },
-   "llm_confidence": 0.9,
-   "confidence": 0.95,
+   "llm_confidence": 0.95,
+   "confidence": 0.9749999999999999,
    "status": "ok"
   },
   "supplier_name": {
@@ -875,8 +875,8 @@
     "page": "p1",
     "snippet": "Davis and Sons"
    },
-   "llm_confidence": 0.8,
-   "confidence": 0.8999999999999999,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "supplier_tax_id": {
@@ -939,7 +939,7 @@
      "value": 17.0,
      "source": {
       "page": "p1",
-      "snippet": "USB-C cables\n17\n306,44\n5.209,48"
+      "snippet": "17"
      },
      "llm_confidence": 0.7,
      "confidence": 0.8499999999999999,
@@ -981,7 +981,7 @@
      "value": 12.0,
      "source": {
       "page": "p1",
-      "snippet": "Network equipment\n12\n382,44\n4.589,28"
+      "snippet": "12"
      },
      "llm_confidence": 0.7,
      "confidence": 0.8499999999999999,
@@ -1023,7 +1023,7 @@
      "value": 17.0,
      "source": {
       "page": "p1",
-      "snippet": "Ergonomic chair\n17\n459,65\n7.814,05"
+      "snippet": "17"
      },
      "llm_confidence": 0.7,
      "confidence": 0.8499999999999999,
@@ -1065,7 +1065,7 @@
      "value": 11.0,
      "source": {
       "page": "p1",
-      "snippet": "Whiteboard markers\n11\n246,86\n2.715,46"
+      "snippet": "11"
      },
      "llm_confidence": 0.7,
      "confidence": 0.8499999999999999,
@@ -1107,7 +1107,7 @@
      "value": 12.0,
      "source": {
       "page": "p1",
-      "snippet": "Hardware purchase\n12\n439,97\n5.279,64"
+      "snippet": "12"
      },
      "llm_confidence": 0.7,
      "confidence": 0.8499999999999999,
@@ -1141,8 +1141,8 @@
     "page": "p1",
     "snippet": "Subtotal: 25.607,91"
    },
-   "llm_confidence": 0.8,
-   "confidence": 0.8999999999999999,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "tax_total": {
@@ -1158,8 +1158,8 @@
     "page": "p1",
     "snippet": "TOTAL: 25.607,91"
    },
-   "llm_confidence": 0.85,
-   "confidence": 0.925,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   }
  },
@@ -1181,8 +1181,8 @@
     "page": "p1",
     "snippet": "Guzman, Hoffman and Baldwin"
    },
-   "llm_confidence": 0.9,
-   "confidence": 0.95,
+   "llm_confidence": 0.85,
+   "confidence": 0.925,
    "status": "ok"
   },
   "supplier_tax_id": {
@@ -1248,10 +1248,10 @@
      "value": 17.0,
      "source": {
       "page": "p1",
-      "snippet": "17"
+      "snippet": "Training workshop\n17\n436.85\n7426.45"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -1260,8 +1260,8 @@
       "page": "p1",
       "snippet": "436.85"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "amount": {
@@ -1270,8 +1270,8 @@
       "page": "p1",
       "snippet": "7426.45"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     }
    },
@@ -1290,10 +1290,10 @@
      "value": 7.0,
      "source": {
       "page": "p1",
-      "snippet": "7"
+      "snippet": "Security audit\n7\n464.81\n3253.67"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -1302,8 +1302,8 @@
       "page": "p1",
       "snippet": "464.81"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "amount": {
@@ -1312,8 +1312,8 @@
       "page": "p1",
       "snippet": "3253.67"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     }
    },
@@ -1332,10 +1332,10 @@
      "value": 10.0,
      "source": {
       "page": "p1",
-      "snippet": "10"
+      "snippet": "Cloud storage plan\n10\n202.50\n2025.00"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -1344,8 +1344,8 @@
       "page": "p1",
       "snippet": "202.50"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "amount": {
@@ -1354,8 +1354,8 @@
       "page": "p1",
       "snippet": "2025.00"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     }
    },
@@ -1374,10 +1374,10 @@
      "value": 12.0,
      "source": {
       "page": "p1",
-      "snippet": "12"
+      "snippet": "Backup generator service\n12\n221.86\n2662.32"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -1386,8 +1386,8 @@
       "page": "p1",
       "snippet": "221.86"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "amount": {
@@ -1396,8 +1396,8 @@
       "page": "p1",
       "snippet": "2662.32"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     }
    },
@@ -1416,10 +1416,10 @@
      "value": 15.0,
      "source": {
       "page": "p1",
-      "snippet": "15"
+      "snippet": "Laptop docking station\n15\n64.90\n973.50"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -1428,8 +1428,8 @@
       "page": "p1",
       "snippet": "64.90"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "amount": {
@@ -1438,8 +1438,8 @@
       "page": "p1",
       "snippet": "973.50"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     }
    },
@@ -1458,10 +1458,10 @@
      "value": 3.0,
      "source": {
       "page": "p1",
-      "snippet": "3"
+      "snippet": "Support retainer\n3\n172.35\n517.05"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -1470,8 +1470,8 @@
       "page": "p1",
       "snippet": "172.35"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "amount": {
@@ -1480,8 +1480,8 @@
       "page": "p1",
       "snippet": "517.05"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     }
    },
@@ -1500,10 +1500,10 @@
      "value": 18.0,
      "source": {
       "page": "p1",
-      "snippet": "18"
+      "snippet": "Desk lamp\n18\n118.91\n2140.38"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -1512,8 +1512,8 @@
       "page": "p1",
       "snippet": "118.91"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "amount": {
@@ -1522,8 +1522,8 @@
       "page": "p1",
       "snippet": "2140.38"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     }
    },
@@ -1542,10 +1542,10 @@
      "value": 1.0,
      "source": {
       "page": "p1",
-      "snippet": "1"
+      "snippet": "Support retainer\n1\n40.14\n40.14"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -1554,8 +1554,8 @@
       "page": "p1",
       "snippet": "40.14"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "amount": {
@@ -1564,8 +1564,8 @@
       "page": "p1",
       "snippet": "40.14"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     }
    }
@@ -1577,8 +1577,8 @@
     "snippet": "Subtotal: 19038.51"
    },
    "llm_confidence": 0.95,
-   "confidence": 0.9749999999999999,
-   "status": "ok"
+   "confidence": 0.7749999999999999,
+   "status": "needs_review"
   },
   "tax_total": {
    "value": 1903.85,
@@ -1587,8 +1587,8 @@
     "snippet": "Tax: 1903.85"
    },
    "llm_confidence": 0.95,
-   "confidence": 0.9749999999999999,
-   "status": "ok"
+   "confidence": 0.7749999999999999,
+   "status": "needs_review"
   },
   "total": {
    "value": 20947.36,
@@ -1596,8 +1596,8 @@
     "page": "p1",
     "snippet": "TOTAL: 20947.36"
    },
-   "llm_confidence": 0.3,
-   "confidence": 0.44999999999999996,
+   "llm_confidence": 0.9,
+   "confidence": 0.75,
    "status": "needs_review"
   }
  },
@@ -1609,8 +1609,8 @@
     "page": "body",
     "snippet": "Please find our invoice below."
    },
-   "llm_confidence": 0.95,
-   "confidence": 0.9749999999999999,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "supplier_name": {
@@ -1681,8 +1681,8 @@
       "page": "body",
       "snippet": "Cloud storage plan x4 @ 52,98 = 211,92"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "quantity": {
@@ -1691,8 +1691,8 @@
       "page": "body",
       "snippet": "Cloud storage plan x4 @ 52,98 = 211,92"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "unit_price": {
@@ -1701,8 +1701,8 @@
       "page": "body",
       "snippet": "Cloud storage plan x4 @ 52,98 = 211,92"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "amount": {
@@ -1711,8 +1711,8 @@
       "page": "body",
       "snippet": "Cloud storage plan x4 @ 52,98 = 211,92"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     }
    },
@@ -1723,8 +1723,8 @@
       "page": "body",
       "snippet": "Security audit x12 @ 214,67 = 2.576,04"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "quantity": {
@@ -1733,8 +1733,8 @@
       "page": "body",
       "snippet": "Security audit x12 @ 214,67 = 2.576,04"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "unit_price": {
@@ -1743,8 +1743,8 @@
       "page": "body",
       "snippet": "Security audit x12 @ 214,67 = 2.576,04"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "amount": {
@@ -1753,8 +1753,8 @@
       "page": "body",
       "snippet": "Security audit x12 @ 214,67 = 2.576,04"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     }
    },
@@ -1765,8 +1765,8 @@
       "page": "body",
       "snippet": "Maintenance contract x2 @ 338,32 = 676,64"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "quantity": {
@@ -1775,8 +1775,8 @@
       "page": "body",
       "snippet": "Maintenance contract x2 @ 338,32 = 676,64"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "unit_price": {
@@ -1785,8 +1785,8 @@
       "page": "body",
       "snippet": "Maintenance contract x2 @ 338,32 = 676,64"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "amount": {
@@ -1795,8 +1795,8 @@
       "page": "body",
       "snippet": "Maintenance contract x2 @ 338,32 = 676,64"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     }
    },
@@ -1807,8 +1807,8 @@
       "page": "body",
       "snippet": "USB-C cables x4 @ 35,00 = 140,00"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "quantity": {
@@ -1817,8 +1817,8 @@
       "page": "body",
       "snippet": "USB-C cables x4 @ 35,00 = 140,00"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "unit_price": {
@@ -1827,8 +1827,8 @@
       "page": "body",
       "snippet": "USB-C cables x4 @ 35,00 = 140,00"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "amount": {
@@ -1837,8 +1837,8 @@
       "page": "body",
       "snippet": "USB-C cables x4 @ 35,00 = 140,00"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     }
    },
@@ -1849,8 +1849,8 @@
       "page": "body",
       "snippet": "Printing services x4 @ 128,08 = 512,32"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "quantity": {
@@ -1859,8 +1859,8 @@
       "page": "body",
       "snippet": "Printing services x4 @ 128,08 = 512,32"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "unit_price": {
@@ -1869,8 +1869,8 @@
       "page": "body",
       "snippet": "Printing services x4 @ 128,08 = 512,32"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "amount": {
@@ -1879,8 +1879,8 @@
       "page": "body",
       "snippet": "Printing services x4 @ 128,08 = 512,32"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     }
    },
@@ -1891,8 +1891,8 @@
       "page": "body",
       "snippet": "Cloud storage plan x18 @ 227,06 = 4.087,08"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "quantity": {
@@ -1901,8 +1901,8 @@
       "page": "body",
       "snippet": "Cloud storage plan x18 @ 227,06 = 4.087,08"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "unit_price": {
@@ -1911,8 +1911,8 @@
       "page": "body",
       "snippet": "Cloud storage plan x18 @ 227,06 = 4.087,08"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "amount": {
@@ -1921,8 +1921,8 @@
       "page": "body",
       "snippet": "Cloud storage plan x18 @ 227,06 = 4.087,08"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     }
    },
@@ -1933,8 +1933,8 @@
       "page": "body",
       "snippet": "Security audit x6 @ 142,88 = 857,28"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "quantity": {
@@ -1943,8 +1943,8 @@
       "page": "body",
       "snippet": "Security audit x6 @ 142,88 = 857,28"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "unit_price": {
@@ -1953,8 +1953,8 @@
       "page": "body",
       "snippet": "Security audit x6 @ 142,88 = 857,28"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "amount": {
@@ -1963,8 +1963,8 @@
       "page": "body",
       "snippet": "Security audit x6 @ 142,88 = 857,28"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     }
    },
@@ -1975,8 +1975,8 @@
       "page": "body",
       "snippet": "Support retainer x3 @ 224,35 = 673,05"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "quantity": {
@@ -1985,8 +1985,8 @@
       "page": "body",
       "snippet": "Support retainer x3 @ 224,35 = 673,05"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "unit_price": {
@@ -1995,8 +1995,8 @@
       "page": "body",
       "snippet": "Support retainer x3 @ 224,35 = 673,05"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "amount": {
@@ -2005,8 +2005,8 @@
       "page": "body",
       "snippet": "Support retainer x3 @ 224,35 = 673,05"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     }
    }
@@ -2017,8 +2017,8 @@
     "page": "body",
     "snippet": "Subtotal: 9.734,33"
    },
-   "llm_confidence": 0.95,
-   "confidence": 0.9749999999999999,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "tax_total": {
@@ -2034,8 +2034,8 @@
     "page": "body",
     "snippet": "TOTAL: 9.734,33"
    },
-   "llm_confidence": 0.95,
-   "confidence": 0.9749999999999999,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   }
  },
@@ -2124,7 +2124,7 @@
      "value": 1.0,
      "source": {
       "page": "Invoice!B10",
-      "snippet": "Data plan | B10=1 | C10=492.73 | D10=492.73"
+      "snippet": "B10=1"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -2317,8 +2317,8 @@
     "page": "p1",
     "snippet": "INVOICE"
    },
-   "llm_confidence": 0.95,
-   "confidence": 0.9749999999999999,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "supplier_name": {
@@ -2358,8 +2358,8 @@
     "snippet": "Date: 09/03/2026"
    },
    "llm_confidence": 0.7,
-   "confidence": 0.8499999999999999,
-   "status": "ok"
+   "confidence": 0.6499999999999999,
+   "status": "needs_review"
   },
   "due_date": {
    "value": null,
@@ -2394,10 +2394,10 @@
      "value": 13.0,
      "source": {
       "page": "p1",
-      "snippet": "Support retainer\n13"
+      "snippet": "Support retainer\n13\n64.34\n836.42"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -2406,8 +2406,8 @@
       "page": "p1",
       "snippet": "64.34"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "amount": {
@@ -2416,8 +2416,8 @@
       "page": "p1",
       "snippet": "836.42"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     }
    },
@@ -2436,10 +2436,10 @@
      "value": 8.0,
      "source": {
       "page": "p1",
-      "snippet": "Desk lamp\n8"
+      "snippet": "Desk lamp\n8\n291.56\n2332.48"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -2448,8 +2448,8 @@
       "page": "p1",
       "snippet": "291.56"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "amount": {
@@ -2458,8 +2458,8 @@
       "page": "p1",
       "snippet": "2332.48"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     }
    },
@@ -2478,10 +2478,10 @@
      "value": 20.0,
      "source": {
       "page": "p1",
-      "snippet": "Annual software licence\n20"
+      "snippet": "Annual software licence\n20\n45.58\n911.60"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -2490,8 +2490,8 @@
       "page": "p1",
       "snippet": "45.58"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "amount": {
@@ -2500,8 +2500,8 @@
       "page": "p1",
       "snippet": "911.60"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     }
    }
@@ -2577,14 +2577,14 @@
    "status": "ok"
   },
   "issue_date": {
-   "value": "2026-08-11",
+   "value": "2026-11-08",
    "source": {
     "page": "Invoice!B4",
     "snippet": "Date | B4=11/08/2026"
    },
-   "llm_confidence": 0.6,
-   "confidence": 0.8,
-   "status": "ok"
+   "llm_confidence": 0.8,
+   "confidence": 0.7,
+   "status": "needs_review"
   },
   "due_date": {
    "value": null,
@@ -2807,8 +2807,8 @@
     "page": "p1",
     "snippet": "Date: 17 November 2026"
    },
-   "llm_confidence": 0.95,
-   "confidence": 0.9749999999999999,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "due_date": {
@@ -2817,8 +2817,8 @@
     "page": "p1",
     "snippet": "Due: 01 January 2027"
    },
-   "llm_confidence": 0.95,
-   "confidence": 0.9749999999999999,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "currency": {
@@ -2827,8 +2827,8 @@
     "page": "p1",
     "snippet": "Currency: AUD"
    },
-   "llm_confidence": 0.95,
-   "confidence": 0.9749999999999999,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "line_items": [
@@ -2839,8 +2839,8 @@
       "page": "p1",
       "snippet": "Network equipment 9 62,14 559,26"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "quantity": {
@@ -2849,8 +2849,8 @@
       "page": "p1",
       "snippet": "Network equipment 9 62,14 559,26"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -2859,8 +2859,8 @@
       "page": "p1",
       "snippet": "Network equipment 9 62,14 559,26"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "amount": {
@@ -2869,8 +2869,8 @@
       "page": "p1",
       "snippet": "Network equipment 9 62,14 559,26"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     }
    },
@@ -2881,8 +2881,8 @@
       "page": "p1",
       "snippet": "Hardware purchase 18 81,95 1.475,10"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "quantity": {
@@ -2891,8 +2891,8 @@
       "page": "p1",
       "snippet": "Hardware purchase 18 81,95 1.475,10"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -2901,8 +2901,8 @@
       "page": "p1",
       "snippet": "Hardware purchase 18 81,95 1.475,10"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "amount": {
@@ -2911,8 +2911,8 @@
       "page": "p1",
       "snippet": "Hardware purchase 18 81,95 1.475,10"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     }
    },
@@ -2923,8 +2923,8 @@
       "page": "p1",
       "snippet": "Travel expenses 20 109,26 2.185,20"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "quantity": {
@@ -2933,9 +2933,9 @@
       "page": "p1",
       "snippet": "Travel expenses 20 109,26 2.185,20"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.45,
-     "status": "needs_review"
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
+     "status": "ok"
     },
     "unit_price": {
      "value": 109.26,
@@ -2943,9 +2943,9 @@
       "page": "p1",
       "snippet": "Travel expenses 20 109,26 2.185,20"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.45,
-     "status": "needs_review"
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
+     "status": "ok"
     },
     "amount": {
      "value": 2185.2,
@@ -2953,8 +2953,8 @@
       "page": "p1",
       "snippet": "Travel expenses 20 109,26 2.185,20"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     }
    },
@@ -2965,8 +2965,8 @@
       "page": "p1",
       "snippet": "Printing services 7 345,31 2417 17"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.6,
+     "confidence": 0.8,
      "status": "ok"
     },
     "quantity": {
@@ -2975,9 +2975,9 @@
       "page": "p1",
       "snippet": "Printing services 7 345,31 2417 17"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.4,
-     "status": "needs_review"
+     "llm_confidence": 0.6,
+     "confidence": 0.8,
+     "status": "ok"
     },
     "unit_price": {
      "value": 345.31,
@@ -2985,19 +2985,19 @@
       "page": "p1",
       "snippet": "Printing services 7 345,31 2417 17"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.4,
-     "status": "needs_review"
+     "llm_confidence": 0.6,
+     "confidence": 0.8,
+     "status": "ok"
     },
     "amount": {
-     "value": 2417.17,
+     "value": null,
      "source": {
       "page": "p1",
       "snippet": "Printing services 7 345,31 2417 17"
      },
-     "llm_confidence": 0.4,
-     "confidence": 0.2,
-     "status": "needs_review"
+     "llm_confidence": 0.3,
+     "confidence": 0.0,
+     "status": "ok"
     }
    },
    {
@@ -3046,8 +3046,8 @@
     "page": "p1",
     "snippet": "Subtotal: 10.832,67"
    },
-   "llm_confidence": 0.9,
-   "confidence": 0.95,
+   "llm_confidence": 0.85,
+   "confidence": 0.925,
    "status": "ok"
   },
   "tax_total": {
@@ -3063,8 +3063,8 @@
     "page": "p1",
     "snippet": "TOTAL: 10.832,67"
    },
-   "llm_confidence": 0.9,
-   "confidence": 0.95,
+   "llm_confidence": 0.85,
+   "confidence": 0.925,
    "status": "ok"
   }
  },
@@ -3117,8 +3117,8 @@
     "snippet": "Date | B4=09/11/2026"
    },
    "llm_confidence": 0.7,
-   "confidence": 0.8499999999999999,
-   "status": "ok"
+   "confidence": 0.6499999999999999,
+   "status": "needs_review"
   },
   "due_date": {
    "value": "2027-01-08",
@@ -3127,8 +3127,8 @@
     "snippet": "Due | B5=08/01/2027"
    },
    "llm_confidence": 0.7,
-   "confidence": 0.8499999999999999,
-   "status": "ok"
+   "confidence": 0.6499999999999999,
+   "status": "needs_review"
   },
   "currency": {
    "value": "EUR",
@@ -3146,7 +3146,7 @@
      "value": "Monthly hosting subscription",
      "source": {
       "page": "Invoice!A10",
-      "snippet": "Monthly hosting subscription"
+      "snippet": "Monthly hosting subscription | B10=4 | C10=42.25 | D10=169"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -3156,7 +3156,7 @@
      "value": 4.0,
      "source": {
       "page": "Invoice!B10",
-      "snippet": "4"
+      "snippet": "B10=4"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -3166,7 +3166,7 @@
      "value": 42.25,
      "source": {
       "page": "Invoice!C10",
-      "snippet": "42.25"
+      "snippet": "C10=42.25"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -3176,7 +3176,7 @@
      "value": 169.0,
      "source": {
       "page": "Invoice!D10",
-      "snippet": "169"
+      "snippet": "D10=169"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -3188,7 +3188,7 @@
      "value": "Network equipment",
      "source": {
       "page": "Invoice!A11",
-      "snippet": "Network equipment"
+      "snippet": "Network equipment | B11=18 | C11=22.83 | D11=410.94"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -3198,7 +3198,7 @@
      "value": 18.0,
      "source": {
       "page": "Invoice!B11",
-      "snippet": "18"
+      "snippet": "B11=18"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -3208,7 +3208,7 @@
      "value": 22.83,
      "source": {
       "page": "Invoice!C11",
-      "snippet": "22.83"
+      "snippet": "C11=22.83"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -3218,7 +3218,7 @@
      "value": 410.94,
      "source": {
       "page": "Invoice!D11",
-      "snippet": "410.94"
+      "snippet": "D11=410.94"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -3230,7 +3230,7 @@
      "value": "Translation services",
      "source": {
       "page": "Invoice!A12",
-      "snippet": "Translation services"
+      "snippet": "Translation services | B12=19 | C12=278.5 | D12=5291.5"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -3240,7 +3240,7 @@
      "value": 19.0,
      "source": {
       "page": "Invoice!B12",
-      "snippet": "19"
+      "snippet": "B12=19"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -3250,7 +3250,7 @@
      "value": 278.5,
      "source": {
       "page": "Invoice!C12",
-      "snippet": "278.5"
+      "snippet": "C12=278.5"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -3260,7 +3260,7 @@
      "value": 5291.5,
      "source": {
       "page": "Invoice!D12",
-      "snippet": "5291.5"
+      "snippet": "D12=5291.5"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -3272,7 +3272,7 @@
      "value": "Security audit",
      "source": {
       "page": "Invoice!A13",
-      "snippet": "Security audit"
+      "snippet": "Security audit | B13=5 | C13=25.71 | D13=128.55"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -3282,7 +3282,7 @@
      "value": 5.0,
      "source": {
       "page": "Invoice!B13",
-      "snippet": "5"
+      "snippet": "B13=5"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -3292,7 +3292,7 @@
      "value": 25.71,
      "source": {
       "page": "Invoice!C13",
-      "snippet": "25.71"
+      "snippet": "C13=25.71"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -3302,7 +3302,7 @@
      "value": 128.55,
      "source": {
       "page": "Invoice!D13",
-      "snippet": "128.55"
+      "snippet": "D13=128.55"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -3314,7 +3314,7 @@
      "value": "Translation services",
      "source": {
       "page": "Invoice!A14",
-      "snippet": "Translation services"
+      "snippet": "Translation services | B14=2 | C14=449.97 | D14=899.94"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -3324,7 +3324,7 @@
      "value": 2.0,
      "source": {
       "page": "Invoice!B14",
-      "snippet": "2"
+      "snippet": "B14=2"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -3334,7 +3334,7 @@
      "value": 449.97,
      "source": {
       "page": "Invoice!C14",
-      "snippet": "449.97"
+      "snippet": "C14=449.97"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -3344,7 +3344,7 @@
      "value": 899.94,
      "source": {
       "page": "Invoice!D14",
-      "snippet": "899.94"
+      "snippet": "D14=899.94"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -3356,7 +3356,7 @@
      "value": "Cloud storage plan",
      "source": {
       "page": "Invoice!A15",
-      "snippet": "Cloud storage plan"
+      "snippet": "Cloud storage plan | B15=8 | C15=335.13 | D15=2681.04"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -3366,7 +3366,7 @@
      "value": 8.0,
      "source": {
       "page": "Invoice!B15",
-      "snippet": "8"
+      "snippet": "B15=8"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -3376,7 +3376,7 @@
      "value": 335.13,
      "source": {
       "page": "Invoice!C15",
-      "snippet": "335.13"
+      "snippet": "C15=335.13"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -3386,7 +3386,7 @@
      "value": 2681.04,
      "source": {
       "page": "Invoice!D15",
-      "snippet": "2681.04"
+      "snippet": "D15=2681.04"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -3398,7 +3398,7 @@
    "value": 9580.97,
    "source": {
     "page": "Invoice!D17",
-    "snippet": "Subtotal | D17=9580.97"
+    "snippet": "C17=Subtotal | D17=9580.97"
    },
    "llm_confidence": 0.95,
    "confidence": 0.9749999999999999,
@@ -3408,7 +3408,7 @@
    "value": 1916.19,
    "source": {
     "page": "Invoice!D18",
-    "snippet": "Tax | D18=1916.19"
+    "snippet": "C18=Tax | D18=1916.19"
    },
    "llm_confidence": 0.95,
    "confidence": 0.9749999999999999,
@@ -3418,7 +3418,7 @@
    "value": 11497.16,
    "source": {
     "page": "Invoice!D19",
-    "snippet": "TOTAL | D19=11497.16"
+    "snippet": "C19=TOTAL | D19=11497.16"
    },
    "llm_confidence": 0.95,
    "confidence": 0.9749999999999999,
@@ -3433,8 +3433,8 @@
     "page": "p1",
     "snippet": "INVOICE"
    },
-   "llm_confidence": 0.9,
-   "confidence": 0.95,
+   "llm_confidence": 0.95,
+   "confidence": 0.9749999999999999,
    "status": "ok"
   },
   "supplier_name": {
@@ -3480,8 +3480,8 @@
     "page": "p1",
     "snippet": "Due: 25/10/2026"
    },
-   "llm_confidence": 0.85,
-   "confidence": 0.925,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "currency": {
@@ -3532,8 +3532,8 @@
       "page": "p1",
       "snippet": "3,351.10"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.95,
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
      "status": "ok"
     }
    },
@@ -3574,8 +3574,8 @@
       "page": "p1",
       "snippet": "4,551.56"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.95,
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
      "status": "ok"
     }
    }
@@ -3586,8 +3586,8 @@
     "page": "p1",
     "snippet": "Subtotal: 7,902.66"
    },
-   "llm_confidence": 0.95,
-   "confidence": 0.9749999999999999,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "tax_total": {
@@ -3596,8 +3596,8 @@
     "page": "p1",
     "snippet": "Tax: 790.27"
    },
-   "llm_confidence": 0.95,
-   "confidence": 0.9749999999999999,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "total": {
@@ -3606,8 +3606,8 @@
     "page": "p1",
     "snippet": "TOTAL: 8,692.93"
    },
-   "llm_confidence": 0.95,
-   "confidence": 0.9749999999999999,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   }
  },
@@ -3699,30 +3699,30 @@
      "value": 17.0,
      "source": {
       "page": "body",
-      "snippet": "Cloud storage plan x17"
+      "snippet": "Cloud storage plan x17 @ 239.23 = 4,066.91"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "unit_price": {
      "value": 239.23,
      "source": {
       "page": "body",
-      "snippet": "@ 239.23"
+      "snippet": "Cloud storage plan x17 @ 239.23 = 4,066.91"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "amount": {
      "value": 4066.91,
      "source": {
       "page": "body",
-      "snippet": "= 4,066.91"
+      "snippet": "Cloud storage plan x17 @ 239.23 = 4,066.91"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.9749999999999999,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     }
    }
@@ -3845,9 +3845,9 @@
       "page": "p1",
       "snippet": "Data plan 14 271,42 3.799,88"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.45,
-     "status": "needs_review"
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
+     "status": "ok"
     },
     "unit_price": {
      "value": 271.42,
@@ -3855,9 +3855,9 @@
       "page": "p1",
       "snippet": "Data plan 14 271,42 3.799,88"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.45,
-     "status": "needs_review"
+     "llm_confidence": 0.75,
+     "confidence": 0.875,
+     "status": "ok"
     },
     "amount": {
      "value": 3799.88,
@@ -3888,28 +3888,28 @@
       "snippet": "Ergonomic chair 20 449 42 8.98840"
      },
      "llm_confidence": 0.5,
+     "confidence": 0.75,
+     "status": "ok"
+    },
+    "unit_price": {
+     "value": 449.42,
+     "source": {
+      "page": "p1",
+      "snippet": "Ergonomic chair 20 449 42 8.98840"
+     },
+     "llm_confidence": 0.5,
      "confidence": 0.25,
      "status": "needs_review"
     },
-    "unit_price": {
-     "value": null,
-     "source": {
-      "page": "p1",
-      "snippet": "Ergonomic chair 20 449 42 8.98840"
-     },
-     "llm_confidence": 0.0,
-     "confidence": 0.0,
-     "status": "ok"
-    },
     "amount": {
-     "value": null,
+     "value": 8988.4,
      "source": {
       "page": "p1",
       "snippet": "Ergonomic chair 20 449 42 8.98840"
      },
-     "llm_confidence": 0.0,
-     "confidence": 0.0,
-     "status": "ok"
+     "llm_confidence": 0.4,
+     "confidence": 0.2,
+     "status": "needs_review"
     }
    },
    {
@@ -3929,9 +3929,9 @@
       "page": "p1",
       "snippet": "Server rack 8 140,10 1.120,80"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.45,
-     "status": "needs_review"
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
+     "status": "ok"
     },
     "unit_price": {
      "value": 140.1,
@@ -3939,9 +3939,9 @@
       "page": "p1",
       "snippet": "Server rack 8 140,10 1.120,80"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.45,
-     "status": "needs_review"
+     "llm_confidence": 0.75,
+     "confidence": 0.875,
+     "status": "ok"
     },
     "amount": {
      "value": 1120.8,
@@ -3971,9 +3971,9 @@
       "page": "p1",
       "snippet": "Server rack 1 197,48 197,48"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.45,
-     "status": "needs_review"
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
+     "status": "ok"
     },
     "unit_price": {
      "value": 197.48,
@@ -4013,9 +4013,9 @@
       "page": "p1",
       "snippet": "Backup generator service 13 363,47 4.725,11"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.45,
-     "status": "needs_review"
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
+     "status": "ok"
     },
     "unit_price": {
      "value": 363.47,
@@ -4023,9 +4023,9 @@
       "page": "p1",
       "snippet": "Backup generator service 13 363,47 4.725,11"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.45,
-     "status": "needs_review"
+     "llm_confidence": 0.75,
+     "confidence": 0.875,
+     "status": "ok"
     },
     "amount": {
      "value": 4725.11,
@@ -4055,9 +4055,9 @@
       "page": "p1",
       "snippet": "Maintenance contract 5 490,46 2.452,30"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.45,
-     "status": "needs_review"
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
+     "status": "ok"
     },
     "unit_price": {
      "value": 490.46,
@@ -4065,9 +4065,9 @@
       "page": "p1",
       "snippet": "Maintenance contract 5 490,46 2.452,30"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.45,
-     "status": "needs_review"
+     "llm_confidence": 0.75,
+     "confidence": 0.875,
+     "status": "ok"
     },
     "amount": {
      "value": 2452.3,
@@ -4097,9 +4097,9 @@
       "page": "p1",
       "snippet": "Ergonomic chair 1 453,93 453,93"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.45,
-     "status": "needs_review"
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
+     "status": "ok"
     },
     "unit_price": {
      "value": 453.93,
@@ -4115,7 +4115,7 @@
      "value": 453.93,
      "source": {
       "page": "p1",
-      "snippet": "Ergonomic chair 1 453,93 453,93"
+      "snippet": "Data plan 14 271,42 3.799,88"
      },
      "llm_confidence": 0.8,
      "confidence": 0.8999999999999999,
@@ -4130,8 +4130,8 @@
     "snippet": "Subtotal: 21.737,90"
    },
    "llm_confidence": 0.85,
-   "confidence": 0.925,
-   "status": "ok"
+   "confidence": 0.725,
+   "status": "needs_review"
   },
   "tax_total": {
    "value": 1086.9,
@@ -4140,17 +4140,17 @@
     "snippet": "Tax: 1.086,90"
    },
    "llm_confidence": 0.85,
-   "confidence": 0.925,
-   "status": "ok"
+   "confidence": 0.725,
+   "status": "needs_review"
   },
   "total": {
-   "value": 22824.8,
+   "value": 22924.8,
    "source": {
     "page": "p1",
     "snippet": "TOTAL: 22.924,80"
    },
-   "llm_confidence": 0.3,
-   "confidence": 0.15,
+   "llm_confidence": 0.9,
+   "confidence": 0.75,
    "status": "needs_review"
   }
  },
@@ -4197,14 +4197,14 @@
    "status": "ok"
   },
   "issue_date": {
-   "value": "2026-11-08",
+   "value": "2026-08-11",
    "source": {
     "page": "Invoice!B4",
     "snippet": "Date | B4=08/11/2026"
    },
    "llm_confidence": 0.6,
-   "confidence": 0.8,
-   "status": "ok"
+   "confidence": 0.6,
+   "status": "needs_review"
   },
   "due_date": {
    "value": "2026-10-10",
@@ -4212,9 +4212,9 @@
     "page": "Invoice!B5",
     "snippet": "Due | B5=10/10/2026"
    },
-   "llm_confidence": 0.9,
-   "confidence": 0.75,
-   "status": "needs_review"
+   "llm_confidence": 0.6,
+   "confidence": 0.8,
+   "status": "ok"
   },
   "currency": {
    "value": "EUR",
@@ -4539,8 +4539,8 @@
     "page": "p1",
     "snippet": "Tax ID: TAX-493537"
    },
-   "llm_confidence": 0.95,
-   "confidence": 0.9749999999999999,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "document_number": {
@@ -4601,8 +4601,8 @@
       "page": "p1",
       "snippet": "Cloud storage plan\n3\n298.09\n894.27"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -4611,8 +4611,8 @@
       "page": "p1",
       "snippet": "298.09"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "amount": {
@@ -4621,8 +4621,8 @@
       "page": "p1",
       "snippet": "894.27"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.95,
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
      "status": "ok"
     }
    },
@@ -4643,8 +4643,8 @@
       "page": "p1",
       "snippet": "USB-C cables\n8\n55.44\n443.52"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -4653,8 +4653,8 @@
       "page": "p1",
       "snippet": "55.44"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "amount": {
@@ -4663,8 +4663,8 @@
       "page": "p1",
       "snippet": "443.52"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.95,
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
      "status": "ok"
     }
    }
@@ -4735,8 +4735,8 @@
     "page": "body",
     "snippet": "Document No: INV-14833"
    },
-   "llm_confidence": 0.95,
-   "confidence": 0.9749999999999999,
+   "llm_confidence": 0.97,
+   "confidence": 0.9849999999999999,
    "status": "ok"
   },
   "issue_date": {
@@ -5102,8 +5102,8 @@
     "page": "p1",
     "snippet": "Date: 08/07/2026"
    },
-   "llm_confidence": 0.8,
-   "confidence": 0.8999999999999999,
+   "llm_confidence": 0.7,
+   "confidence": 0.8499999999999999,
    "status": "ok"
   },
   "due_date": {
@@ -5112,8 +5112,8 @@
     "page": "p1",
     "snippet": "Due: 09/21/2026"
    },
-   "llm_confidence": 0.9,
-   "confidence": 0.95,
+   "llm_confidence": 0.8,
+   "confidence": 0.8999999999999999,
    "status": "ok"
   },
   "currency": {
@@ -5134,8 +5134,8 @@
       "page": "p1",
       "snippet": "Training workshop 18"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
      "status": "ok"
     },
     "quantity": {
@@ -5144,8 +5144,8 @@
       "page": "p1",
       "snippet": "Training workshop 18"
      },
-     "llm_confidence": 0.7,
-     "confidence": 0.8499999999999999,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -5154,8 +5154,8 @@
       "page": "p1",
       "snippet": "10.02"
      },
-     "llm_confidence": 0.6,
-     "confidence": 0.8,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "amount": {
@@ -5164,8 +5164,8 @@
       "page": "p1",
       "snippet": "180.36"
      },
-     "llm_confidence": 0.6,
-     "confidence": 0.8,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     }
    },
@@ -5176,8 +5176,8 @@
       "page": "p1",
       "snippet": "Cloud storage plan 3"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
      "status": "ok"
     },
     "quantity": {
@@ -5186,8 +5186,8 @@
       "page": "p1",
       "snippet": "Cloud storage plan 3"
      },
-     "llm_confidence": 0.7,
-     "confidence": 0.8499999999999999,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -5196,8 +5196,8 @@
       "page": "p1",
       "snippet": "124.47"
      },
-     "llm_confidence": 0.6,
-     "confidence": 0.8,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "amount": {
@@ -5206,8 +5206,8 @@
       "page": "p1",
       "snippet": "373.41"
      },
-     "llm_confidence": 0.6,
-     "confidence": 0.8,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     }
    },
@@ -5218,8 +5218,8 @@
       "page": "p1",
       "snippet": "Security audit 16"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
      "status": "ok"
     },
     "quantity": {
@@ -5228,8 +5228,8 @@
       "page": "p1",
       "snippet": "Security audit 16"
      },
-     "llm_confidence": 0.7,
-     "confidence": 0.8499999999999999,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -5238,8 +5238,8 @@
       "page": "p1",
       "snippet": "279.81"
      },
-     "llm_confidence": 0.6,
-     "confidence": 0.8,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "amount": {
@@ -5248,8 +5248,8 @@
       "page": "p1",
       "snippet": "4,476.96"
      },
-     "llm_confidence": 0.6,
-     "confidence": 0.8,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     }
    },
@@ -5260,8 +5260,8 @@
       "page": "p1",
       "snippet": "Support retainer 16"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
      "status": "ok"
     },
     "quantity": {
@@ -5270,8 +5270,8 @@
       "page": "p1",
       "snippet": "Support retainer 16"
      },
-     "llm_confidence": 0.7,
-     "confidence": 0.8499999999999999,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -5280,8 +5280,8 @@
       "page": "p1",
       "snippet": "324.72"
      },
-     "llm_confidence": 0.6,
-     "confidence": 0.8,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "amount": {
@@ -5290,8 +5290,8 @@
       "page": "p1",
       "snippet": "5,195.52"
      },
-     "llm_confidence": 0.6,
-     "confidence": 0.8,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     }
    },
@@ -5302,8 +5302,8 @@
       "page": "p1",
       "snippet": "Server rack 15"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
      "status": "ok"
     },
     "quantity": {
@@ -5312,8 +5312,8 @@
       "page": "p1",
       "snippet": "Server rack 15"
      },
-     "llm_confidence": 0.7,
-     "confidence": 0.8499999999999999,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -5322,8 +5322,8 @@
       "page": "p1",
       "snippet": "397.50"
      },
-     "llm_confidence": 0.6,
-     "confidence": 0.8,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "amount": {
@@ -5332,8 +5332,8 @@
       "page": "p1",
       "snippet": "5,962.50"
      },
-     "llm_confidence": 0.6,
-     "confidence": 0.8,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     }
    },
@@ -5344,8 +5344,8 @@
       "page": "p1",
       "snippet": "Consulting hours 10"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
      "status": "ok"
     },
     "quantity": {
@@ -5354,8 +5354,8 @@
       "page": "p1",
       "snippet": "Consulting hours 10"
      },
-     "llm_confidence": 0.7,
-     "confidence": 0.8499999999999999,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -5364,8 +5364,8 @@
       "page": "p1",
       "snippet": "114.69"
      },
-     "llm_confidence": 0.6,
-     "confidence": 0.8,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "amount": {
@@ -5374,8 +5374,8 @@
       "page": "p1",
       "snippet": "1,146.90"
      },
-     "llm_confidence": 0.6,
-     "confidence": 0.8,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     }
    }
@@ -5419,8 +5419,8 @@
     "page": "body",
     "snippet": "Invoice INV-7734 from Morales-Jones"
    },
-   "llm_confidence": 0.9,
-   "confidence": 0.95,
+   "llm_confidence": 0.95,
+   "confidence": 0.9749999999999999,
    "status": "ok"
   },
   "supplier_name": {
@@ -5940,7 +5940,7 @@
      "value": 13.0,
      "source": {
       "page": "Invoice!B10",
-      "snippet": "B10=13"
+      "snippet": "Travel expenses | B10=13"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -6247,8 +6247,8 @@
       "page": "p1",
       "snippet": "Security audit 2 97.85 195.70"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "quantity": {
@@ -6289,8 +6289,8 @@
       "page": "p1",
       "snippet": "Translation services 20 379.44 7588.80"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "quantity": {
@@ -6299,9 +6299,9 @@
       "page": "p1",
       "snippet": "Translation services 20 379.44 7588.80"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.45,
-     "status": "needs_review"
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
+     "status": "ok"
     },
     "unit_price": {
      "value": 379.44,
@@ -6309,9 +6309,9 @@
       "page": "p1",
       "snippet": "Translation services 20 379.44 7588.80"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.45,
-     "status": "needs_review"
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
+     "status": "ok"
     },
     "amount": {
      "value": 7588.8,
@@ -6331,8 +6331,8 @@
       "page": "p1",
       "snippet": "USB-C cables 15 381.20 5718.00"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "quantity": {
@@ -6341,9 +6341,9 @@
       "page": "p1",
       "snippet": "USB-C cables 15 381.20 5718.00"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.45,
-     "status": "needs_review"
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
+     "status": "ok"
     },
     "unit_price": {
      "value": 381.2,
@@ -6351,9 +6351,9 @@
       "page": "p1",
       "snippet": "USB-C cables 15 381.20 5718.00"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.45,
-     "status": "needs_review"
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
+     "status": "ok"
     },
     "amount": {
      "value": 5718.0,
@@ -6373,8 +6373,8 @@
       "page": "p1",
       "snippet": "Cloud storage plan 9 276.86 2491.74"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "quantity": {
@@ -6383,9 +6383,9 @@
       "page": "p1",
       "snippet": "Cloud storage plan 9 276.86 2491.74"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.45,
-     "status": "needs_review"
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
+     "status": "ok"
     },
     "unit_price": {
      "value": 276.86,
@@ -6393,9 +6393,9 @@
       "page": "p1",
       "snippet": "Cloud storage plan 9 276.86 2491.74"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.45,
-     "status": "needs_review"
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
+     "status": "ok"
     },
     "amount": {
      "value": 2491.74,
@@ -6415,8 +6415,8 @@
       "page": "p1",
       "snippet": "Travel expenses 15 441.02 6615.30"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.9,
+     "confidence": 0.95,
      "status": "ok"
     },
     "quantity": {
@@ -6425,9 +6425,9 @@
       "page": "p1",
       "snippet": "Travel expenses 15 441.02 6615.30"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.45,
-     "status": "needs_review"
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
+     "status": "ok"
     },
     "unit_price": {
      "value": 441.02,
@@ -6435,9 +6435,9 @@
       "page": "p1",
       "snippet": "Travel expenses 15 441.02 6615.30"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.45,
-     "status": "needs_review"
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
+     "status": "ok"
     },
     "amount": {
      "value": 6615.3,
@@ -6530,8 +6530,8 @@
     "page": "p1",
     "snippet": "Date: 04/27/2026"
    },
-   "llm_confidence": 0.85,
-   "confidence": 0.925,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "due_date": {
@@ -6579,8 +6579,8 @@
       "page": "p1",
       "snippet": "466.66"
      },
-     "llm_confidence": 0.75,
-     "confidence": 0.875,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "amount": {
@@ -6589,8 +6589,8 @@
       "page": "p1",
       "snippet": "7,466.56"
      },
-     "llm_confidence": 0.75,
-     "confidence": 0.875,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     }
    },
@@ -6621,8 +6621,8 @@
       "page": "p1",
       "snippet": "354.18"
      },
-     "llm_confidence": 0.75,
-     "confidence": 0.875,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "amount": {
@@ -6631,8 +6631,8 @@
       "page": "p1",
       "snippet": "6,021.06"
      },
-     "llm_confidence": 0.75,
-     "confidence": 0.875,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     }
    },
@@ -6663,8 +6663,8 @@
       "page": "p1",
       "snippet": "490.22"
      },
-     "llm_confidence": 0.75,
-     "confidence": 0.875,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "amount": {
@@ -6673,8 +6673,8 @@
       "page": "p1",
       "snippet": "7,843.52"
      },
-     "llm_confidence": 0.75,
-     "confidence": 0.875,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     }
    },
@@ -6705,8 +6705,8 @@
       "page": "p1",
       "snippet": "277.88"
      },
-     "llm_confidence": 0.75,
-     "confidence": 0.875,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "amount": {
@@ -6715,8 +6715,8 @@
       "page": "p1",
       "snippet": "4,168.20"
      },
-     "llm_confidence": 0.75,
-     "confidence": 0.875,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     }
    },
@@ -6747,8 +6747,8 @@
       "page": "p1",
       "snippet": "461.32"
      },
-     "llm_confidence": 0.75,
-     "confidence": 0.875,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "amount": {
@@ -6757,8 +6757,8 @@
       "page": "p1",
       "snippet": "3,229.24"
      },
-     "llm_confidence": 0.75,
-     "confidence": 0.875,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     }
    },
@@ -6789,8 +6789,8 @@
       "page": "p1",
       "snippet": "432.69"
      },
-     "llm_confidence": 0.75,
-     "confidence": 0.875,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "amount": {
@@ -6799,8 +6799,8 @@
       "page": "p1",
       "snippet": "2,163.45"
      },
-     "llm_confidence": 0.75,
-     "confidence": 0.875,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     }
    },
@@ -6831,8 +6831,8 @@
       "page": "p1",
       "snippet": "173.24"
      },
-     "llm_confidence": 0.75,
-     "confidence": 0.875,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "amount": {
@@ -6841,8 +6841,8 @@
       "page": "p1",
       "snippet": "2,425.36"
      },
-     "llm_confidence": 0.75,
-     "confidence": 0.875,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     }
    }
@@ -6853,8 +6853,8 @@
     "page": "p1",
     "snippet": "Subtotal: 33,317.39"
    },
-   "llm_confidence": 0.85,
-   "confidence": 0.925,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "tax_total": {
@@ -6863,8 +6863,8 @@
     "page": "p1",
     "snippet": "Tax: 5,997.13"
    },
-   "llm_confidence": 0.85,
-   "confidence": 0.925,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "total": {
@@ -6873,8 +6873,8 @@
     "page": "p1",
     "snippet": "TOTAL: 39,314.52"
    },
-   "llm_confidence": 0.85,
-   "confidence": 0.925,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   }
  },
@@ -7295,8 +7295,8 @@
     "snippet": "Subtotal: 15304.87"
    },
    "llm_confidence": 0.95,
-   "confidence": 0.9749999999999999,
-   "status": "ok"
+   "confidence": 0.7749999999999999,
+   "status": "needs_review"
   },
   "tax_total": {
    "value": 1530.49,
@@ -7305,8 +7305,8 @@
     "snippet": "Tax: 1530.49"
    },
    "llm_confidence": 0.95,
-   "confidence": 0.9749999999999999,
-   "status": "ok"
+   "confidence": 0.7749999999999999,
+   "status": "needs_review"
   },
   "total": {
    "value": 16832.11,
@@ -7314,8 +7314,8 @@
     "page": "body",
     "snippet": "TOTAL: 16832.11"
    },
-   "llm_confidence": 0.4,
-   "confidence": 0.5,
+   "llm_confidence": 0.95,
+   "confidence": 0.7749999999999999,
    "status": "needs_review"
   }
  },
@@ -7743,8 +7743,8 @@
     "page": "Invoice!B7",
     "snippet": "Tax ID | B7=TAX-799233"
    },
-   "llm_confidence": 0.92,
-   "confidence": 0.96,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "document_number": {
@@ -7763,8 +7763,8 @@
     "page": "Invoice!B4",
     "snippet": "Date | B4=05 October 2026"
    },
-   "llm_confidence": 0.93,
-   "confidence": 0.9650000000000001,
+   "llm_confidence": 0.95,
+   "confidence": 0.9749999999999999,
    "status": "ok"
   },
   "due_date": {
@@ -7773,8 +7773,8 @@
     "page": "Invoice!B5",
     "snippet": "Due | B5=19 November 2026"
    },
-   "llm_confidence": 0.93,
-   "confidence": 0.9650000000000001,
+   "llm_confidence": 0.95,
+   "confidence": 0.9749999999999999,
    "status": "ok"
   },
   "currency": {
@@ -7793,10 +7793,10 @@
      "value": "Maintenance contract",
      "source": {
       "page": "Invoice!A10",
-      "snippet": "Maintenance contract | B10=10 | C10=340.42 | D10=3404.2"
+      "snippet": "A10=Maintenance contract"
      },
-     "llm_confidence": 0.93,
-     "confidence": 0.9650000000000001,
+     "llm_confidence": 0.95,
+     "confidence": 0.9749999999999999,
      "status": "ok"
     },
     "quantity": {
@@ -7805,8 +7805,8 @@
       "page": "Invoice!B10",
       "snippet": "B10=10"
      },
-     "llm_confidence": 0.93,
-     "confidence": 0.9650000000000001,
+     "llm_confidence": 0.95,
+     "confidence": 0.9749999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -7815,8 +7815,8 @@
       "page": "Invoice!C10",
       "snippet": "C10=340.42"
      },
-     "llm_confidence": 0.93,
-     "confidence": 0.9650000000000001,
+     "llm_confidence": 0.95,
+     "confidence": 0.9749999999999999,
      "status": "ok"
     },
     "amount": {
@@ -7825,8 +7825,8 @@
       "page": "Invoice!D10",
       "snippet": "D10=3404.2"
      },
-     "llm_confidence": 0.93,
-     "confidence": 0.9650000000000001,
+     "llm_confidence": 0.95,
+     "confidence": 0.9749999999999999,
      "status": "ok"
     }
    },
@@ -7835,10 +7835,10 @@
      "value": "Office supplies",
      "source": {
       "page": "Invoice!A11",
-      "snippet": "Office supplies | B11=3 | C11=223.66 | D11=670.98"
+      "snippet": "A11=Office supplies"
      },
-     "llm_confidence": 0.93,
-     "confidence": 0.9650000000000001,
+     "llm_confidence": 0.95,
+     "confidence": 0.9749999999999999,
      "status": "ok"
     },
     "quantity": {
@@ -7847,8 +7847,8 @@
       "page": "Invoice!B11",
       "snippet": "B11=3"
      },
-     "llm_confidence": 0.93,
-     "confidence": 0.9650000000000001,
+     "llm_confidence": 0.95,
+     "confidence": 0.9749999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -7857,8 +7857,8 @@
       "page": "Invoice!C11",
       "snippet": "C11=223.66"
      },
-     "llm_confidence": 0.93,
-     "confidence": 0.9650000000000001,
+     "llm_confidence": 0.95,
+     "confidence": 0.9749999999999999,
      "status": "ok"
     },
     "amount": {
@@ -7867,8 +7867,8 @@
       "page": "Invoice!D11",
       "snippet": "D11=670.98"
      },
-     "llm_confidence": 0.93,
-     "confidence": 0.9650000000000001,
+     "llm_confidence": 0.95,
+     "confidence": 0.9749999999999999,
      "status": "ok"
     }
    },
@@ -7877,10 +7877,10 @@
      "value": "Translation services",
      "source": {
       "page": "Invoice!A12",
-      "snippet": "Translation services | B12=19 | C12=153.08 | D12=2908.52"
+      "snippet": "A12=Translation services"
      },
-     "llm_confidence": 0.93,
-     "confidence": 0.9650000000000001,
+     "llm_confidence": 0.95,
+     "confidence": 0.9749999999999999,
      "status": "ok"
     },
     "quantity": {
@@ -7889,8 +7889,8 @@
       "page": "Invoice!B12",
       "snippet": "B12=19"
      },
-     "llm_confidence": 0.93,
-     "confidence": 0.9650000000000001,
+     "llm_confidence": 0.95,
+     "confidence": 0.9749999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -7899,8 +7899,8 @@
       "page": "Invoice!C12",
       "snippet": "C12=153.08"
      },
-     "llm_confidence": 0.93,
-     "confidence": 0.9650000000000001,
+     "llm_confidence": 0.95,
+     "confidence": 0.9749999999999999,
      "status": "ok"
     },
     "amount": {
@@ -7909,8 +7909,8 @@
       "page": "Invoice!D12",
       "snippet": "D12=2908.52"
      },
-     "llm_confidence": 0.93,
-     "confidence": 0.9650000000000001,
+     "llm_confidence": 0.95,
+     "confidence": 0.9749999999999999,
      "status": "ok"
     }
    },
@@ -7919,10 +7919,10 @@
      "value": "Security audit",
      "source": {
       "page": "Invoice!A13",
-      "snippet": "Security audit | B13=9 | C13=231.13 | D13=2080.17"
+      "snippet": "A13=Security audit"
      },
-     "llm_confidence": 0.93,
-     "confidence": 0.9650000000000001,
+     "llm_confidence": 0.95,
+     "confidence": 0.9749999999999999,
      "status": "ok"
     },
     "quantity": {
@@ -7931,8 +7931,8 @@
       "page": "Invoice!B13",
       "snippet": "B13=9"
      },
-     "llm_confidence": 0.93,
-     "confidence": 0.9650000000000001,
+     "llm_confidence": 0.95,
+     "confidence": 0.9749999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -7941,8 +7941,8 @@
       "page": "Invoice!C13",
       "snippet": "C13=231.13"
      },
-     "llm_confidence": 0.93,
-     "confidence": 0.9650000000000001,
+     "llm_confidence": 0.95,
+     "confidence": 0.9749999999999999,
      "status": "ok"
     },
     "amount": {
@@ -7951,8 +7951,8 @@
       "page": "Invoice!D13",
       "snippet": "D13=2080.17"
      },
-     "llm_confidence": 0.93,
-     "confidence": 0.9650000000000001,
+     "llm_confidence": 0.95,
+     "confidence": 0.9749999999999999,
      "status": "ok"
     }
    }
@@ -7963,8 +7963,8 @@
     "page": "Invoice!D15",
     "snippet": "C15=Subtotal | D15=9063.87"
    },
-   "llm_confidence": 0.93,
-   "confidence": 0.9650000000000001,
+   "llm_confidence": 0.95,
+   "confidence": 0.9749999999999999,
    "status": "ok"
   },
   "tax_total": {
@@ -7973,8 +7973,8 @@
     "page": "Invoice!D16",
     "snippet": "C16=Tax | D16=1812.77"
    },
-   "llm_confidence": 0.93,
-   "confidence": 0.9650000000000001,
+   "llm_confidence": 0.95,
+   "confidence": 0.9749999999999999,
    "status": "ok"
   },
   "total": {
@@ -7983,8 +7983,8 @@
     "page": "Invoice!D17",
     "snippet": "C17=TOTAL | D17=10876.64"
    },
-   "llm_confidence": 0.93,
-   "confidence": 0.9650000000000001,
+   "llm_confidence": 0.95,
+   "confidence": 0.9749999999999999,
    "status": "ok"
   }
  },
@@ -8066,7 +8066,7 @@
      "value": "Annual software licence",
      "source": {
       "page": "Invoice!A10",
-      "snippet": "Annual software licence"
+      "snippet": "Annual software licence | B10=20 | C10=373.86 | D10=7477.2"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -8108,7 +8108,7 @@
      "value": "Travel expenses",
      "source": {
       "page": "Invoice!A11",
-      "snippet": "Travel expenses"
+      "snippet": "Travel expenses | B11=8 | C11=305.5 | D11=2444"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -8150,7 +8150,7 @@
      "value": "Translation services",
      "source": {
       "page": "Invoice!A12",
-      "snippet": "Translation services"
+      "snippet": "Translation services | B12=8 | C12=320.13 | D12=2561.04"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -8192,7 +8192,7 @@
      "value": "Whiteboard markers",
      "source": {
       "page": "Invoice!A13",
-      "snippet": "Whiteboard markers"
+      "snippet": "Whiteboard markers | B13=9 | C13=340.49 | D13=3064.41"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -8234,7 +8234,7 @@
      "value": "Backup generator service",
      "source": {
       "page": "Invoice!A14",
-      "snippet": "Backup generator service"
+      "snippet": "Backup generator service | B14=5 | C14=315.98 | D14=1579.9"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -8348,9 +8348,9 @@
     "page": "body",
     "snippet": "Date: 11/05/2026"
    },
-   "llm_confidence": 0.75,
-   "confidence": 0.875,
-   "status": "ok"
+   "llm_confidence": 0.7,
+   "confidence": 0.6499999999999999,
+   "status": "needs_review"
   },
   "due_date": {
    "value": "2026-06-10",
@@ -8358,9 +8358,9 @@
     "page": "body",
     "snippet": "Due: 10/06/2026"
    },
-   "llm_confidence": 0.75,
-   "confidence": 0.875,
-   "status": "ok"
+   "llm_confidence": 0.7,
+   "confidence": 0.6499999999999999,
+   "status": "needs_review"
   },
   "currency": {
    "value": "USD",
@@ -8390,8 +8390,8 @@
       "page": "body",
       "snippet": "Translation services x17"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.95,
+     "llm_confidence": 0.95,
+     "confidence": 0.9749999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -8432,8 +8432,8 @@
       "page": "body",
       "snippet": "Training workshop x6"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.95,
+     "llm_confidence": 0.95,
+     "confidence": 0.9749999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -8474,8 +8474,8 @@
       "page": "body",
       "snippet": "Server rack x10"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.95,
+     "llm_confidence": 0.95,
+     "confidence": 0.9749999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -8579,8 +8579,8 @@
     "page": "body",
     "snippet": "Date: 24/12/2026"
    },
-   "llm_confidence": 0.95,
-   "confidence": 0.9749999999999999,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "due_date": {
@@ -8589,8 +8589,8 @@
     "page": "body",
     "snippet": "Due: 22/02/2027"
    },
-   "llm_confidence": 0.95,
-   "confidence": 0.9749999999999999,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "currency": {
@@ -8935,8 +8935,8 @@
     "page": "body",
     "snippet": "Subject: Invoice INV-27896 from Smith-Bowen"
    },
-   "llm_confidence": 0.95,
-   "confidence": 0.9749999999999999,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "supplier_name": {
@@ -9178,8 +9178,8 @@
       "page": "p1",
       "snippet": "4752.48"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.95,
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
      "status": "ok"
     }
    },
@@ -9220,8 +9220,8 @@
       "page": "p1",
       "snippet": "3140.13"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.95,
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
      "status": "ok"
     }
    },
@@ -9262,8 +9262,8 @@
       "page": "p1",
       "snippet": "278.46"
      },
-     "llm_confidence": 0.9,
-     "confidence": 0.95,
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
      "status": "ok"
     }
    }
@@ -9327,8 +9327,8 @@
     "page": "Invoice!B7",
     "snippet": "Tax ID | B7=TAX-132663"
    },
-   "llm_confidence": 0.95,
-   "confidence": 0.9749999999999999,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "document_number": {
@@ -9347,8 +9347,8 @@
     "page": "Invoice!B4",
     "snippet": "Date | B4=01/24/2026"
    },
-   "llm_confidence": 0.95,
-   "confidence": 0.9749999999999999,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "due_date": {
@@ -9357,8 +9357,8 @@
     "page": "Invoice!B5",
     "snippet": "Due | B5=03/10/2026"
    },
-   "llm_confidence": 0.95,
-   "confidence": 0.9749999999999999,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "currency": {
@@ -9621,8 +9621,8 @@
     "snippet": "Date | B4=12/04/2026"
    },
    "llm_confidence": 0.7,
-   "confidence": 0.8499999999999999,
-   "status": "ok"
+   "confidence": 0.6499999999999999,
+   "status": "needs_review"
   },
   "due_date": {
    "value": null,
@@ -9647,7 +9647,7 @@
      "value": "Cloud storage plan",
      "source": {
       "page": "Invoice!A10",
-      "snippet": "Cloud storage plan | B10=14"
+      "snippet": "Cloud storage plan | B10=14 | C10=228.52 | D10=3199.28"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -9689,7 +9689,7 @@
      "value": "Support retainer",
      "source": {
       "page": "Invoice!A11",
-      "snippet": "Support retainer | B11=14"
+      "snippet": "Support retainer | B11=14 | C11=172.77 | D11=2418.78"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -9731,7 +9731,7 @@
      "value": "Maintenance contract",
      "source": {
       "page": "Invoice!A12",
-      "snippet": "Maintenance contract | B12=13"
+      "snippet": "Maintenance contract | B12=13 | C12=210.91 | D12=2741.83"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -9773,7 +9773,7 @@
      "value": "Hardware purchase",
      "source": {
       "page": "Invoice!A13",
-      "snippet": "Hardware purchase | B13=11"
+      "snippet": "Hardware purchase | B13=11 | C13=216.25 | D13=2378.75"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -9815,7 +9815,7 @@
      "value": "Backup generator service",
      "source": {
       "page": "Invoice!A14",
-      "snippet": "Backup generator service | B14=9"
+      "snippet": "Backup generator service | B14=9 | C14=190.28 | D14=1712.52"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -9857,7 +9857,7 @@
      "value": "Network equipment",
      "source": {
       "page": "Invoice!A15",
-      "snippet": "Network equipment | B15=16"
+      "snippet": "Network equipment | B15=16 | C15=38.23 | D15=611.68"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -9899,7 +9899,7 @@
      "value": "Consulting hours",
      "source": {
       "page": "Invoice!A16",
-      "snippet": "Consulting hours | B16=3"
+      "snippet": "Consulting hours | B16=3 | C16=218.78 | D16=656.34"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -9961,7 +9961,7 @@
    "value": 16188.63,
    "source": {
     "page": "Invoice!D20",
-    "snippet": "C20=TOTAL | D20=16188.63"
+    "snippet": "C18=TOTAL | D20=16188.63"
    },
    "llm_confidence": 0.95,
    "confidence": 0.9749999999999999,
@@ -9996,8 +9996,8 @@
     "page": "p1",
     "snippet": "Tax ID: TAX-323072"
    },
-   "llm_confidence": 0.92,
-   "confidence": 0.96,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "document_number": {
@@ -10016,8 +10016,8 @@
     "page": "p1",
     "snippet": "Date: 20/05/2026"
    },
-   "llm_confidence": 0.93,
-   "confidence": 0.9650000000000001,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "due_date": {
@@ -10026,8 +10026,8 @@
     "page": "p1",
     "snippet": "Due: 03/06/2026"
    },
-   "llm_confidence": 0.93,
-   "confidence": 0.9650000000000001,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "currency": {
@@ -10056,10 +10056,10 @@
      "value": 16.0,
      "source": {
       "page": "p1",
-      "snippet": "Backup generator service\n16\n116.00\n1856.00"
+      "snippet": "16"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -10068,8 +10068,8 @@
       "page": "p1",
       "snippet": "116.00"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "amount": {
@@ -10078,8 +10078,8 @@
       "page": "p1",
       "snippet": "1856.00"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     }
    },
@@ -10098,10 +10098,10 @@
      "value": 12.0,
      "source": {
       "page": "p1",
-      "snippet": "Hardware purchase\n12\n423.46\n5081.52"
+      "snippet": "12"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -10110,8 +10110,8 @@
       "page": "p1",
       "snippet": "423.46"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "amount": {
@@ -10120,8 +10120,8 @@
       "page": "p1",
       "snippet": "5081.52"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     }
    },
@@ -10140,10 +10140,10 @@
      "value": 4.0,
      "source": {
       "page": "p1",
-      "snippet": "Translation services\n4\n382.49\n1529.96"
+      "snippet": "4"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -10152,8 +10152,8 @@
       "page": "p1",
       "snippet": "382.49"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "amount": {
@@ -10162,8 +10162,8 @@
       "page": "p1",
       "snippet": "1529.96"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     }
    },
@@ -10182,10 +10182,10 @@
      "value": 8.0,
      "source": {
       "page": "p1",
-      "snippet": "Desk lamp\n8\n404.57\n3236.56"
+      "snippet": "8"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -10194,8 +10194,8 @@
       "page": "p1",
       "snippet": "404.57"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "amount": {
@@ -10204,8 +10204,8 @@
       "page": "p1",
       "snippet": "3236.56"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     }
    },
@@ -10224,10 +10224,10 @@
      "value": 20.0,
      "source": {
       "page": "p1",
-      "snippet": "Ergonomic chair\n20\n308.72\n6174.40"
+      "snippet": "20"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -10236,8 +10236,8 @@
       "page": "p1",
       "snippet": "308.72"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "amount": {
@@ -10246,8 +10246,8 @@
       "page": "p1",
       "snippet": "6174.40"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     }
    },
@@ -10266,10 +10266,10 @@
      "value": 18.0,
      "source": {
       "page": "p1",
-      "snippet": "USB-C cables\n18\n18.00\n324.00"
+      "snippet": "18"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -10278,8 +10278,8 @@
       "page": "p1",
       "snippet": "18.00"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "amount": {
@@ -10288,8 +10288,8 @@
       "page": "p1",
       "snippet": "324.00"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     }
    },
@@ -10298,7 +10298,7 @@
      "value": "Backup generator service",
      "source": {
       "page": "p1",
-      "snippet": "Backup generator service\n9\n19.33\n173.97"
+      "snippet": "Backup generator service"
      },
      "llm_confidence": 0.9,
      "confidence": 0.95,
@@ -10308,10 +10308,10 @@
      "value": 9.0,
      "source": {
       "page": "p1",
-      "snippet": "Backup generator service\n9\n19.33\n173.97"
+      "snippet": "9"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -10320,8 +10320,8 @@
       "page": "p1",
       "snippet": "19.33"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "amount": {
@@ -10330,8 +10330,8 @@
       "page": "p1",
       "snippet": "173.97"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     }
    }
@@ -10342,8 +10342,8 @@
     "page": "p1",
     "snippet": "Subtotal: 18376.41"
    },
-   "llm_confidence": 0.93,
-   "confidence": 0.9650000000000001,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "tax_total": {
@@ -10352,8 +10352,8 @@
     "page": "p1",
     "snippet": "Tax: 3307.75"
    },
-   "llm_confidence": 0.93,
-   "confidence": 0.9650000000000001,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "total": {
@@ -10362,8 +10362,8 @@
     "page": "p1",
     "snippet": "TOTAL: 21684.16"
    },
-   "llm_confidence": 0.93,
-   "confidence": 0.9650000000000001,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   }
  },
@@ -10445,7 +10445,7 @@
      "value": "Data plan",
      "source": {
       "page": "Invoice!A10",
-      "snippet": "Data plan | B10=14 | C10=229.55 | D10=3213.7"
+      "snippet": "A10=Data plan"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10455,7 +10455,7 @@
      "value": 14.0,
      "source": {
       "page": "Invoice!B10",
-      "snippet": "Data plan | B10=14 | C10=229.55 | D10=3213.7"
+      "snippet": "B10=14"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10465,7 +10465,7 @@
      "value": 229.55,
      "source": {
       "page": "Invoice!C10",
-      "snippet": "Data plan | B10=14 | C10=229.55 | D10=3213.7"
+      "snippet": "C10=229.55"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10475,7 +10475,7 @@
      "value": 3213.7,
      "source": {
       "page": "Invoice!D10",
-      "snippet": "Data plan | B10=14 | C10=229.55 | D10=3213.7"
+      "snippet": "D10=3213.7"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10487,7 +10487,7 @@
      "value": "Office supplies",
      "source": {
       "page": "Invoice!A11",
-      "snippet": "Office supplies | B11=12 | C11=159.26 | D11=1911.12"
+      "snippet": "A11=Office supplies"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10497,7 +10497,7 @@
      "value": 12.0,
      "source": {
       "page": "Invoice!B11",
-      "snippet": "Office supplies | B11=12 | C11=159.26 | D11=1911.12"
+      "snippet": "B11=12"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10507,7 +10507,7 @@
      "value": 159.26,
      "source": {
       "page": "Invoice!C11",
-      "snippet": "Office supplies | B11=12 | C11=159.26 | D11=1911.12"
+      "snippet": "C11=159.26"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10517,7 +10517,7 @@
      "value": 1911.12,
      "source": {
       "page": "Invoice!D11",
-      "snippet": "Office supplies | B11=12 | C11=159.26 | D11=1911.12"
+      "snippet": "D11=1911.12"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10529,7 +10529,7 @@
      "value": "Printing services",
      "source": {
       "page": "Invoice!A12",
-      "snippet": "Printing services | B12=19 | C12=300.13 | D12=5702.47"
+      "snippet": "A12=Printing services"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10539,7 +10539,7 @@
      "value": 19.0,
      "source": {
       "page": "Invoice!B12",
-      "snippet": "Printing services | B12=19 | C12=300.13 | D12=5702.47"
+      "snippet": "B12=19"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10549,7 +10549,7 @@
      "value": 300.13,
      "source": {
       "page": "Invoice!C12",
-      "snippet": "Printing services | B12=19 | C12=300.13 | D12=5702.47"
+      "snippet": "C12=300.13"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10559,7 +10559,7 @@
      "value": 5702.47,
      "source": {
       "page": "Invoice!D12",
-      "snippet": "Printing services | B12=19 | C12=300.13 | D12=5702.47"
+      "snippet": "D12=5702.47"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10571,7 +10571,7 @@
      "value": "Annual software licence",
      "source": {
       "page": "Invoice!A13",
-      "snippet": "Annual software licence | B13=5 | C13=82.92 | D13=414.6"
+      "snippet": "A13=Annual software licence"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10581,7 +10581,7 @@
      "value": 5.0,
      "source": {
       "page": "Invoice!B13",
-      "snippet": "Annual software licence | B13=5 | C13=82.92 | D13=414.6"
+      "snippet": "B13=5"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10591,7 +10591,7 @@
      "value": 82.92,
      "source": {
       "page": "Invoice!C13",
-      "snippet": "Annual software licence | B13=5 | C13=82.92 | D13=414.6"
+      "snippet": "C13=82.92"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10601,7 +10601,7 @@
      "value": 414.6,
      "source": {
       "page": "Invoice!D13",
-      "snippet": "Annual software licence | B13=5 | C13=82.92 | D13=414.6"
+      "snippet": "D13=414.6"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10613,7 +10613,7 @@
      "value": "Whiteboard markers",
      "source": {
       "page": "Invoice!A14",
-      "snippet": "Whiteboard markers | B14=2 | C14=338.61 | D14=677.22"
+      "snippet": "A14=Whiteboard markers"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10623,7 +10623,7 @@
      "value": 2.0,
      "source": {
       "page": "Invoice!B14",
-      "snippet": "Whiteboard markers | B14=2 | C14=338.61 | D14=677.22"
+      "snippet": "B14=2"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10633,7 +10633,7 @@
      "value": 338.61,
      "source": {
       "page": "Invoice!C14",
-      "snippet": "Whiteboard markers | B14=2 | C14=338.61 | D14=677.22"
+      "snippet": "C14=338.61"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10643,7 +10643,7 @@
      "value": 677.22,
      "source": {
       "page": "Invoice!D14",
-      "snippet": "Whiteboard markers | B14=2 | C14=338.61 | D14=677.22"
+      "snippet": "D14=677.22"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10655,7 +10655,7 @@
      "value": "Training workshop",
      "source": {
       "page": "Invoice!A15",
-      "snippet": "Training workshop | B15=15 | C15=332.66 | D15=4989.9"
+      "snippet": "A15=Training workshop"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10665,7 +10665,7 @@
      "value": 15.0,
      "source": {
       "page": "Invoice!B15",
-      "snippet": "Training workshop | B15=15 | C15=332.66 | D15=4989.9"
+      "snippet": "B15=15"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10675,7 +10675,7 @@
      "value": 332.66,
      "source": {
       "page": "Invoice!C15",
-      "snippet": "Training workshop | B15=15 | C15=332.66 | D15=4989.9"
+      "snippet": "C15=332.66"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10685,7 +10685,7 @@
      "value": 4989.9,
      "source": {
       "page": "Invoice!D15",
-      "snippet": "Training workshop | B15=15 | C15=332.66 | D15=4989.9"
+      "snippet": "D15=4989.9"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10697,7 +10697,7 @@
      "value": "Server rack",
      "source": {
       "page": "Invoice!A16",
-      "snippet": "Server rack | B16=20 | C16=223.81 | D16=4476.2"
+      "snippet": "A16=Server rack"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10706,8 +10706,8 @@
     "quantity": {
      "value": 20.0,
      "source": {
-      "page": "Invoice!B16",
-      "snippet": "Server rack | B16=20 | C16=223.81 | D16=4476.2"
+      "page": "Invoice!A16",
+      "snippet": "B16=20"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10717,7 +10717,7 @@
      "value": 223.81,
      "source": {
       "page": "Invoice!C16",
-      "snippet": "Server rack | B16=20 | C16=223.81 | D16=4476.2"
+      "snippet": "C16=223.81"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10727,7 +10727,7 @@
      "value": 4476.2,
      "source": {
       "page": "Invoice!D16",
-      "snippet": "Server rack | B16=20 | C16=223.81 | D16=4476.2"
+      "snippet": "D16=4476.2"
      },
      "llm_confidence": 0.95,
      "confidence": 0.9749999999999999,
@@ -10739,7 +10739,7 @@
    "value": 21385.21,
    "source": {
     "page": "Invoice!D18",
-    "snippet": "Subtotal | D18=21385.21"
+    "snippet": "C18=Subtotal | D18=21385.21"
    },
    "llm_confidence": 0.95,
    "confidence": 0.9749999999999999,
@@ -10749,7 +10749,7 @@
    "value": 1069.26,
    "source": {
     "page": "Invoice!D19",
-    "snippet": "Tax | D19=1069.26"
+    "snippet": "C19=Tax | D19=1069.26"
    },
    "llm_confidence": 0.95,
    "confidence": 0.9749999999999999,
@@ -10759,7 +10759,7 @@
    "value": 22454.47,
    "source": {
     "page": "Invoice!D20",
-    "snippet": "TOTAL | D20=22454.47"
+    "snippet": "C20=TOTAL | D20=22454.47"
    },
    "llm_confidence": 0.95,
    "confidence": 0.9749999999999999,
@@ -10853,8 +10853,8 @@
       "page": "p1",
       "snippet": "Cloud storage plan\n5\n383.26\n1916.30"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -10863,8 +10863,8 @@
       "page": "p1",
       "snippet": "383.26"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "amount": {
@@ -10873,8 +10873,8 @@
       "page": "p1",
       "snippet": "1916.30"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     }
    },
@@ -10895,8 +10895,8 @@
       "page": "p1",
       "snippet": "Travel expenses\n11\n64.39\n708.29"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -10905,8 +10905,8 @@
       "page": "p1",
       "snippet": "64.39"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "amount": {
@@ -10915,8 +10915,8 @@
       "page": "p1",
       "snippet": "708.29"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     }
    },
@@ -10937,8 +10937,8 @@
       "page": "p1",
       "snippet": "Server rack\n14\n91.97\n1287.58"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -10947,8 +10947,8 @@
       "page": "p1",
       "snippet": "91.97"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "amount": {
@@ -10957,8 +10957,8 @@
       "page": "p1",
       "snippet": "1287.58"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     }
    },
@@ -10979,8 +10979,8 @@
       "page": "p1",
       "snippet": "Data plan\n18\n353.32\n6359.76"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -10989,8 +10989,8 @@
       "page": "p1",
       "snippet": "353.32"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "amount": {
@@ -10999,8 +10999,8 @@
       "page": "p1",
       "snippet": "6359.76"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     }
    },
@@ -11021,8 +11021,8 @@
       "page": "p1",
       "snippet": "Laptop docking station\n18\n417.51\n7515.18"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -11031,8 +11031,8 @@
       "page": "p1",
       "snippet": "417.51"
      },
-     "llm_confidence": 0.8,
-     "confidence": 0.8999999999999999,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     },
     "amount": {
@@ -11041,8 +11041,8 @@
       "page": "p1",
       "snippet": "7515.18"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.7,
+     "confidence": 0.8499999999999999,
      "status": "ok"
     }
    }
@@ -11058,11 +11058,14 @@
    "status": "ok"
   },
   "tax_total": {
-   "value": null,
-   "source": null,
-   "llm_confidence": 0.0,
-   "confidence": 0.0,
-   "status": "ok"
+   "value": 5.0,
+   "source": {
+    "page": "p1",
+    "snippet": "TOTAL: 17792.11"
+   },
+   "llm_confidence": 0.3,
+   "confidence": 0.6499999999999999,
+   "status": "needs_review"
   },
   "total": {
    "value": 17792.11,
@@ -11070,9 +11073,9 @@
     "page": "p1",
     "snippet": "TOTAL: 17792.11"
    },
-   "llm_confidence": 0.4,
-   "confidence": 0.5,
-   "status": "needs_review"
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
+   "status": "ok"
   }
  },
  "doc_043": {
@@ -11093,8 +11096,8 @@
     "page": "p1",
     "snippet": "Allen-Allen"
    },
-   "llm_confidence": 0.7,
-   "confidence": 0.8499999999999999,
+   "llm_confidence": 0.8,
+   "confidence": 0.8999999999999999,
    "status": "ok"
   },
   "supplier_tax_id": {
@@ -11165,8 +11168,8 @@
       "page": "p1",
       "snippet": "Office supplies\n20\n232.75\n4655.00"
      },
-     "llm_confidence": 0.7,
-     "confidence": 0.8499999999999999,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -11175,8 +11178,8 @@
       "page": "p1",
       "snippet": "232.75"
      },
-     "llm_confidence": 0.7,
-     "confidence": 0.8499999999999999,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "amount": {
@@ -11207,8 +11210,8 @@
       "page": "p1",
       "snippet": "Translation services\n3\n221.17\n663.51"
      },
-     "llm_confidence": 0.7,
-     "confidence": 0.8499999999999999,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -11217,8 +11220,8 @@
       "page": "p1",
       "snippet": "221.17"
      },
-     "llm_confidence": 0.7,
-     "confidence": 0.8499999999999999,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "amount": {
@@ -11249,8 +11252,8 @@
       "page": "p1",
       "snippet": "Hardware purchase\n8\n220.66\n1765.28"
      },
-     "llm_confidence": 0.7,
-     "confidence": 0.8499999999999999,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -11259,8 +11262,8 @@
       "page": "p1",
       "snippet": "220.66"
      },
-     "llm_confidence": 0.7,
-     "confidence": 0.8499999999999999,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "amount": {
@@ -11291,8 +11294,8 @@
       "page": "p1",
       "snippet": "Data plan\n17\n43.93\n746.81"
      },
-     "llm_confidence": 0.7,
-     "confidence": 0.8499999999999999,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -11301,8 +11304,8 @@
       "page": "p1",
       "snippet": "43.93"
      },
-     "llm_confidence": 0.7,
-     "confidence": 0.8499999999999999,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "amount": {
@@ -11333,8 +11336,8 @@
       "page": "p1",
       "snippet": "Travel expenses\n11\n114.68\n1261.48"
      },
-     "llm_confidence": 0.7,
-     "confidence": 0.8499999999999999,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -11343,8 +11346,8 @@
       "page": "p1",
       "snippet": "114.68"
      },
-     "llm_confidence": 0.7,
-     "confidence": 0.8499999999999999,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "amount": {
@@ -11375,8 +11378,8 @@
       "page": "p1",
       "snippet": "Office supplies\n3\n257.69\n773.07"
      },
-     "llm_confidence": 0.7,
-     "confidence": 0.8499999999999999,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -11385,8 +11388,8 @@
       "page": "p1",
       "snippet": "257.69"
      },
-     "llm_confidence": 0.7,
-     "confidence": 0.8499999999999999,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "amount": {
@@ -11417,8 +11420,8 @@
       "page": "p1",
       "snippet": "Hardware purchase\n17\n257.43\n4376.31"
      },
-     "llm_confidence": 0.7,
-     "confidence": 0.8499999999999999,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -11427,8 +11430,8 @@
       "page": "p1",
       "snippet": "257.43"
      },
-     "llm_confidence": 0.7,
-     "confidence": 0.8499999999999999,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "amount": {
@@ -11509,8 +11512,8 @@
     "page": "p1",
     "snippet": "Document No: INV-83306"
    },
-   "llm_confidence": 0.95,
-   "confidence": 0.9749999999999999,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "issue_date": {
@@ -11551,8 +11554,8 @@
       "page": "p1",
       "snippet": "Server rack 15 378.45 5,676.75"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "quantity": {
@@ -11561,9 +11564,9 @@
       "page": "p1",
       "snippet": "Server rack 15 378.45 5,676.75"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.425,
-     "status": "needs_review"
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
+     "status": "ok"
     },
     "unit_price": {
      "value": 378.45,
@@ -11571,9 +11574,9 @@
       "page": "p1",
       "snippet": "Server rack 15 378.45 5,676.75"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.425,
-     "status": "needs_review"
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
+     "status": "ok"
     },
     "amount": {
      "value": 5676.75,
@@ -11581,8 +11584,8 @@
       "page": "p1",
       "snippet": "Server rack 15 378.45 5,676.75"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     }
    },
@@ -11593,8 +11596,8 @@
       "page": "p1",
       "snippet": "Desk lamp 15 342.16 5,132.40"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "quantity": {
@@ -11603,9 +11606,9 @@
       "page": "p1",
       "snippet": "Desk lamp 15 342.16 5,132.40"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.425,
-     "status": "needs_review"
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
+     "status": "ok"
     },
     "unit_price": {
      "value": 342.16,
@@ -11613,9 +11616,9 @@
       "page": "p1",
       "snippet": "Desk lamp 15 342.16 5,132.40"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.425,
-     "status": "needs_review"
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
+     "status": "ok"
     },
     "amount": {
      "value": 5132.4,
@@ -11623,8 +11626,8 @@
       "page": "p1",
       "snippet": "Desk lamp 15 342.16 5,132.40"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     }
    },
@@ -11635,8 +11638,8 @@
       "page": "p1",
       "snippet": "Desk lamp 20 164.99 3,299.80"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "quantity": {
@@ -11645,8 +11648,8 @@
       "page": "p1",
       "snippet": "Desk lamp 20 164.99 3,299.80"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -11655,9 +11658,9 @@
       "page": "p1",
       "snippet": "Desk lamp 20 164.99 3,299.80"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.425,
-     "status": "needs_review"
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
+     "status": "ok"
     },
     "amount": {
      "value": 3299.8,
@@ -11665,8 +11668,8 @@
       "page": "p1",
       "snippet": "Desk lamp 20 164.99 3,299.80"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     }
    },
@@ -11677,8 +11680,8 @@
       "page": "p1",
       "snippet": "USB-C cables 11 79.72 876.92"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "quantity": {
@@ -11687,8 +11690,8 @@
       "page": "p1",
       "snippet": "USB-C cables 11 79.72 876.92"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "unit_price": {
@@ -11697,8 +11700,8 @@
       "page": "p1",
       "snippet": "USB-C cables 11 79.72 876.92"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "amount": {
@@ -11707,8 +11710,8 @@
       "page": "p1",
       "snippet": "USB-C cables 11 79.72 876.92"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     }
    },
@@ -11719,8 +11722,8 @@
       "page": "p1",
       "snippet": "Consulting hours 16 223.89 3,582.24"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     },
     "quantity": {
@@ -11729,9 +11732,9 @@
       "page": "p1",
       "snippet": "Consulting hours 16 223.89 3,582.24"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.425,
-     "status": "needs_review"
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
+     "status": "ok"
     },
     "unit_price": {
      "value": 223.89,
@@ -11739,9 +11742,9 @@
       "page": "p1",
       "snippet": "Consulting hours 16 223.89 3,582.24"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.425,
-     "status": "needs_review"
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
+     "status": "ok"
     },
     "amount": {
      "value": 3582.24,
@@ -11749,8 +11752,8 @@
       "page": "p1",
       "snippet": "Consulting hours 16 223.89 3,582.24"
      },
-     "llm_confidence": 0.85,
-     "confidence": 0.925,
+     "llm_confidence": 0.8,
+     "confidence": 0.8999999999999999,
      "status": "ok"
     }
    }
@@ -11762,8 +11765,8 @@
     "snippet": "Subtotal: 18,568.11"
    },
    "llm_confidence": 0.9,
-   "confidence": 0.95,
-   "status": "ok"
+   "confidence": 0.75,
+   "status": "needs_review"
   },
   "tax_total": {
    "value": 3942.26,
@@ -11772,8 +11775,8 @@
     "snippet": "Tax: 3,942.26"
    },
    "llm_confidence": 0.9,
-   "confidence": 0.95,
-   "status": "ok"
+   "confidence": 0.75,
+   "status": "needs_review"
   },
   "total": {
    "value": 21910.37,
@@ -11880,9 +11883,9 @@
       "page": "p1",
       "snippet": "Whiteboard markers 17 195.32 3320.44"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.475,
-     "status": "needs_review"
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
+     "status": "ok"
     },
     "amount": {
      "value": 3320.44,
@@ -11912,9 +11915,9 @@
       "page": "p1",
       "snippet": "Desk lamp 18 477.34 8592.12"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.475,
-     "status": "needs_review"
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
+     "status": "ok"
     },
     "unit_price": {
      "value": 477.34,
@@ -11922,9 +11925,9 @@
       "page": "p1",
       "snippet": "Desk lamp 18 477.34 8592.12"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.475,
-     "status": "needs_review"
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
+     "status": "ok"
     },
     "amount": {
      "value": 8592.12,
@@ -11964,9 +11967,9 @@
       "page": "p1",
       "snippet": "Annual software licence 15 454.98 6824.70"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.475,
-     "status": "needs_review"
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
+     "status": "ok"
     },
     "amount": {
      "value": 6824.7,
@@ -11996,9 +11999,9 @@
       "page": "p1",
       "snippet": "Desk lamp 7 164.16 1149.12"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.475,
-     "status": "needs_review"
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
+     "status": "ok"
     },
     "unit_price": {
      "value": 164.16,
@@ -12006,9 +12009,9 @@
       "page": "p1",
       "snippet": "Desk lamp 7 164.16 1149.12"
      },
-     "llm_confidence": 0.95,
-     "confidence": 0.475,
-     "status": "needs_review"
+     "llm_confidence": 0.85,
+     "confidence": 0.925,
+     "status": "ok"
     },
     "amount": {
      "value": 1149.12,
@@ -12222,7 +12225,7 @@
      "value": 7.0,
      "source": {
       "page": "p1",
-      "snippet": "Server rack\n7\n117.14\n819.98"
+      "snippet": "Server rack 7 117.14 819.98"
      },
      "llm_confidence": 0.7,
      "confidence": 0.8499999999999999,
@@ -12264,7 +12267,7 @@
      "value": 5.0,
      "source": {
       "page": "p1",
-      "snippet": "Network equipment\n5\n43.20\n216.00"
+      "snippet": "Network equipment 5 43.20 216.00"
      },
      "llm_confidence": 0.7,
      "confidence": 0.8499999999999999,
@@ -12365,8 +12368,8 @@
     "page": "body",
     "snippet": "Date: 09/14/2026"
    },
-   "llm_confidence": 0.85,
-   "confidence": 0.925,
+   "llm_confidence": 0.9,
+   "confidence": 0.95,
    "status": "ok"
   },
   "due_date": {

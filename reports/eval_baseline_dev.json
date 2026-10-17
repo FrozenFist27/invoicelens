@@ -5,17 +5,17 @@
   "n_ok": 40,
   "n_err": 0,
   "model": "claude-haiku-5-5",
-  "timestamp": "2026-10-17T17:01:14.011809+00:00",
-  "git_sha": "941dbe7",
+  "timestamp": "2026-10-17T17:12:28.352120+00:00",
+  "git_sha": "56427c4",
   "dataset_sha256": "c39e15849db64f63",
   "note": "email attachments are not re-processed in eval (body carries the same data)",
   "aggregate": {
-    "tp": 1149,
-    "fp": 4,
-    "fn": 10,
-    "precision": 0.9965,
-    "recall": 0.9914,
-    "f1": 0.9939
+    "tp": 1129,
+    "fp": 6,
+    "fn": 30,
+    "precision": 0.9947,
+    "recall": 0.9741,
+    "f1": 0.9843
   },
   "per_field": {
     "supplier_name": {
@@ -35,20 +35,20 @@
       "f1": 1.0
     },
     "issue_date": {
-      "tp": 39,
-      "fp": 1,
-      "fn": 1,
-      "precision": 0.975,
-      "recall": 0.975,
-      "f1": 0.975
+      "tp": 38,
+      "fp": 2,
+      "fn": 2,
+      "precision": 0.95,
+      "recall": 0.95,
+      "f1": 0.95
     },
     "due_date": {
-      "tp": 30,
-      "fp": 0,
-      "fn": 0,
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0
+      "tp": 29,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.9667,
+      "recall": 0.9667,
+      "f1": 0.9667
     },
     "currency": {
       "tp": 40,
@@ -91,79 +91,79 @@
       "f1": 1.0
     },
     "line_items.*": {
-      "tp": 812,
+      "tp": 794,
       "fp": 2,
-      "fn": 8,
+      "fn": 26,
       "precision": 0.9975,
-      "recall": 0.9902,
-      "f1": 0.9939
+      "recall": 0.9683,
+      "f1": 0.9827
     }
   },
   "ops": {
-    "cost_per_doc_mean_usd": 0.000983,
-    "cost_per_doc_p95_usd": 0.001409,
-    "time_per_doc_mean_s": 8.556,
-    "time_per_doc_p95_s": 24.316,
-    "total_cost_usd": 0.039309,
+    "cost_per_doc_mean_usd": 0.000994,
+    "cost_per_doc_p95_usd": 0.001426,
+    "time_per_doc_mean_s": 8.618,
+    "time_per_doc_p95_s": 26.674,
+    "total_cost_usd": 0.039755,
     "total_input_tokens": 219155,
-    "total_output_tokens": 70837,
-    "cache_read_tokens": 200280,
-    "cache_write_tokens": 0
+    "total_output_tokens": 70577,
+    "cache_read_tokens": 195273,
+    "cache_write_tokens": 5007
   },
   "per_doc": [
     {
       "doc_id": "doc_000",
       "doc_type": "scanned_pdf",
-      "cost_usd": 0.001163,
-      "ms_total": 17761,
+      "cost_usd": 0.001738,
+      "ms_total": 31440,
       "retries": 0,
-      "fields_needs_review": 10
+      "fields_needs_review": 0
     },
     {
       "doc_id": "doc_001",
       "doc_type": "scanned_pdf",
-      "cost_usd": 0.000884,
-      "ms_total": 12566,
+      "cost_usd": 0.000886,
+      "ms_total": 14075,
       "retries": 0,
-      "fields_needs_review": 3
+      "fields_needs_review": 0
     },
     {
       "doc_id": "doc_002",
       "doc_type": "scanned_pdf",
-      "cost_usd": 0.000682,
-      "ms_total": 11494,
+      "cost_usd": 0.000681,
+      "ms_total": 12509,
       "retries": 0,
-      "fields_needs_review": 2
+      "fields_needs_review": 0
     },
     {
       "doc_id": "doc_003",
       "doc_type": "text_pdf",
-      "cost_usd": 0.000901,
-      "ms_total": 5173,
+      "cost_usd": 0.000893,
+      "ms_total": 5202,
       "retries": 0,
       "fields_needs_review": 0
     },
     {
       "doc_id": "doc_004",
       "doc_type": "text_pdf",
-      "cost_usd": 0.001127,
-      "ms_total": 6404,
+      "cost_usd": 0.001061,
+      "ms_total": 5829,
       "retries": 0,
       "fields_needs_review": 0
     },
     {
       "doc_id": "doc_005",
       "doc_type": "email",
-      "cost_usd": 0.001409,
-      "ms_total": 7664,
+      "cost_usd": 0.001418,
+      "ms_total": 7635,
       "retries": 0,
       "fields_needs_review": 0
     },
     {
       "doc_id": "doc_006",
       "doc_type": "spreadsheet",
-      "cost_usd": 0.001048,
-      "ms_total": 6138,
+      "cost_usd": 0.00087,
+      "ms_total": 4814,
       "retries": 0,
       "fields_needs_review": 0
     },
@@ -171,63 +171,63 @@
       "doc_id": "doc_007",
       "doc_type": "text_pdf",
       "cost_usd": 0.00069,
-      "ms_total": 4030,
+      "ms_total": 4229,
       "retries": 0,
       "fields_needs_review": 0
     },
     {
       "doc_id": "doc_008",
       "doc_type": "spreadsheet",
-      "cost_usd": 0.000744,
-      "ms_total": 4456,
+      "cost_usd": 0.000743,
+      "ms_total": 4506,
       "retries": 0,
       "fields_needs_review": 0
     },
     {
       "doc_id": "doc_009",
       "doc_type": "scanned_pdf",
-      "cost_usd": 0.000983,
-      "ms_total": 23008,
+      "cost_usd": 0.000985,
+      "ms_total": 14451,
       "retries": 0,
-      "fields_needs_review": 4
+      "fields_needs_review": 0
     },
     {
       "doc_id": "doc_010",
       "doc_type": "spreadsheet",
-      "cost_usd": 0.001066,
-      "ms_total": 6065,
+      "cost_usd": 0.001097,
+      "ms_total": 6033,
       "retries": 0,
       "fields_needs_review": 0
     },
     {
       "doc_id": "doc_013",
       "doc_type": "text_pdf",
-      "cost_usd": 0.000621,
-      "ms_total": 3671,
+      "cost_usd": 0.000624,
+      "ms_total": 3693,
       "retries": 0,
       "fields_needs_review": 0
     },
     {
       "doc_id": "doc_014",
       "doc_type": "email",
-      "cost_usd": 0.000564,
-      "ms_total": 3376,
+      "cost_usd": 0.000566,
+      "ms_total": 3526,
       "retries": 0,
       "fields_needs_review": 0
     },
     {
       "doc_id": "doc_017",
       "doc_type": "scanned_pdf",
-      "cost_usd": 0.00124,
-      "ms_total": 27502,
+      "cost_usd": 0.001242,
+      "ms_total": 16217,
       "retries": 0,
-      "fields_needs_review": 11
+      "fields_needs_review": 0
     },
     {
       "doc_id": "doc_018",
       "doc_type": "spreadsheet",
-      "cost_usd": 0.001076,
-      "ms_total": 5938,
+      "cost_usd": 0.001092,
+      "ms_total": 6441,
       "retries": 0,
       "fields_needs_review": 0
     },
@@ -235,15 +235,15 @@
       "doc_id": "doc_019",
       "doc_type": "text_pdf",
       "cost_usd": 0.000638,
-      "ms_total": 4743,
+      "ms_total": 3850,
       "retries": 0,
       "fields_needs_review": 0
     },
     {
       "doc_id": "doc_020",
       "doc_type": "email",
-      "cost_usd": 0.00117,
-      "ms_total": 6394,
+      "cost_usd": 0.001171,
+      "ms_total": 6507,
       "retries": 0,
       "fields_needs_review": 0
     },
@@ -251,7 +251,7 @@
       "doc_id": "doc_021",
       "doc_type": "scanned_pdf",
       "cost_usd": 0.000912,
-      "ms_total": 24316,
+      "ms_total": 12461,
       "retries": 0,
       "fields_needs_review": 0
     },
@@ -259,79 +259,79 @@
       "doc_id": "doc_023",
       "doc_type": "email",
       "cost_usd": 0.001409,
-      "ms_total": 7515,
+      "ms_total": 7490,
       "retries": 0,
       "fields_needs_review": 0
     },
     {
       "doc_id": "doc_025",
       "doc_type": "spreadsheet",
-      "cost_usd": 0.001017,
-      "ms_total": 5767,
+      "cost_usd": 0.001058,
+      "ms_total": 6436,
       "retries": 0,
       "fields_needs_review": 0
     },
     {
       "doc_id": "doc_027",
       "doc_type": "scanned_pdf",
-      "cost_usd": 0.001007,
-      "ms_total": 13213,
+      "cost_usd": 0.000938,
+      "ms_total": 13622,
       "retries": 0,
-      "fields_needs_review": 8
+      "fields_needs_review": 0
     },
     {
       "doc_id": "doc_028",
       "doc_type": "scanned_pdf",
       "cost_usd": 0.000982,
-      "ms_total": 17374,
+      "ms_total": 13084,
       "retries": 0,
       "fields_needs_review": 0
     },
     {
       "doc_id": "doc_029",
       "doc_type": "email",
-      "cost_usd": 0.001326,
-      "ms_total": 7170,
+      "cost_usd": 0.001426,
+      "ms_total": 8020,
       "retries": 0,
       "fields_needs_review": 0
     },
     {
       "doc_id": "doc_030",
       "doc_type": "email",
-      "cost_usd": 0.001295,
-      "ms_total": 7015,
+      "cost_usd": 0.001294,
+      "ms_total": 6935,
       "retries": 0,
       "fields_needs_review": 0
     },
     {
       "doc_id": "doc_031",
       "doc_type": "spreadsheet",
-      "cost_usd": 0.000802,
-      "ms_total": 4594,
+      "cost_usd": 0.000879,
+      "ms_total": 5086,
       "retries": 0,
       "fields_needs_review": 0
     },
     {
       "doc_id": "doc_032",
       "doc_type": "spreadsheet",
-      "cost_usd": 0.000916,
-      "ms_total": 5108,
+      "cost_usd": 0.001047,
+      "ms_total": 5782,
       "retries": 0,
       "fields_needs_review": 0
     },
     {
       "doc_id": "doc_033",
       "doc_type": "email",
-      "cost_usd": 0.000752,
-      "ms_total": 4466,
+      "cost_usd": 0.000801,
+      "ms_total": 4376,
       "retries": 0,
       "fields_needs_review": 0
     },
     {
       "doc_id": "doc_035",
       "doc_type": "email",
-      "cost_usd": 0.001218,
-      "ms_total": 6883,
+      "cost_usd": 0.001306,
+      "ms_total": 7198,
       "retries": 0,
       "fields_needs_review": 0
     },
@@ -339,47 +339,47 @@
       "doc_id": "doc_036",
       "doc_type": "email",
       "cost_usd": 0.000516,
-      "ms_total": 3097,
+      "ms_total": 3083,
       "retries": 0,
       "fields_needs_review": 0
     },
     {
       "doc_id": "doc_037",
       "doc_type": "text_pdf",
-      "cost_usd": 0.0007,
-      "ms_total": 4974,
+      "cost_usd": 0.000651,
+      "ms_total": 4054,
       "retries": 0,
       "fields_needs_review": 0
     },
     {
       "doc_id": "doc_038",
       "doc_type": "spreadsheet",
-      "cost_usd": 0.000881,
-      "ms_total": 5230,
+      "cost_usd": 0.000884,
+      "ms_total": 4872,
       "retries": 0,
       "fields_needs_review": 0
     },
     {
       "doc_id": "doc_039",
       "doc_type": "spreadsheet",
-      "cost_usd": 0.001132,
-      "ms_total": 6149,
+      "cost_usd": 0.001115,
+      "ms_total": 6296,
       "retries": 0,
       "fields_needs_review": 0
     },
     {
       "doc_id": "doc_040",
       "doc_type": "text_pdf",
-      "cost_usd": 0.001013,
-      "ms_total": 5858,
+      "cost_usd": 0.00103,
+      "ms_total": 5704,
       "retries": 0,
       "fields_needs_review": 0
     },
     {
       "doc_id": "doc_041",
       "doc_type": "spreadsheet",
-      "cost_usd": 0.001491,
-      "ms_total": 8253,
+      "cost_usd": 0.001193,
+      "ms_total": 6601,
       "retries": 0,
       "fields_needs_review": 0
     },
@@ -387,15 +387,15 @@
       "doc_id": "doc_042",
       "doc_type": "text_pdf",
       "cost_usd": 0.000898,
-      "ms_total": 5093,
+      "ms_total": 5076,
       "retries": 0,
       "fields_needs_review": 0
     },
     {
       "doc_id": "doc_043",
       "doc_type": "text_pdf",
-      "cost_usd": 0.001112,
-      "ms_total": 6114,
+      "cost_usd": 0.001099,
+      "ms_total": 6294,
       "retries": 0,
       "fields_needs_review": 0
     },
@@ -403,23 +403,23 @@
       "doc_id": "doc_044",
       "doc_type": "scanned_pdf",
       "cost_usd": 0.000949,
-      "ms_total": 12811,
+      "ms_total": 23710,
       "retries": 0,
-      "fields_needs_review": 7
+      "fields_needs_review": 0
     },
     {
       "doc_id": "doc_045",
       "doc_type": "scanned_pdf",
       "cost_usd": 0.001087,
-      "ms_total": 14041,
+      "ms_total": 26674,
       "retries": 0,
-      "fields_needs_review": 6
+      "fields_needs_review": 0
     },
     {
       "doc_id": "doc_047",
       "doc_type": "text_pdf",
       "cost_usd": 0.000621,
-      "ms_total": 3643,
+      "ms_total": 3856,
       "retries": 0,
       "fields_needs_review": 0
     },
@@ -427,7 +427,7 @@
       "doc_id": "doc_049",
       "doc_type": "email",
       "cost_usd": 0.001265,
-      "ms_total": 7167,
+      "ms_total": 7062,
       "retries": 0,
       "fields_needs_review": 0
     }

@@ -157,6 +157,12 @@ def _process_one(
     )
 
 
+def _att_name(att: Path, doc_id: str) -> str:
+    """Attachment stem without the '<doc_id>_' prefix the email loader adds when saving it."""
+    stem = att.stem
+    return stem[len(doc_id) + 1 :] if stem.startswith(doc_id + "_") else stem
+
+
 def process_document(
     llm,
     path: str | Path,
@@ -175,11 +181,11 @@ def process_document(
     results.append(first)
     for att in attachments if include_attachments else []:
         try:
-            att_id = f"{doc_id}_{att.stem}"
+            att_id = f"{doc_id}__{_att_name(att, doc_id)}"
             r, _ = _process_one(llm, att, att_id, config, write_outputs, out_dir, db_path)
             results.append(r)
         except Exception as e:  # noqa: BLE001
             results.append(
-                PipelineResult(doc_id=f"{doc_id}_{att.stem}", doc_type="?", doc=None, error=str(e))
+                PipelineResult(doc_id=f"{doc_id}__{_att_name(att, doc_id)}", doc_type="?", doc=None, error=str(e))
             )
     return results

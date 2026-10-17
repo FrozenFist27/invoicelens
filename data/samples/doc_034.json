@@ -36,8 +36,8 @@
    "page": "p1",
    "snippet": "Document No: PO-60609"
   },
-  "llm_confidence": 0.9,
-  "confidence": 0.95,
+  "llm_confidence": 0.92,
+  "confidence": 0.96,
   "status": "ok"
  },
  "issue_date": {
@@ -66,8 +66,8 @@
    "page": "p1",
    "snippet": "Currency: AUD"
   },
-  "llm_confidence": 0.9,
-  "confidence": 0.95,
+  "llm_confidence": 0.95,
+  "confidence": 0.9749999999999999,
   "status": "ok"
  },
  "line_items": [
@@ -392,8 +392,8 @@
    "page": "p1",
    "snippet": "TOTAL: 15,634.92"
   },
-  "llm_confidence": 0.85,
-  "confidence": 0.925,
+  "llm_confidence": 0.9,
+  "confidence": 0.95,
   "status": "ok"
  },
  "_doc_type": "scanned_pdf",
