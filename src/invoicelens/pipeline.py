@@ -49,6 +49,7 @@ def _process_one(
     write_outputs: bool = False,
     out_dir: str | Path | None = None,
     db_path: str | Path | None = None,
+    session: str | None = None,
 ) -> tuple[PipelineResult, list[Path]]:
     cfg = get_settings()
     t_total = Timer()
@@ -82,7 +83,7 @@ def _process_one(
             score_doc(doc, doc_text, issues)
             from .review_queue import add_items
 
-            add_items(doc, issues, db_path)
+            add_items(doc, issues, db_path, session)
         else:
             # baseline: still score for output consistency, but no retry/review routing
             ms_validate = 0
@@ -172,17 +173,18 @@ def process_document(
     out_dir: str | Path | None = None,
     db_path: str | Path | None = None,
     include_attachments: bool = True,
+    session: str | None = None,
 ) -> list[PipelineResult]:
     """Process one file. An email with attachments yields one result per attachment too."""
     p = Path(path)
     doc_id = doc_id or p.stem
     results: list[PipelineResult] = []
-    first, attachments = _process_one(llm, p, doc_id, config, write_outputs, out_dir, db_path)
+    first, attachments = _process_one(llm, p, doc_id, config, write_outputs, out_dir, db_path, session)
     results.append(first)
     for att in attachments if include_attachments else []:
         try:
             att_id = f"{doc_id}__{_att_name(att, doc_id)}"
-            r, _ = _process_one(llm, att, att_id, config, write_outputs, out_dir, db_path)
+            r, _ = _process_one(llm, att, att_id, config, write_outputs, out_dir, db_path, session)
             results.append(r)
         except Exception as e:  # noqa: BLE001
             results.append(

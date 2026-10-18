@@ -8,6 +8,8 @@ results (data/samples/*.json) and cost nothing.
 from __future__ import annotations
 
 import json
+import re
+import secrets
 import shutil
 import tempfile
 import time
@@ -35,7 +37,38 @@ PER_IP_PER_MIN = 5
 
 _daily = {"day": date.today(), "n": 0}
 _ip_hits: dict[str, deque] = defaultdict(deque)
-_results: dict[str, dict] = {}  # session id -> {"result": dict, "path": Path|None, "ts": float}
+_results: dict[str, dict] = {}  # result id -> {"result", "path", "ts", "owner"}
+
+# Public demo (DEMO_MODE): every visitor gets an anonymous random session cookie. Review items,
+# results and uploaded files are scoped to it; cached samples (owner None) are shared.
+COOKIE = "il_session"
+_SID_RE = re.compile(r"^[0-9a-f]{32}$")
+RETENTION_S = 3600  # hard upper bound for stored uploads / review rows in demo mode
+
+
+def _demo() -> bool:
+    return bool(get_settings().demo_mode)
+
+
+def _session(request: Request) -> tuple[str | None, bool]:
+    """(visitor session id, is_new). (None, False) outside demo mode."""
+    if not _demo():
+        return None, False
+    sid = request.cookies.get(COOKIE, "")
+    if _SID_RE.match(sid):
+        return sid, False
+    return secrets.token_hex(16), True
+
+
+def _finish(resp, sid: str | None, new: bool):
+    if new and sid:
+        resp.set_cookie(COOKIE, sid, httponly=True, samesite="lax", max_age=RETENTION_S * 24)
+    return resp
+
+
+def _owned(entry: dict, sid: str | None) -> bool:
+    """Samples (owner None) are public; in demo mode uploads belong to one visitor."""
+    return not _demo() or entry.get("owner") is None or entry.get("owner") == sid
 
 
 def _caps():
@@ -53,6 +86,33 @@ def _sweep() -> None:
     for sid in [k for k, v in _results.items() if now - v["ts"] > SESSION_TTL_S]:
         _results.pop(sid, None)
         shutil.rmtree(WORK_DIR / sid, ignore_errors=True)
+    if _demo():
+        # belt and braces: nothing older than RETENTION_S survives on disk or in the review DB,
+        # including orphans from failed requests and extracted e-mail attachments.
+        if WORK_DIR.exists():
+            for d in WORK_DIR.iterdir():
+                if d.name not in _results and now - d.stat().st_mtime > RETENTION_S:
+                    shutil.rmtree(d, ignore_errors=True)
+        for d in Path(tempfile.gettempdir()).glob("invoicelens_eml_*"):
+            try:
+                if now - d.stat().st_mtime > SESSION_TTL_S:
+                    shutil.rmtree(d, ignore_errors=True)
+            except OSError:
+                pass
+        try:
+            from ..review_queue import init_db, purge_older_than
+
+            init_db()
+            purge_older_than(RETENTION_S)
+        except Exception:  # noqa: BLE001
+            pass
+
+
+@app.middleware("http")
+async def _sweep_mw(request: Request, call_next):
+    if request.url.path != "/health":
+        _sweep()
+    return await call_next(request)
 
 
 def _check_limits(request: Request) -> None:
@@ -89,7 +149,7 @@ def index(request: Request):
 
 @app.post("/extract", response_class=HTMLResponse)
 async def extract_upload(request: Request, file: UploadFile = File(...)):
-    _sweep()
+    owner, new_cookie = _session(request)
     caps = _caps()
     name = Path(file.filename or "upload").name
     ext = Path(name).suffix.lower()
@@ -129,7 +189,9 @@ async def extract_upload(request: Request, file: UploadFile = File(...)):
     except Exception as e:  # noqa: BLE001
         raise HTTPException(503, f"LLM not configured: {e}") from None
     _daily["n"] += 1
-    results = process_document(llm, path, config="full", doc_id=sid, include_attachments=False)
+    results = process_document(
+        llm, path, config="full", doc_id=sid, include_attachments=False, session=owner
+    )
     r = results[0]
     if r.error or r.doc is None:
         raise HTTPException(502, f"Extraction failed: {r.error}")
@@ -137,8 +199,10 @@ async def extract_upload(request: Request, file: UploadFile = File(...)):
     payload["_doc_type"] = r.doc_type
     payload["_metrics"] = r.metrics.model_dump() if r.metrics else {}
     payload["_issues"] = [i.model_dump() for i in r.issues]
-    _results[sid] = {"result": payload, "path": path, "ts": time.time(), "filename": name}
-    return _render_result(request, sid)
+    _results[sid] = {
+        "result": payload, "path": path, "ts": time.time(), "filename": name, "owner": owner,
+    }
+    return _finish(_render_result(request, sid), owner, new_cookie)
 
 
 @app.post("/sample/{doc_id}", response_class=HTMLResponse)
@@ -154,6 +218,7 @@ def sample(request: Request, doc_id: str):
         "path": src,
         "ts": time.time() + 10**9,  # never swept; samples are static
         "filename": src.name if src else p.stem,
+        "owner": None,
     }
     return _render_result(request, sid, cached=True)
 
@@ -194,6 +259,9 @@ def _render_result(request: Request, sid: str, cached: bool = False):
 @app.get("/source/{sid}", response_class=HTMLResponse)
 def source_view(request: Request, sid: str, page: str = "p1", snippet: str = ""):
     entry = _results.get(sid)
+    owner, _ = _session(request)
+    if entry and not _owned(entry, owner):
+        entry = None
     if not entry or not entry.get("path"):
         raise HTTPException(404, "Source no longer available (uploads are deleted after 30 minutes).")
     path: Path = entry["path"]
@@ -211,8 +279,10 @@ def source_view(request: Request, sid: str, page: str = "p1", snippet: str = "")
 
 
 @app.get("/source/{sid}/page.png")
-def source_png(sid: str, page: str = "p1", snippet: str = ""):
+def source_png(request: Request, sid: str, page: str = "p1", snippet: str = ""):
     entry = _results.get(sid)
+    if entry and not _owned(entry, _session(request)[0]):
+        entry = None
     if not entry or not entry.get("path") or entry["path"].suffix.lower() != ".pdf":
         raise HTTPException(404)
     import pymupdf
@@ -236,19 +306,25 @@ def review_page(request: Request):
     from ..review_queue import init_db, list_pending
 
     init_db()
-    return templates.TemplateResponse(request, "review.html", {"items": list_pending()})
+    owner, new_cookie = _session(request)
+    items = list_pending(session=owner, scoped=_demo())
+    return _finish(templates.TemplateResponse(request, "review.html", {"items": items}), owner, new_cookie)
 
 
 @app.post("/review/{item_id}")
-def review_action(item_id: int, action: str = Form(...), value: str = Form("")):
+def review_action(request: Request, item_id: int, action: str = Form(...), value: str = Form("")):
     from ..review_queue import accept, correct_item
 
+    owner, _ = _session(request)
+    scoped = _demo()
     if action == "accept":
-        accept(item_id)
+        ok = accept(item_id, session=owner, scoped=scoped)
     elif action == "correct" and value.strip():
-        correct_item(item_id, value.strip())
+        ok = correct_item(item_id, value.strip(), session=owner, scoped=scoped)
     else:
         raise HTTPException(400, "bad action")
+    if not ok:
+        raise HTTPException(404, "Unknown review item")
     return RedirectResponse("/review", status_code=303)
 
 

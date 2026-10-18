@@ -8,6 +8,7 @@ are flagged and sent to the review queue.</p>
 <button type="submit">Extract</button>
 </form>
 <p><span class="badge">Demo caps: {{ caps.max_mb }} MB, {{ caps.max_pages }} pages, {{ caps.daily }} documents/day. Uploads are deleted after 30 minutes.</span></p>
+<p class="muted" style="font-size:.9em">Uploads are processed and deleted; don't upload confidential documents.</p>
 <p class="muted" style="font-size:.9em">Free hosts sleep when idle, so the first request can be slow.</p>
 </div>
 {% if samples %}<div class="card"><h2>Cached sample results (no LLM call)</h2>

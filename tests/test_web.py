@@ -97,3 +97,119 @@ def test_review_accept_and_correct(client):
     add_items(doc, [])
     add_items(doc, [])
     assert len(list_pending()) <= before + len(ids)
+
+
+# ---- public-demo isolation (DEMO_MODE) ----
+
+
+def _doc_needing_review(doc_id="dX"):
+    from invoicelens.models import Field, InvoiceDoc, SourceRef
+
+    def f(v, st="ok"):
+        return Field(value=v, source=SourceRef(page="p1", snippet="s"), llm_confidence=0.5,
+                     confidence=0.4, status=st)
+
+    doc = InvoiceDoc(
+        doc_id=doc_id, doc_kind=f("invoice"), supplier_name=f("A", "needs_review"),
+        supplier_tax_id=f(None), document_number=f("1"), issue_date=f(None), due_date=f(None),
+        currency=f("USD"), line_items=[], subtotal=f(None), tax_total=f(None), total=f(None),
+    )
+    return doc
+
+
+@pytest.fixture()
+def demo_clients(client, monkeypatch):
+    monkeypatch.setattr(webapp, "_demo", lambda: True)
+    a = TestClient(webapp.app)
+    b = TestClient(webapp.app)
+    return a, b
+
+
+def test_demo_cookie_is_httponly_lax_random(demo_clients):
+    a, b = demo_clients
+    ra = a.get("/review")
+    set_cookie = ra.headers["set-cookie"].lower()
+    assert "il_session=" in set_cookie and "httponly" in set_cookie and "samesite=lax" in set_cookie
+    b.get("/review")
+    assert a.cookies.get("il_session") != b.cookies.get("il_session")
+
+
+def test_demo_review_queue_is_isolated_between_sessions(demo_clients):
+    from invoicelens.review_queue import add_items, list_pending
+
+    a, b = demo_clients
+    a.get("/review")
+    b.get("/review")
+    ida = add_items(_doc_needing_review("docA"), [], session=a.cookies["il_session"])[0]
+    idb = add_items(_doc_needing_review("docB"), [], session=b.cookies["il_session"])[0]
+    assert "docA" in a.get("/review").text and "docB" not in a.get("/review").text
+    assert "docB" in b.get("/review").text and "docA" not in b.get("/review").text
+    # B cannot act on A's item
+    r = b.post(f"/review/{ida}", data={"action": "accept"}, follow_redirects=False)
+    assert r.status_code == 404
+    r = b.post(f"/review/{ida}", data={"action": "correct", "value": "x"}, follow_redirects=False)
+    assert r.status_code == 404
+    assert {p.id for p in list_pending()} == {ida, idb}
+    # A can
+    assert a.post(f"/review/{ida}", data={"action": "accept"}, follow_redirects=False).status_code == 303
+    assert {p.id for p in list_pending()} == {idb}
+
+
+def test_demo_without_cookie_sees_nothing_and_forged_cookie_ignored(demo_clients):
+    from invoicelens.review_queue import add_items
+
+    a, _ = demo_clients
+    add_items(_doc_needing_review("docU"), [], session=None)  # unscoped/CLI row
+    c = TestClient(webapp.app)
+    assert "docU" not in c.get("/review").text
+    c.cookies.set("il_session", "not-a-valid-id")
+    assert "docU" not in c.get("/review").text
+
+
+def test_non_demo_cli_behaviour_unchanged(client):
+    from invoicelens.review_queue import add_items, list_pending
+
+    ids = add_items(_doc_needing_review("docC"), [])
+    assert "docC" in client.get("/review").text
+    assert client.post(f"/review/{ids[0]}", data={"action": "accept"}, follow_redirects=False).status_code == 303
+    assert list_pending() == []
+    assert "set-cookie" not in client.get("/review").headers
+
+
+def test_demo_uploads_not_retrievable_by_other_session(demo_clients, tmp_path, monkeypatch):
+    a, b = demo_clients
+    a.get("/review")
+    f = tmp_path / "up.csv"
+    f.write_text("a,b\n1,2\n")
+    webapp._results["abc123"] = {
+        "result": {}, "path": f, "ts": __import__("time").time(), "filename": "up.csv",
+        "owner": a.cookies["il_session"],
+    }
+    assert a.get("/source/abc123").status_code != 404
+    assert b.get("/source/abc123").status_code == 404
+    assert b.get("/source/abc123/page.png").status_code == 404
+    webapp._results.pop("abc123")
+
+
+def test_demo_sweep_deletes_old_uploads_and_review_rows(demo_clients, tmp_path, monkeypatch):
+    import os
+    import time
+
+    from invoicelens.review_queue import add_items, list_pending
+
+    monkeypatch.setattr(webapp, "WORK_DIR", tmp_path / "work")
+    old = webapp.WORK_DIR / "orphan"
+    old.mkdir(parents=True)
+    (old / "x.pdf").write_bytes(b"x")
+    past = time.time() - 2 * 3600
+    os.utime(old, (past, past))
+    tracked = webapp.WORK_DIR / "tracked"
+    tracked.mkdir()
+    (tracked / "t.csv").write_text("a")
+    webapp._results["tracked"] = {"result": {}, "path": tracked / "t.csv",
+                                  "ts": time.time() - webapp.SESSION_TTL_S - 5, "owner": "o"}
+    add_items(_doc_needing_review("old"), [], session="o")
+    monkeypatch.setattr(webapp, "RETENTION_S", -1)  # everything counts as old
+    webapp._sweep()
+    assert not old.exists() and not tracked.exists() and "tracked" not in webapp._results
+    assert list_pending() == []

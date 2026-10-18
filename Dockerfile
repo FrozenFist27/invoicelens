@@ -8,7 +8,7 @@ RUN apt-get update \
 RUN useradd -m -u 1000 user
 USER user
 ENV HOME=/home/user PATH=/home/user/.local/bin:$PATH \
-    DEMO_MODE=true PYTHONUNBUFFERED=1 \
+    DEMO_MODE=1 PYTHONUNBUFFERED=1 \
     REVIEW_DB_PATH=/tmp/invoicelens/review.db TMPDIR=/tmp
 WORKDIR /home/user/app
 
