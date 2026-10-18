@@ -4,7 +4,7 @@
 
 ![license](https://img.shields.io/badge/license-MIT-blue) ![tests](https://img.shields.io/badge/tests-74%20passing-brightgreen)
 
-> **Demo project.** Built and measured on 50 synthetic, fictional documents. No client or real supplier data. Real-world accuracy will differ; see [Limitations](#limitations).
+> Built and measured on 50 synthetic, fictional documents. Real-world accuracy will differ; see [Limitations](#limitations).
 
 ## Problem
 

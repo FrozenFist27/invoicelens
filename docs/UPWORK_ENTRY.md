@@ -1,14 +1,14 @@
 # Upwork portfolio entry (draft)
 
-**Title:** InvoiceLens - Invoice & PO Extraction with Measured Accuracy (Demo Project)
+**Title:** InvoiceLens - Invoice & PO Extraction with Measured Accuracy
 
-**Label to keep visible in the entry:** *Demo project built on synthetic data. No client data.*
+**Note:** *Measured on synthetic data.*
 
 **Role:** Solo developer (design, build, evaluation)
 
 **Description**
 
-Demo project built on synthetic data. A Python pipeline that turns supplier invoices and purchase orders (text PDFs, scanned PDFs, spreadsheets and email bodies) into validated JSON and CSV. An LLM (Claude Haiku) extracts a fixed schema; deterministic rules check line-item arithmetic, totals, dates and currency codes; failures trigger a targeted correction retry; uncertain fields go to a review queue instead of being guessed. Every field links back to its source page or cell.
+A Python pipeline that turns supplier invoices and purchase orders (text PDFs, scanned PDFs, spreadsheets and email bodies) into validated JSON and CSV. An LLM (Claude Haiku) extracts a fixed schema; deterministic rules check line-item arithmetic, totals, dates and currency codes; failures trigger a targeted correction retry; uncertain fields go to a review queue instead of being guessed. Every field links back to its source page or cell.
 
 Measured results (synthetic documents, run on 2026-10-17):
 - 10 held-out documents: field F1 0.995 for both a plain single call and the full pipeline (the model is already accurate on clean synthetic documents).
