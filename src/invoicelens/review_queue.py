@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 import sqlite3
 from contextlib import contextmanager
 from datetime import datetime, timezone
@@ -10,7 +11,10 @@ from pathlib import Path
 from .confidence import iter_fields
 from .models import InvoiceDoc, ReviewItem, ValidationIssue
 
-DEFAULT_DB = Path(__file__).resolve().parents[2] / "data" / "review.db"
+# REVIEW_DB_PATH lets containers (e.g. Hugging Face Spaces, non-root) put the DB under /tmp or /data.
+DEFAULT_DB = Path(
+    os.environ.get("REVIEW_DB_PATH") or Path(__file__).resolve().parents[2] / "data" / "review.db"
+)
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS review_items (

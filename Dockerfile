@@ -8,7 +8,8 @@ RUN apt-get update \
 RUN useradd -m -u 1000 user
 USER user
 ENV HOME=/home/user PATH=/home/user/.local/bin:$PATH \
-    DEMO_MODE=true PYTHONUNBUFFERED=1
+    DEMO_MODE=true PYTHONUNBUFFERED=1 \
+    REVIEW_DB_PATH=/tmp/invoicelens/review.db TMPDIR=/tmp
 WORKDIR /home/user/app
 
 COPY --chown=user pyproject.toml README.md ./
@@ -19,4 +20,5 @@ RUN pip install --no-cache-dir -e .
 
 # ANTHROPIC_API_KEY must be provided as a runtime secret (Space secret / docker -e). Never bake it in.
 EXPOSE 7860
-CMD ["uvicorn", "invoicelens.web.app:app", "--host", "0.0.0.0", "--port", "7860"]
+# --proxy-headers so per-IP limits see the real client behind the Spaces proxy.
+CMD ["uvicorn", "invoicelens.web.app:app", "--host", "0.0.0.0", "--port", "7860", "--proxy-headers", "--forwarded-allow-ips", "*"]
