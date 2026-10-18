@@ -16,3 +16,6 @@ build/
 .ruff_cache/
 .DS_Store
 reports/*.tmp.json
+
+# internal design notes (kept local)
+IDEATION.md
