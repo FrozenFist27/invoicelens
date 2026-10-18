@@ -1,16 +1,16 @@
 # Project Catalog offer (draft)
 
-Status: draft for the human to review. Prices are deliberately left blank: the owner decides them.
+Status: draft. Prices set by the owner (2026-10-18).
 
 **Title:** I will build an invoice / PO data extraction pipeline with measured accuracy
 
 **One-line pitch:** Invoices and purchase orders in (text PDF, scanned PDF, spreadsheet, email), validated JSON and CSV out, with every field traced to its source page and accuracy measured on documents you share.
 
-| Tier | Scope | Delivery | Price (human decides) |
+| Tier | Scope | Delivery | Price |
 |---|---|---|---|
-| Starter | 1 document type (for example text PDF invoices), fixed schema, JSON/CSV output, accuracy report on up to 20 of your sample documents | 5 days | $[decide] |
-| Standard | Up to 3 input types including scanned PDFs, validation plus retry, review queue, accuracy report on up to 50 documents | 10 days | $[decide] |
-| Advanced | All 4 input types including email, custom fields, simple web upload/review UI, deployment to your cloud, handover docs | 15 days | $[decide] |
+| Starter | 1 document type (for example text PDF invoices), fixed schema, JSON/CSV output, accuracy report on up to 20 of your sample documents | 2 days | $300 |
+| Standard | Up to 3 input types including scanned PDFs, validation plus retry, review queue, accuracy report on up to 50 documents | 4 days | $600 |
+| Advanced | All 4 input types including email, custom fields, simple web upload/review UI, deployment to your cloud, handover docs | 7 days | $900 |
 
 **What the buyer gets**
 - Python package and CLI, with tests.
