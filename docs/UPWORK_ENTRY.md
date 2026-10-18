@@ -20,6 +20,6 @@ Honest limits: synthetic data, small held-out set (n=10), single run per configu
 
 **Skills:** Python, LLM / Claude API, OCR (Tesseract), PDF processing, Data Extraction, FastAPI, Pydantic, Automated Testing.
 
-**Links to add when available:** GitHub repo (not yet published), live demo (Hugging Face Space, not yet deployed), 2-minute video (script in `docs/VIDEO_SCRIPT.md`).
+**Links:** GitHub repo https://github.com/FrozenFist27/invoicelens · Live demo https://invoicelens-h4efwpcu7q-uc.a.run.app · 2-minute video: to be recorded (script in `docs/VIDEO_SCRIPT.md`).
 
 See also `docs/PROJECT_CATALOG.md` for the Project Catalog tiers (prices left for the owner to set).

@@ -14,4 +14,4 @@ Prep: `invoicelens serve` running; `data/review.db` seeded by running `invoicele
 | 1:30-1:50 | Terminal: `invoicelens eval --config full --split heldout` output, or `reports/eval_report_full_dev.md` | "On 40 development documents the full pipeline scores F1 0.994 against 0.984 for a plain single call, and every wrong scalar field was routed to review. On the 10 held-out documents both score 0.995. Cost is about a tenth of a cent per document." |
 | 1:50-2:00 | Repo / README results table | "Code, tests and the measured report are in the repo. Available as a fixed-scope build on Upwork." |
 
-Do not claim: production accuracy, real customer data, or that the live Hugging Face Space exists (it has not been deployed yet).
+Do not claim: production accuracy, real customer data, or that the demo handles more than its caps (2 MB, 3 pages, 20 documents/day). Live demo: https://invoicelens-h4efwpcu7q-uc.a.run.app.

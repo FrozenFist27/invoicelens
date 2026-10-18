@@ -4,6 +4,8 @@
 
 ![license](https://img.shields.io/badge/license-MIT-blue) ![tests](https://img.shields.io/badge/tests-74%20passing-brightgreen)
 
+> **Live demo:** https://invoicelens-h4efwpcu7q-uc.a.run.app (first load after idle can take a few seconds; 20 uploads/day cap).
+
 > Built and measured on 50 synthetic, fictional documents. Real-world accuracy will differ; see [Limitations](#limitations).
 
 ## Problem
@@ -113,11 +115,11 @@ Important: the code pins the API endpoint to `https://api.anthropic.com`. It del
 
 On Windows set `TESSERACT_CMD` in `.env` to `C:\Program Files\Tesseract-OCR\tesseract.exe`.
 
-### Web demo and Hugging Face Space
+### Web demo (live on Google Cloud Run)
 
 `invoicelens serve` runs a FastAPI page: upload, result table with confidence and status colouring, click-through to the source page with the snippet highlighted (PDF) or the cell text (spreadsheet/email), a review queue page with accept/correct, and buttons that replay cached real results at zero cost. Demo caps: 2 MB, 3 pages, 20 documents per day globally, 5 uploads per minute per IP, uploads deleted after 30 minutes.
 
-The `Dockerfile` is Space-ready (Tesseract installed, port 7860, non-root user). **Not deployed:** no Hugging Face token was available in this build. To deploy: create a Docker Space, push this repo to it, and add `ANTHROPIC_API_KEY` as a Space secret.
+Live at https://invoicelens-h4efwpcu7q-uc.a.run.app : Google Cloud Run (us-central1, 1 vCPU / 1 GiB, scales to zero, max 1 instance), API key from Secret Manager. Uploads are scoped to the visitor's session and deleted after 30 minutes. The `Dockerfile` (Tesseract, port 7860, non-root) also runs as-is on any container host.
 
 ## Output format
 
